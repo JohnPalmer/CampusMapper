@@ -17,17 +17,34 @@
  * See the GNU General Public License for more details.
  * 
  * You should have received a copy of the GNU General Public License along 
- * with Space Mapper.  If not, see <http://www.gnu.org/licenses/>.
+ * with Space Mapper.  If not, see <http://www.gnu.org/licenses/>.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.movelab.campus_mapper"
-    android:versionCode="15"
-    android:versionName="2.09" >
+    android:versionCode="0"
+    android:versionName="0.01" >
 
     <uses-sdk
         android:minSdkVersion="4"
-        android:targetSdkVersion="19" />
+        android:targetSdkVersion="21" />
 
     <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
