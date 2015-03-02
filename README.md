@@ -10,7 +10,7 @@ Campus Mapper is distributed in the hope that it will be useful, but WITHOUT ANY
 
 You should have received a copy of the GNU General Public License along with this program.  If not, see http://www.gnu.org/licenses.
 
-Campus Mapper incorporates code from Space Mapper and the Human Mobility Project.
+The Campus Mapper launcher icon is based on an image created by created Gerardo Martín Martínez. Campus Mapper incorporates code from Space Mapper and the Human Mobility Project.
 
 The code incorporated from Space Mapper is subject to the following terms:
 
