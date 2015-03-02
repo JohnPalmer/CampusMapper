@@ -21,21 +21,6 @@
 
 package net.movelab.cmlibrary;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-
-import net.movelab.cmlibrary.R;
-import net.movelab.cmlibrary.Fix.Fixes;
-import net.movelab.cmlibrary.RangeSeekBar.OnRangeSeekBarChangeListener;
-import net.movelab.cmlibrary.RangeSeekBarDonut.OnRangeSeekBarDonutChangeListener;
 import android.app.AlertDialog;
 import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
@@ -58,6 +43,7 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -71,10 +57,24 @@ import android.widget.RelativeLayout;
 import android.widget.TextView;
 
 import com.google.android.maps.GeoPoint;
-import com.google.android.maps.MapActivity;
 import com.google.android.maps.MapController;
 import com.google.android.maps.MapView;
 import com.google.android.maps.Overlay;
+
+import net.movelab.cmlibrary.Fix.Fixes;
+import net.movelab.cmlibrary.RangeSeekBar.OnRangeSeekBarChangeListener;
+import net.movelab.cmlibrary.RangeSeekBarDonut.OnRangeSeekBarDonutChangeListener;
+
+import java.io.BufferedWriter;
+import java.io.File;
+import java.io.FileOutputStream;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.text.SimpleDateFormat;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.Date;
+import java.util.List;
 
 /**
  * Allows user to view their own data in a map (from the database on their phone
@@ -84,7 +84,7 @@ import com.google.android.maps.Overlay;
  * 
  * 
  */
-public class MapMyData extends MapActivity {
+public class MapMyData extends FragmentActivity {
 	String TAG = "MapMyData";
 	private MapView mapView;
 	private MapController myMapController;
