@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/CampusMapper_Library/CampusMapper_Library.iml" filepath="$PROJECT_DIR$/CampusMapper_Library/CampusMapper_Library.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CampusMapper_Research/CampusMapper_Research.iml" filepath="$PROJECT_DIR$/CampusMapper_Research/CampusMapper_Research.iml" />
+    </modules>
+  </component>
+</project>
+

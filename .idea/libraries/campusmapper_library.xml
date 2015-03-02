@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="campusmapper_library">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/CampusMapper_Library/bin/campusmapper_library.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
