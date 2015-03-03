@@ -29,13 +29,13 @@
         android:layout_height="0dp"
         android:layout_weight="1" >
 
-        <com.google.android.maps.MapView
-            xmlns:android="http://schemas.android.com/apk/res/android"
+
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
             android:id="@+id/mapview"
-            android:layout_width="fill_parent"
-            android:layout_height="fill_parent"
-            android:apiKey=""
-            android:clickable="true" />
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:name="com.google.android.gms.maps.SupportMapFragment"/>
+
 
         <LinearLayout
             android:id="@+id/mapReceiverNotificationArea"

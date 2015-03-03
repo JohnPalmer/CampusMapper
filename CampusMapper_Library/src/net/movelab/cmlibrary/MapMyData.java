@@ -85,7 +85,8 @@ import java.util.List;
  * 
  */
 public class MapMyData extends FragmentActivity {
-	String TAG = "MapMyData";
+
+    String TAG = "MapMyData";
 	private MapView mapView;
 	private MapController myMapController;
 	public List<Overlay> mapOverlays;
