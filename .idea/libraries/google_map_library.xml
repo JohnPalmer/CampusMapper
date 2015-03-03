@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="google-map-library">
+    <CLASSES />
+    <JAVADOC />
+    <SOURCES>
+      <root url="file://$PROJECT_DIR$/google-map-library/gen" />
+      <root url="file://$PROJECT_DIR$/google-map-library/src" />
+      <root url="file://$PROJECT_DIR$/google-map-library/tests/src" />
+    </SOURCES>
+  </library>
+</component>
