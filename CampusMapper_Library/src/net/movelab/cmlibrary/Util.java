@@ -382,7 +382,7 @@ public class Util {
 
 		try {
 			is = new BufferedInputStream(context.getResources()
-					.openRawResource(R.raw.pub_key));
+					.openRawResource(R.raw.pubkey));
 			bos = new ByteArrayOutputStream();
 			while (is.available() > 0) {
 				bos.write(is.read());

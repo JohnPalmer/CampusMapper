@@ -60,6 +60,7 @@ import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Environment;
+import android.os.SystemClock;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
 import android.view.Menu;
@@ -90,7 +91,7 @@ import com.google.android.maps.Overlay;
  */
 public class MapMyData extends FragmentActivity {
 	String TAG = "MapMyData";
-	private ToggleButton mService;
+	private ToggleButton mServiceButton;
 
 	boolean getIntro = false;
 	boolean isPro = false;
@@ -172,6 +173,8 @@ public class MapMyData extends FragmentActivity {
 
 	private int minDist = 0;
 
+    Context context = this;
+
 	@Override
 	public void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
@@ -185,7 +188,6 @@ public class MapMyData extends FragmentActivity {
 		// TODO add all of the alerts from countdown activity regarding sensors
 		// off, sm off etc.
 
-		Context context = getApplicationContext();
 		PropertyHolder.init(context);
 		PowerSensor.init(context);
 
@@ -204,19 +206,63 @@ public class MapMyData extends FragmentActivity {
 
 		setContentView(R.layout.map_layout);
 
-		// pauseToggle = !PropertyHolder.isServiceOn();
 
-		mPoints = new ArrayList<MapPoint>();
+        // service button
+        mServiceButton = (ToggleButton) findViewById(R.id.service_button);
+        boolean isServiceOn = PropertyHolder.isServiceOn();
+        mServiceButton.setChecked(isServiceOn);
+        mServiceButton.setOnClickListener(new ToggleButton.OnClickListener() {
+            public void onClick(View view) {
+                if (view.getId() != R.id.service_button)
+                    return;
+                boolean on = ((ToggleButton) view).isChecked();
+                String schedule = on ? Util.MESSAGE_SCHEDULE
+                        : Util.MESSAGE_UNSCHEDULE;
+                // Log.e(TAG, schedule + on);
+
+                // now schedule or unschedule
+                Intent intent = new Intent(
+                        getString(R.string.internal_message_id) + schedule);
+                context.sendBroadcast(intent);
+                if (on) {
+                    final long ptNow = PropertyHolder.ptStart();
+
+                    ContentResolver ucr = getContentResolver();
+
+                    ucr.insert(
+                            Util.getUploadQueueUri(context),
+                            UploadContentValues.createUpload("ONF", "on,"
+                                    + Util.iso8601(System.currentTimeMillis())
+                                    + "," + ptNow));
+                } else {
+
+                    final long ptNow = PropertyHolder.ptStop();
+                    // stop uploader
+                    Intent stopUploaderIntent = new Intent(MapMyData.this,
+                            FileUploader.class);
+                    // Stop service if it is currently running
+                    stopService(stopUploaderIntent);
 
 
-		progressbar = (ProgressBar) findViewById(R.id.mapProgressbar);
-		progressbar.setProgress(0);
+                        ContentResolver ucr = getContentResolver();
 
-		progressbarText = (TextView) findViewById(R.id.progressBarLabel);
+                        ucr.insert(Util.getUploadQueueUri(context),
+                                UploadContentValues.createUpload(
+                                        "ONF",
+                                        "off,"
+                                                + Util.iso8601(System
+                                                .currentTimeMillis())
+                                                + "," + ptNow));
 
-		progressNotificationArea = (LinearLayout) findViewById(R.id.mapProgressNotificationArea);
 
-		receiverNotificationArea = (LinearLayout) findViewById(R.id.mapReceiverNotificationArea);
+
+                }
+
+            }
+        });
+
+
+        receiverNotificationArea = (LinearLayout) findViewById(R.id.mapReceiverNotificationArea);
 
 		mReceiversOffWarning = (TextView) findViewById(R.id.mapReceiversOffWarning);
 
@@ -225,7 +271,7 @@ public class MapMyData extends FragmentActivity {
 		isPro = PropertyHolder.getProVersion();
 
 		AppRater.app_launched(this);
-		
+
 		privacyZones = new ArrayList<GeoPoint>();
 
 	}
