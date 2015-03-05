@@ -38,7 +38,7 @@
 -->
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="net.movelab.campus_mapper"
+    package="net.movelab.campus_mobility"
     android:versionCode="1"
     android:versionName="0.01" >
 
@@ -136,13 +136,13 @@
         <service android:name="net.movelab.cmlibrary.FileUploader" />
 
         <provider
-            android:name="net.movelab.campus_mapper.SpaceMapperResearchContentProvider"
+            android:name="net.movelab.campus_mobility.SpaceMapperResearchContentProvider"
             android:authorities="net.movelab.campus_mapper.spacemapperfixprovider"
             android:enabled="true"
             android:exported="false" >
         </provider>
         <provider
-            android:name="net.movelab.campus_mapper.SpaceMapperResearchUploadQueueContentProvider"
+            android:name="net.movelab.campus_mobility.SpaceMapperResearchUploadQueueContentProvider"
             android:authorities="net.movelab.campus_mapper.uploadqueueprovider"
             android:enabled="true"
             android:exported="false" >

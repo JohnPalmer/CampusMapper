@@ -1,24 +1,26 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
- * Space Mapper
- * Copyright (C) 2012, 2013 John R.B. Palmer
- * Contact: jrpalmer@princeton.edu
- * 
- * This file is part of Space Mapper.
- * 
- * Space Mapper is free software: you can redistribute it and/or modify 
- * it under the terms of the GNU General Public License as published by 
- * the Free Software Foundation, either version 3 of the License, or (at 
- * your option) any later version.
- * 
- * Space Mapper is distributed in the hope that it will be useful, but 
- * WITHOUT ANY WARRANTY; without even the implied warranty of 
- * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
- * See the GNU General Public License for more details.
- * 
- * You should have received a copy of the GNU General Public License along 
- * with Space Mapper.  If not, see <http://www.gnu.org/licenses/>.
--->
+  ~ Campus Mapper, also called Campus Mobility, is a mobile phone app for studying activity spaces on campuses. It is based in part on code from the Human Mobility Project.
+  ~
+  ~ Copyright (c) 2015 John R.B. Palmer.
+  ~
+  ~ Campus Mapper is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+  ~
+  ~ Campus Mapper is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+  ~
+  ~ You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses.
+  ~
+  ~
+  ~ The code incorporated from the Human Mobility Project is subject to the following terms:
+  ~
+  ~ Copyright 2010, 2011 Human Mobility Project
+  ~
+  ~ Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+  ~
+  ~ The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.
+  ~
+  ~ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
+  -->
 
 <resources>
 
@@ -32,7 +34,7 @@
     <string name="warning_calendar_start_date">Avís: Has escollit una data d\'inici posterior a la data de finalització. Canvia una o l\'altra, per veure les dades al mapa.</string>
     <string name="warning_calendar_end_date">Avís: Has escollit una data de finalització anterior a la data d\'inici. Canvia una o l\'altra, per veure les dades al mapa.</string>
     <string name="save_db_label">Enviar</string>
-    <string name="pro_welcome">T\'acabes d\'actualitzar gratuïtament a Space Mapper Pro. Pots deixar de participar en el Activity-Space Project en qualsevol moment canviant la configuració de la teva participació al menú Preferències.\n\nMoltes gràcies!</string>
+    <string name="pro_welcome">T\'acabes d\'actualitzar gratuïtament a Campus Mobility Pro. Pots deixar de participar en el Activity-Space Project en qualsevol moment canviant la configuració de la teva participació al menú Preferències.\n\nMoltes gràcies!</string>
     <string name="dbq_battery_prompt">Has tingut problemes amb la durada de la bateria del telèfon mentre s\'utilitza l\'aplicació?</string>
     <string name="db_howfound_friend">D\'un amic o conegut</string>
     <string name="db_howfound_ad">D\'un anunci</string>
@@ -44,9 +46,9 @@
     <string name="dbq_friends_prompt">Coneixes algú més que faci servir l\'aplicació?</string>
     <string name="dbq_behavior1_prompt">Creus que aquesta aplicació  pot haver modificat el teu comportament?</string>
     <string name="dbq_behavior2_prompt">Has pensat en que aquesta aplicació s\'estava executant en el teu dia a dia?</string>
-    <string name="proconversion_notification_initial">Actualització de Space Mapper</string>
-    <string name="proconversion_notification_subject">Actualització de Space Mapper</string>
-    <string name="proconversion_notification">Has rebut una actualització gratuïta a Space Mapper Pro.</string>
+    <string name="proconversion_notification_initial">Actualització de Campus Mobility</string>
+    <string name="proconversion_notification_subject">Actualització de Campus Mobility</string>
+    <string name="proconversion_notification">Has rebut una actualització gratuïta a Campus Mobility Pro.</string>
     <string name="offline_warning">T\'ha desconnectat Internet. Si us plau, comprova la teva connexió a Internet i torna-ho a intentar.</string>
     <string name="uploading">Carrega</string>
     <string name="location">localització</string>
@@ -93,7 +95,7 @@
     <string name="latest_station_time_label">"Última: "</string>
     <string name="tracking_notification_initial">Gravant la teva activitat-espai.</string>
     <string name="tracking_notification">Gravant la teva activitat-espai.</string>
-    <string name="tracking_notification_subject">Space Mapper està gravant</string>
+    <string name="tracking_notification_subject">Campus Mobility està gravant</string>
     <string name="menu_flush_gps">Actualitza GPS</string>
     <string name="renew_gps_alert">Voldries eliminar i baixar un nou A-GPS data ? Fer-ho millorarà el funcionament del GPS si tens una bona connexió de dades i el GPS sembla que no funciona correctament. No obstant, això pot resultar en un endarreriment en les estimacions de les teves localitzacions.</string>
     <string name="first_fix_time">Primer punt en l\'espai-temps:</string>
@@ -104,14 +106,14 @@
     <string name="toggle_zax">Eix temporal</string>
     <string name="toggle_xyax">Eix espacial</string>
     <string name="lifeline_button">L\'espai-temps</string>
-    <string name="made_with_SM">Imatge fet amb l\'Space Mapper</string>
+    <string name="made_with_SM">Imatge fet amb l\'Campus Mobility</string>
     <string name="menu_share">Comparteix l\'aplicació</string>
     <string name="share_with">Comparteix via</string>
-    <string name="rate_heading">Avaluar l\'Space Mapper</string>
+    <string name="rate_heading">Avaluar l\'Campus Mobility</string>
     <string name="rate_no">No, gràcies</string>
     <string name="rate_later">Recorda\'m-ho més tard</string>
-    <string name="rate_yes">Avaluar l\'Space Mapper</string>
-    <string name="rate_prompt">Si t\'agrada utilitzar l\'Space Mapper, si us plau dedica un moment per avaluar-lo. Gràcies pel teu suport!</string>
+    <string name="rate_yes">Avaluar l\'Campus Mobility</string>
+    <string name="rate_prompt">Si t\'agrada utilitzar l\'Campus Mobility, si us plau dedica un moment per avaluar-lo. Gràcies pel teu suport!</string>
     <string name="menu_rate">Avaluar l\'aplicació</string>
     <string name="menu_map_save">Guardar el Mapa</string>
     <string name="menu_map_share">Compartir el Mapa</string>
@@ -122,10 +124,10 @@
     <string name="data_SD_error">Error al guardar l\’arxiu a la tarja SD.</string>
     <string name="data_SD_unavailable">Tarja SD No Disponible – l\’arxiu no es pot guardar.</string>
     <string name="data_saved">Les dades s\’han guardat com </string>
-    <string name="withdraw_error">Tota la informació de l\’Space Mapper ha estat esborrada del teu telèfon però s\’ha produït un error al tractar de posar-se en contacte amb el servidor de l\’Space Mapper. Si us plau, comprova la teva connexió a Internet i torna-ho a intentar.</string>
+    <string name="withdraw_error">Tota la informació de l\’Campus Mobility ha estat esborrada del teu telèfon però s\’ha produït un error al tractar de posar-se en contacte amb el servidor de l\’Campus Mobility. Si us plau, comprova la teva connexió a Internet i torna-ho a intentar.</string>
     <string name="cancel">Anul.lar</string>
     <string name="withdraw_warning_yes">Si, vull eliminar les dades ara</string>
-    <string name="withdraw_warning">ATENCIÓ: Tota la informació de l\’Space Mapper s\’ha guardat a la memòria interna del telèfon i totes les dades enviades al servidor de l\’Space Mapper s\’eliminaran. Aquest procés no es pot desfer. Estàs segur/a que vols continuar?</string>
+    <string name="withdraw_warning">ATENCIÓ: Tota la informació de l\’Campus Mobility s\’ha guardat a la memòria interna del telèfon i totes les dades enviades al servidor de l\’Campus Mobility s\’eliminaran. Aquest procés no es pot desfer. Estàs segur/a que vols continuar?</string>
     <string name="new_fix_blinker">Nova Localització!</string>
     <string name="time_label">Data i Hora: </string>
     <string name="lat_label">Latitud: </string>
@@ -142,12 +144,12 @@
     <string name="menu_toggle_view">Satèl.lit./Mapa</string>
     <string name="data_off_alert">Guardar les meves dades està apagat. Clica aquí per accedir al menú de Preferències i activar-lo. </string>
     <string name="noGPSAlert">"El teu GPS està desconnectat. Vols activar-lo?".</string>
-    <string name="noGPSnoNetAlert">El teu GPS i el teu receptor de localitzacions sense fils estan desactivats. Space Mapper no pot obtenir la teva localització sense com a mínim un d\’ells activat. Vols activar-los ?</string>
+    <string name="noGPSnoNetAlert">El teu GPS i el teu receptor de localitzacions sense fils estan desactivats. Campus Mobility no pot obtenir la teva localització sense com a mínim un d\’ells activat. Vols activar-los ?</string>
     <string name="noGPS">El teu GPS està desactivat. \nSi us plau, clica aquí per activar-lo.</string>
-    <string name="noGPSnoNet">Space Mapper no pot localitzar-te perquè el teu GPS i el teu receptor sense fils estan apagats. \nSi us plau, clica aquí per activar-los.</string>
+    <string name="noGPSnoNet">Campus Mobility no pot localitzar-te perquè el teu GPS i el teu receptor sense fils estan apagats. \nSi us plau, clica aquí per activar-los.</string>
     <string name="consent_date_prompt">Apretant el botó d\’Acceptar, has acceptat a l\’hora i la data indicades aquí. Pots canviar d\’opinió respecte la teva participació en el projecte d\’investigació en qualsevol moment utilitzant el menú d\’Activity-Space Project.</string>
-    <string name="delete_mydata_query">Vols esborrar algunes dades que Space Mapper ha guardat al teu telèfon?</string>
-    <string name="more_data_later"> Space Mapper inclourà instruments d\’anàlisi addicionals en el futur proper</string>
+    <string name="delete_mydata_query">Vols esborrar algunes dades que Campus Mobility ha guardat al teu telèfon?</string>
+    <string name="more_data_later"> Campus Mobility inclourà instruments d\’anàlisi addicionals en el futur proper</string>
     <string name="help">Ajuda</string>
     <string name="user_guide">Guia de l\’usuari/a</string>
     <string name="faqs">FAQs</string>
@@ -158,20 +160,20 @@
     <string name="contact_heading">Contacte</string>
     <string name="thanks_for_interest">Gràcies pel teu interès!</string>
     <string name="ok">OK</string>
-    <string name="underage_message">Per tal de participar al projecte Space Mapper com a voluntari i per tant com a subjecte de recerca cal que siguis major de 18 anys. Pots visitar la nostra pàgina per conèixer-nos més o per posar-te en contacte amb nosaltres per resoldre qualsevol pregunta o fer-nos arribar qualsevol suggerència.</string>
-    <string name="project_website">www.princeton.edu/~jrpalmer/spacemapper</string>
-    <string name="project_email">activity.space.project@gmail.com</string>
+    <string name="underage_message">Per tal de participar al projecte Campus Mobility com a voluntari i per tant com a subjecte de recerca cal que siguis major de 18 anys. Pots visitar la nostra pàgina per conèixer-nos més o per posar-te en contacte amb nosaltres per resoldre qualsevol pregunta o fer-nos arribar qualsevol suggerència.</string>
+    <string name="project_website">TO_BE_ADDED</string>
+    <string name="project_email">TO_BE_ADDED</string>
     <string name="menu_locate_now">Localitza\’m ara</string>
     <string name="menu_upload_now">Carrega Ara</string>
     <string name="intro_button_over">Sóc major de 18 anys</string>
     <string name="intro_button_under">Tinc menys de 18 anys.</string>
-    <string name="intro_heading">Benvingut/da a Space Mapper</string>
+    <string name="intro_heading">Benvingut/da a Campus Mobility</string>
     <string name="intro_subheading">Introducció</string>
-    <string name="main_text_off">Space Mapper està desactivat. \nClica aquí per tornar a activar-lo.</string>
+    <string name="main_text_off">Campus Mobility està desactivat. \nClica aquí per tornar a activar-lo.</string>
     <string name="location_found">LOCALITZACIÓ TROBADA</string>
     <string name="checking_location">Localitzant-te</string>
     <string name="countdown_text">Compte enrere per la nova localització:</string>
-    <string name="main_text">Gràcies per participar! \n\nEn qualsevol moment pots sortir de l\’Space Mapper. No et preocupis, el programa es continuarà executant al teu telèfon. \n\nUtilitza el botó del menú per més opcions.</string>
+    <string name="main_text">Gràcies per participar! \n\nEn qualsevol moment pots sortir de l\’Campus Mobility. No et preocupis, el programa es continuarà executant al teu telèfon. \n\nUtilitza el botó del menú per més opcions.</string>
     <string name="heading_mydata_spinner">Període</string>
     <string name="text_mydata_spinner">Per quants dies?</string>
     <string name="heading_mydata_button">Guardar dades</string>
@@ -179,9 +181,9 @@
     <string name="user_id">ID usuari:</string>
     <string name="withdraw_lock_heading">Vull deixar de participar</string>
     <string name="withdraw_lock_subheading"></string>
-    <string name="withdraw_lock_text">Has deixat de participar en l\’estudi i has eliminat totes les dades de l\’Space Mapper del teu telèfon i del servidor. Per la teva informació, aquest codi és l\’ID d\’usuari únic que el programa t\’ha assignat durant la teva participació. Si vols tornar a participar a l\’estudi en el futur, necessitaràs reinstal.lar l\’aplicació al teu telèfon i el programa t\’assignarà automàticament un nou ID d\’usuari. </string>
+    <string name="withdraw_lock_text">Has deixat de participar en l\’estudi i has eliminat totes les dades de l\’Campus Mobility del teu telèfon i del servidor. Per la teva informació, aquest codi és l\’ID d\’usuari únic que el programa t\’ha assignat durant la teva participació. Si vols tornar a participar a l\’estudi en el futur, necessitaràs reinstal.lar l\’aplicació al teu telèfon i el programa t\’assignarà automàticament un nou ID d\’usuari. </string>
     <string name="withdraw_delete_button">Vull deixar de participar i eliminar totes les dades</string>
-    <string name="withdraw_delete_text">Clica aquí per deixar de participar a l\’estudi i eliminar permanentment totes les dades de l\’Space Mapper del teu telèfon i del servidor del projecte d\’investigació. Necessitaràs una connexió d\’internet per tal de completar aquest procés.</string>
+    <string name="withdraw_delete_text">Clica aquí per deixar de participar a l\’estudi i eliminar permanentment totes les dades de l\’Campus Mobility del teu telèfon i del servidor del projecte d\’investigació. Necessitaràs una connexió d\’internet per tal de completar aquest procés.</string>
     <string name="withdraw_heading">Vull deixar de participar</string>
     <string name="withdraw_subheading"></string>
     <string name="save_data_button">Guarda les dades</string>
@@ -217,7 +219,7 @@
     <string name="menu_settings">Preferències</string>
     <string name="menu_data">Les meves dades</string>
     <string name="menu_help">Ajuda</string>
-    <string name="SplashHeading">Space Mapper</string>
+    <string name="SplashHeading">Campus Mobility</string>
     <string name="SexPrompt">Sexe:</string>
     <string name="born_res_prompt">Vas néixer al mateix país al qual resideixes actualment?</string>
     <string name="age_prompt">Edat:</string>
@@ -230,10 +232,10 @@
     <string name="nhousehold_prompt_short">Membres de la llar, incloent-t´hi tu:</string>
     <string name="emp_prompt">Situació laboral:</string>
     <string name="save_reg_label">Envia respostes</string>
-    <string name="service_is_on">Space Mapper està activat</string>
-    <string name="service_is_off">Space Mapper està desactivat</string>
+    <string name="service_is_on">Campus Mobility està activat</string>
+    <string name="service_is_off">Campus Mobility està desactivat</string>
     <string name="text_interval_spinner">Mesura la localització cada: </string>
-    <string name="banner_image_content_description">Icona Space Mapper</string>
+    <string name="banner_image_content_description">Icona Campus Mobility</string>
     <string name="consent_heading">Formulari de Consentiment</string>
     <string name="consent_instructions">Si us plau llegeix el següent formulari de consentiment. Pots acceptar electrònicament clicant el botó d\’acceptar de la pantalla. Si tens qualsevol pregunta, envia-les a activity.space.project@gmail.com.</string>
     <string name="consent_signature_button">Acceptar</string>
@@ -243,92 +245,20 @@
     <string name="consent_decline_button">No accepto</string>
     <string name="intro_text">
 <![CDATA[
-<p>Gràcies per install.lar l\’app ! Space Mapper és part d\’un estudi acadèmic sobre el moviment de les persones i els espais als quals desarrollen les seves activitats diàries. Si participes en aquest estudi com a voluntari/ària, Space Mapper guardarà al teu telèfon les teves localitzaciones a intervals de temps predeterminats i els enviarà a investigadors de la Universitat de Princeton. Abans d\’iniciar la teva participació a l\’estudi i de començar a utilitzar l\’aplicació et preguem que contestis una breu enquesta inicial per l\’estudi demogràfic dels participants i que contestis una altra breu enquesta al finalitzar la teva participació.</p>
-<p>Tota la informació que ens proporcionis està encriptada i serà guardada de manera confidencial. Les úniques persones que hi tindran accés són els investigadors d\’Space Mapper, i només els resultats absolutament anònims es compartiran amb d\’altres investigadors. Pots deixar de participar en el projecte de recerca en qualsevol moment i sol.licitar l\’eliminació de les teves dades del servidor.</p>
-<p>Si participes en aquest estudi contribuiràs a la ciència i ajudaràs a millorar a conèixer el moviment humà i la segregació espacial de les persones. Podràs dibuixar a un mapa els teus moviments, analitzar-los i conèixer millor els espais que freqüentes.</p>
+<p>Gràcies per install.lar l\’app ! Campus Mobility és part d\’un estudi acadèmic sobre el moviment de les persones i els espais als quals desarrollen les seves activitats diàries. Si participes en aquest estudi com a voluntari/ària, Campus Mobility guardarà al teu telèfon les teves localitzaciones a intervals de temps predeterminats i els enviarà a investigadors de la Universitat Autonoma de Barcelona. </p>
+<p>Tota la informació que ens proporcionis està encriptada i serà guardada de manera confidencial. Les úniques persones que hi tindran accés són els investigadors d\’Campus Mobility, i només els resultats absolutament anònims es compartiran amb d\’altres investigadors.</p>
 <p>Per tal de participar en aquest projecte has de ser major de 18 anys.</p>
 <p>Si tens alguna pregunta, si us plau, visita la nostra pàgina web o envia\’ns un email a l\’adreça que tens aquí sota</p>
 <p>Si vols continuar, si us plau llegeix i accepta electrònicament el formulari de consentiment de la pàgina següent. Moltes gràcies pel teu interès i participació!</p>
-<p>Copyright &#169; 2012, 2013 John R.B. Palmer</p>
- 
-<p> This program is free software: you can redistribute it and/or modify
-    it under the terms of the GNU General Public License as published by
-    the Free Software Foundation, either version 3 of the License, or
-    (at your option) any later version.</p>
-
-<p>This program is distributed in the hope that it will be useful,
-    but WITHOUT ANY WARRANTY; without even the implied warranty of
-    MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
-    GNU General Public License for more details.</p>
-
-<p>You should have received a copy of the GNU General Public License
-    along with this program.  If not, see http://www.gnu.org/licenses.</p>
-
-<p>This program incorporates code from the Human Mobility Project, written by Chang Y. Chung, 
-Kathleen Li, and Necati E. Ozgencil, which is subject to the following terms:</p>
-
-<blockquote><p>Copyright &#169; 2010, 2011 Human Mobility Project</p>
-
-<p>Permission is hereby granted, free of charge, to any person obtaining
-a copy of this software and associated documentation files (the
-"Software"), to deal in the Software without restriction, including
-without limitation the rights to use, copy, modify, merge, publish,
-distribute, sublicense, and/or sell copies of the Software, and to
-permit persons to whom the Software is furnished to do so, subject to
-the following conditions:</p>
-
-<p>The above copyright notice and this permission notice shall be included
-in all copies or substantial portions of the Software.</p>
-
-<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND,
-EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF
-MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT.
-IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
-CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
-TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
-SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p></blockquote>
-
-<p>This program also incorporates code from Funf, which is subject to the following terms:</p>
-
-
-<blockquote> <p> 		Funf: Open Sensing Framework<br/>
- 		Copyright &#169; 2010-2011 Nadav Aharony, Wei Pan, Alex Pentland.<br/> 
-  		Acknowledgments: Alan Gardner<br/>
-  		Contact: nadav@media.mit.edu</p>
-  
-<p>  		Funf is free software: you can redistribute it and/or modify
-  		it under the terms of the GNU Lesser General Public License as 
-  		published by the Free Software Foundation, either version 3 of 
-  		the License, or (at your option) any later version. </p>
-  
-<p> 		Funf is distributed in the hope that it will be useful, but 
-  		WITHOUT ANY WARRANTY; without even the implied warranty of 
-  		MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
-  		See the GNU Lesser General Public License for more details.</p></blockquote>
-
-<p>This program also incorporates code from range-seek-bar, written by Stephan Tittel, Peter Sinnott, and Thomas Barrasso, which is subject to the following terms:</p>
-
-
-<blockquote><p>Copyright 2013 Stephan Tittel, Peter Sinnott, and Thomas Barrasso</p>
- <p>Licensed under the Apache License, Version 2.0 (the "License");
- you may not use this file except in compliance with the License.
- You may obtain a copy of the License at</p>
-<p>       http://www.apache.org/licenses/LICENSE-2.0</p>
-<p>   Unless required by applicable law or agreed to in writing, software
-    distributed under the License is distributed on an "AS IS" BASIS,
-    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-    See the License for the specific language governing permissions and
-    limitations under the License.</p></blockquote>
-
 ]]>
     </string>
     <string name="about_html">
 <![CDATA[
-<p>Space Mapper versió 2.09</p>
+<p>Campus Mobility versió 1.00</p>
 
-<p>Space Mapper forma part d\’un projecte acadèmic sobre l\’espai i els llocs als quals es troben les persones al 
-desenvolupar les seves activitats durant la seva vida diària. Escrit per John R.B. Palmer, està parcialment basat en el codi del Human Mobility Project, escrit per Chang Y. Chung, Kathleen Li, i Necati E. Ozgencil, en el de Funf, escrit per Nadav Aharony, Wei Pan, i Alex Pentland, i en el de range-seek-bar, escrit per Stephan Tittel, Peter Sinnott, i Thomas Barrasso. El codi de l\’Space Mapper està disponible a la pàgina web que teniu a continuació.</p>
-<p>Copyright &#169; 2012, 2013 John R.B. Palmer</p>
+<p>Campus Mobility forma part d\’un projecte acadèmic sobre l\’espai i els llocs als quals es troben les persones al
+desenvolupar les seves activitats durant la seva vida diària. Escrit per John R.B. Palmer, està parcialment basat en el codi del Human Mobility Project, escrit per Chang Y. Chung, Kathleen Li, i Necati E. Ozgencil. El codi de l\’Campus Mobility està disponible a http://github.com/JohnPalmer/CampusMapper.</p>
+<p>Copyright &#169; 2015 John R.B. Palmer</p>
  
 <p> This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
@@ -365,42 +295,6 @@ IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY
 CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT,
 TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE
 SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p></blockquote>
-
-<p>The code incorporated from Funf is subject to the following terms:</p>
-
-
-<blockquote> <p> 		Funf: Open Sensing Framework<br/>
- 		Copyright &#169; 2010-2011 Nadav Aharony, Wei Pan, Alex Pentland.<br/> 
-  		Acknowledgments: Alan Gardner<br/>
-  		Contact: nadav@media.mit.edu</p>
-  
-<p>  		Funf is free software: you can redistribute it and/or modify
-  		it under the terms of the GNU Lesser General Public License as 
-  		published by the Free Software Foundation, either version 3 of 
-  		the License, or (at your option) any later version. </p>
-  
-<p> 		Funf is distributed in the hope that it will be useful, but 
-  		WITHOUT ANY WARRANTY; without even the implied warranty of 
-  		MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  
-  		See the GNU Lesser General Public License for more details.</p></blockquote>
-
-<p>The code incorporated from range-seek-bar is subject to the following terms:</p>
-
-<blockquote> <p>
-  Copyright 2013 Stephan Tittel, Peter Sinnott, and Thomas Barrasso</p>
-
-   <p>Licensed under the Apache License, Version 2.0 (the "License");
-   you may not use this file except in compliance with the License.
-   You may obtain a copy of the License at</p>
-
-<p>       http://www.apache.org/licenses/LICENSE-2.0</p>
-
-<p>   Unless required by applicable law or agreed to in writing, software
-   distributed under the License is distributed on an "AS IS" BASIS,
-   WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-   See the License for the specific language governing permissions and
-   limitations under the License.</p></blockquote>  
-
     ]]>
     </string>
     <string name="faqs_html">
@@ -458,42 +352,13 @@ John Palmer, estudiant de doctorat de la Woodrow Wilson School i l\’Office of 
     </string>
     <string name="consent_text">
 <![CDATA[
-<p><b>FORMULARI ESTÀNDARD DE CONSENTIMENT PRESTAT PER UN ADULT</b></p>
-<p>PRINCETON UNIVERSITY INSTITUTIONAL REVIEW BOARD</p>
-<p>TÍTOL DEL PROJECTE D\’INVESTIGACIÓ: Activity-Space Project</p>
-<p>INVESTIGADOR: John Palmer</p>
-<p>La Universitat de Princeton requereix el present consentiment informat a qualsevol participant en un projecte d\’investigació liderat per investigadors de la Universitat. Aquest projecte ha estat aprovat per l\’ Institutional Review Board for Human Subjects de la Universitat de Princeton.</p>
-<p>Se m\’ha:</p>
-<p>A. Proporcionat una explicació detallada sobre els procediments que se seguiran durant el projecte, incloent aquells que són experimentals.</p>
-<p><b><i>Entenc que per participar en aquest projecte haig de ser major de 18 anys. Entenc que una aplicació continuarà executant-se al meu telèfon i que aquesta aplicació enviarà informació sobre les meves localitzacions geogràfiques i el meu moviment, sobre la configuració de l\’idioma del meu mòbil i l\’estat de la bateria del meu telèfon així com sobre les meves respostes a les preguntes de les enquestes dels investigadors de la Universitat de Princeton.</p>
-<p>Entenc que la utilitació del telèfon mòbil mentre condueixi pot augmentar el risc d\’accidents, morts o danys i que està prohibit en molts estats. Entenc que no hauria d\’utilitzar l\’aplicació o el meu telèfon mòbil en cap cas mentre condueixi, i estic d\’acord en no fer-ho. Entenc també que la seguretat és la prioritat més important en tots els aspectes d\’aquest projecte i estic d\’acord en utilitzar el meu telèfon mòbil en tot moment d\’una manera segura.</p>
-
-
-<p>Entenc que l\’objectiu d\’aquest projecte d\’investigació és estudiar el moviment humà i la segregació espacial; i que no rebré cap tipus de compensació econòmica per la meva participació; podré revisar i utilitzar la meva informació, incloent les estimacions de les localitzacions i els mapes dels meus patrons de moviment. Entenc que es prendran les mesures raonables per tal de protegir el meu anonimat en tota la informació que envïi pel projecte d\’investigació i que aquesta no es compartirà amb persones alienes al projecte. Aquesta informació s\’utilitzarà només per finalitats científiques. Finalment, entenc que l\’equip del projecte d\’investigació eliminarà tota la informació que hagi transmès si així ho solicités a través del botó "Deixar de participar en el projecte" del menú d\’ajuda de l\’aplicació.</b></i></p>
-<p>B. Contestat les preguntes que tenia relatives a l\’estudi.</p>
-<p>Entenc que:</p>
-<p>A. La meva participació és voluntària, i puc revocar el meu consentiment i deixar de participar en el projecte d\’investigació en qualsevol moment. La meva negativa a participar en el projecte d\’investigació no donarà lloc a cap tipus de penalització.</p>
-<p>B. La prestació del meu consentiment no implica la renúncia a qualsevol dret o eximeix a la Universitat de Princeton, els seus agents o a l\’investigador responsable d\’aquest projecte, de qualsevol responsabilitat per culpa.</p>
-<p>Presto el meu consentiment a ser un participant d\’aquest projecte d\’investigació.</p>
+<p><b>FORMULARI DE CONSENTIMENT</b></p>
+<p>TO BE ADDED</p>
         ]]>
     </string>
     <string name="contact_info">
 <![CDATA[
-<p><b>TÍTOL DEL PROJECTE D\’INVESTIGACIÓ: Activity-Space Project</b></p>
-<p><b>Per qualsevol pregunta relativa a aquest projecte d\’investigació contacta amb:</b></p>
-<p>INVESTIGADOR PRINCIPAL:</p>
-John Palmer<br/>
-Office of Population Research<br/>
-Wallace Hall<br/>
-Princeton University<br/>
-Princeton, NJ 08644
-
-<p><b>Per qualsevol pregunta sobre els seus drets com a participant d\’aquest projecte d\’investigació contacta:</b></p>
-Princeton University Office of Research Integrity and Assurance<br/> 
-Compliance Administrator<br/>
-Email: irb@princeton.edu<br/> 
-Phone: (609) 258-3077 
-
+<p><b>TO BE ADDED</b></p>
      ]]>
     </string>
 

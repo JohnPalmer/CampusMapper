@@ -19,7 +19,7 @@
  * with Space Mapper.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package net.movelab.campus_mapper;
+package net.movelab.campus_mobility;
 
 import net.movelab.cmlibrary.SpaceMapperContentProvider;
 
