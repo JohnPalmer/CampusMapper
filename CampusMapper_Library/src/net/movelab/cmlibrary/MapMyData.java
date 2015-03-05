@@ -1,11 +1,11 @@
 /*
- * Campus Mapper, also called Campus Mobility, is a mobile phone app for studying activity spaces on campuses. It is based in part on code from the Human Mobility Project.
+ * Mobility Mapper is a mobile phone app for studying activity spaces on campuses. It is based in part on code from the Human Mobility Project.
  *
  * Copyright (c) 2015 John R.B. Palmer.
  *
- * Campus Mapper is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+ * Mobility Mapper is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
  *
- * Campus Mapper is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+ * Mobility Mapper is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
  *
  * You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses.
  *
@@ -181,11 +181,6 @@ public class MapMyData extends FragmentActivity {
 	public void onCreate(Bundle icicle) {
 		super.onCreate(icicle);
 
-		final int screenSize = getResources().getConfiguration().screenLayout
-				& Configuration.SCREENLAYOUT_SIZE_MASK;
-		if (screenSize != Configuration.SCREENLAYOUT_SIZE_LARGE
-				&& screenSize != Configuration.SCREENLAYOUT_SIZE_XLARGE)
-			requestWindowFeature(Window.FEATURE_NO_TITLE);
 
 		// TODO add all of the alerts from countdown activity regarding sensors
 		// off, sm off etc.
@@ -207,62 +202,6 @@ public class MapMyData extends FragmentActivity {
 		// Log.e("FixGet", "minDist=" + minDist);
 
 		setContentView(R.layout.map_layout);
-
-
-        // service button
-        mServiceButton = (ToggleButton) findViewById(R.id.service_button);
-        boolean isServiceOn = PropertyHolder.isServiceOn();
-        mServiceButton.setChecked(isServiceOn);
-        mServiceButton.setOnClickListener(new ToggleButton.OnClickListener() {
-            public void onClick(View view) {
-                if (view.getId() != R.id.service_button)
-                    return;
-                boolean on = ((ToggleButton) view).isChecked();
-                String schedule = on ? Util.MESSAGE_SCHEDULE
-                        : Util.MESSAGE_UNSCHEDULE;
-                // Log.e(TAG, schedule + on);
-
-                // now schedule or unschedule
-                Intent intent = new Intent(
-                        getString(R.string.internal_message_id) + schedule);
-                context.sendBroadcast(intent);
-                if (on) {
-                    final long ptNow = PropertyHolder.ptStart();
-
-                    ContentResolver ucr = getContentResolver();
-
-                    ucr.insert(
-                            Util.getUploadQueueUri(context),
-                            UploadContentValues.createUpload("ONF", "on,"
-                                    + Util.iso8601(System.currentTimeMillis())
-                                    + "," + ptNow));
-                } else {
-
-                    final long ptNow = PropertyHolder.ptStop();
-                    // stop uploader
-                    Intent stopUploaderIntent = new Intent(MapMyData.this,
-                            FileUploader.class);
-                    // Stop service if it is currently running
-                    stopService(stopUploaderIntent);
-
-
-                        ContentResolver ucr = getContentResolver();
-
-                        ucr.insert(Util.getUploadQueueUri(context),
-                                UploadContentValues.createUpload(
-                                        "ONF",
-                                        "off,"
-                                                + Util.iso8601(System
-                                                .currentTimeMillis())
-                                                + "," + ptNow));
-
-
-
-                }
-
-            }
-        });
-
 
         receiverNotificationArea = (LinearLayout) findViewById(R.id.mapReceiverNotificationArea);
 
@@ -298,85 +237,142 @@ public class MapMyData extends FragmentActivity {
 		isServiceOn = PropertyHolder.isServiceOn();
 		shareData = PropertyHolder.getShareData();
 
-		receiverNotificationArea.setVisibility(View.INVISIBLE);
+        // service button
+        mServiceButton = (ToggleButton) findViewById(R.id.service_button);
+        mServiceButton.setChecked(isServiceOn);
+        mServiceButton.setOnClickListener(new ToggleButton.OnClickListener() {
+            public void onClick(View view) {
+                if (view.getId() != R.id.service_button)
+                    return;
+                boolean on = ((ToggleButton) view).isChecked();
+                String schedule = on ? Util.MESSAGE_SCHEDULE
+                        : Util.MESSAGE_UNSCHEDULE;
+                // Log.e(TAG, schedule + on);
 
-		if (isServiceOn) {
-			final LocationManager manager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+                Context this_context = view.getContext();
+                // now schedule or unschedule
+                Intent intent = new Intent(
+                        getString(R.string.internal_message_id) + schedule);
+                if(this_context != null)
+                    this_context.sendBroadcast(intent);
+                if (on) {
+                    final long ptNow = PropertyHolder.ptStart();
 
-			if (!manager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
-				if (!manager
-						.isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
-					receiverNotificationArea.setVisibility(View.VISIBLE);
+                    ContentResolver ucr = getContentResolver();
 
-					mReceiversOffWarning.setText(getResources().getString(
-							R.string.noGPSnoNet));
-				} else {
-					receiverNotificationArea.setVisibility(View.VISIBLE);
+                    ucr.insert(
+                            Util.getUploadQueueUri(this_context),
+                            UploadContentValues.createUpload("ONF", "on,"
+                                    + Util.iso8601(System.currentTimeMillis())
+                                    + "," + ptNow));
+                } else {
 
-					mReceiversOffWarning.setText(getResources().getString(
-							R.string.noGPS));
-				}
-
-				mReceiversOffWarning
-						.setOnClickListener(new View.OnClickListener() {
-
-							@Override
-							public void onClick(View v) {
-								startActivity(new Intent(
-										android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS));
-
-							}
-						});
-
-			}
-
-		} else {
-
-			receiverNotificationArea.setVisibility(View.VISIBLE);
-
-			mReceiversOffWarning.setText(getResources().getString(
-					R.string.main_text_off));
-
-			mReceiversOffWarning.setOnTouchListener(new View.OnTouchListener() {
-
-				@Override
-				public boolean onTouch(View v, MotionEvent e) {
-
-					if (e.getAction() == MotionEvent.ACTION_DOWN) {
-					receiverNotificationArea.setBackgroundColor(getResources()
-							.getColor(R.color.push_button_color));
-					}
-					if (e.getAction() == MotionEvent.ACTION_UP) {
-					receiverNotificationArea.setBackgroundColor(getResources()
-							.getColor(R.color.dark_grey));
-					}
-					
-					
-					return false;
-				}
-
-			});
-
-			mReceiversOffWarning.setOnClickListener(new View.OnClickListener() {
-
-				@Override
-				public void onClick(View v) {
+                    final long ptNow = PropertyHolder.ptStop();
+                    // stop uploader
+                    Intent stopUploaderIntent = new Intent(MapMyData.this,
+                            FileUploader.class);
+                    // Stop service if it is currently running
+                    stopService(stopUploaderIntent);
 
 
-					Intent intent = new Intent(
-							getString(R.string.internal_message_id)
-									+ Util.MESSAGE_SCHEDULE);
-					sendBroadcast(intent);
-					receiverNotificationArea.setVisibility(View.INVISIBLE);
+                    ContentResolver ucr = getContentResolver();
 
-				}
-			});
+                    ucr.insert(Util.getUploadQueueUri(this_context),
+                            UploadContentValues.createUpload(
+                                    "ONF",
+                                    "off,"
+                                            + Util.iso8601(System
+                                            .currentTimeMillis())
+                                            + "," + ptNow));
 
-		}
+
+
+                }
+
+            }
+        });
+
+
+
+        receiverNotificationArea.setVisibility(View.VISIBLE);
+
 
 		super.onResume();
 
 	}
+
+    private void setNotificationArea(){
+        if (isServiceOn) {
+            final LocationManager manager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
+
+            if (!manager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
+                if (!manager
+                        .isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
+
+                    mReceiversOffWarning.setText(getResources().getString(
+                            R.string.noGPSnoNet));
+                } else {
+
+                    mReceiversOffWarning.setText(getResources().getString(
+                            R.string.noGPS));
+                }
+
+                mReceiversOffWarning
+                        .setOnClickListener(new View.OnClickListener() {
+
+                            @Override
+                            public void onClick(View v) {
+                                startActivity(new Intent(
+                                        android.provider.Settings.ACTION_LOCATION_SOURCE_SETTINGS));
+
+                            }
+                        });
+
+            }
+
+        } else {
+
+
+            mReceiversOffWarning.setText(getResources().getString(
+                    R.string.main_text_off));
+
+            mReceiversOffWarning.setOnTouchListener(new View.OnTouchListener() {
+
+                @Override
+                public boolean onTouch(View v, MotionEvent e) {
+
+                    if (e.getAction() == MotionEvent.ACTION_DOWN) {
+                        receiverNotificationArea.setBackgroundColor(getResources()
+                                .getColor(R.color.push_button_color));
+                    }
+                    if (e.getAction() == MotionEvent.ACTION_UP) {
+                        receiverNotificationArea.setBackgroundColor(getResources()
+                                .getColor(R.color.dark_grey));
+                    }
+
+
+                    return false;
+                }
+
+            });
+
+            mReceiversOffWarning.setOnClickListener(new View.OnClickListener() {
+
+                @Override
+                public void onClick(View v) {
+
+
+                    Intent intent = new Intent(
+                            getString(R.string.internal_message_id)
+                                    + Util.MESSAGE_SCHEDULE);
+                    sendBroadcast(intent);
+
+                }
+            });
+
+        }
+
+    }
 
 	@Override
 	protected void onPause() {

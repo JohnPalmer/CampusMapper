@@ -27,7 +27,7 @@
 
     <string name="package_name" translatable="false">net.movelab.campus_mapper</string>
     <string name="internal_message_id" translatable="false">net.movelab.campus_mapper</string>
-    <string name="app_name" translatable="false">Campus Mobility</string>
+    <string name="app_name" translatable="false">Mobility Mapper</string>
     <string name="content_provider_authority_uploadqueue" translatable="false">net.movelab.campus_mapper.uploadqueueprovider</string>
     <string name="content_provider_authority_fixes" translatable="false">net.movelab.campus_mapper.spacemapperfixprovider</string>
 
