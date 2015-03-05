@@ -39,11 +39,15 @@ import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.CheckBox;
+import android.widget.EditText;
 import android.widget.LinearLayout;
 import android.widget.RadioGroup;
 import android.widget.RadioGroup.OnCheckedChangeListener;
 import android.widget.Spinner;
 import android.widget.TextView;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 /**
  * Allows user to provide answers to survey before starting using the app. All
@@ -55,242 +59,26 @@ import android.widget.TextView;
 public class Registration extends Activity {
 	// private static final String TAG = "Registration";
 
-	String userId = UUID.randomUUID().toString();
+    public static String JSON_KEY_PHONE_LANG = "phone_language";
+    public static String JSON_KEY_VERSION = "version";
+    public static String JSON_KEY_SDK = "sdk";
+    public static String JSON_KEY_USER_CODE = "user_code";
 
-	private Spinner mAgeSpinner;
-	private RadioGroup mSexRadioGroup;
-	private LinearLayout mRaceView;
-	private CheckBox mWhiteBox;
-	private CheckBox mBlackBox;
-	private CheckBox mLatinoBox;
-	private CheckBox mNativeAmericanBox;
-	private CheckBox mAsianBox;
-	private CheckBox mOtherBox;
-	private RadioGroup mMarriedRadioGroup;
-	private Spinner mKidsSpinner;
-	private RadioGroup mBornResRadioGroup;
-	private TextView mPobPrompt;
-	private Spinner mPobSpinner;
-	private Spinner mPorSpinner;
-	private TextView mEntryYearPrompt;
-	private Spinner mEntryyearSpinner;
-	private RadioGroup mCitRadioGroup;
-	private Spinner mLangSpinner;
-	private Spinner mEmpSpinner;
+    String userId = UUID.randomUUID().toString();
 
-	private String countrySelected = "";
-	private String DR1 = "";
-	private String DR2 = "United States";
-	private String DR3 = "Estats Units (EUA)";
-	private String DR4 = "Estados Unidos de Am�rica";
-
-	private static final int MIN_AGE = 18;
-	private static final int MAX_AGE = 150;
-
-	private static final int MIN_KIDS = 0;
-	private static final int MAX_KIDS = 30;
-
-	private static final int MIN_YEAR = 1900;
-
-	// The maximum year used in the entry year spinner will be the current year,
-	// set on create.
-	private int MAX_YEAR;
-
-	private static final int MIN_HH = 1;
-	private static final int MAX_HH = 50;
+	private EditText survey_code_entry;
 
 	/** Called when the activity is first created. */
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.registration);
-
-		MAX_YEAR = Calendar.getInstance().get(Calendar.YEAR);
-
-		// Set up raceview, Pob and entryyear so that they can change
-		mRaceView = (LinearLayout) findViewById(R.id.raceView);
-		mPobPrompt = (TextView) findViewById(R.id.pob_prompt);
-		mEntryYearPrompt = (TextView) findViewById(R.id.entryyearPrompt);
-		mEntryyearSpinner = (Spinner) findViewById(R.id.entryyearSpinner);
-		ArrayAdapter<CharSequence> entryAdapter = new ArrayAdapter<CharSequence>(
-				this, android.R.layout.simple_spinner_item);
-		entryAdapter
-				.setDropDownViewResource(R.layout.multiline_spinner_dropdown_item);
-		entryAdapter.add("  ");
-		for (int i = MAX_YEAR; i >= MIN_YEAR; i--) {
-			entryAdapter.add(Integer.toString(i));
-		}
-		mEntryyearSpinner.setAdapter(entryAdapter);
-
-		// RadioGroups
-
-		mSexRadioGroup = (RadioGroup) findViewById(R.id.sexRadioGroup);
-		mMarriedRadioGroup = (RadioGroup) findViewById(R.id.marriedRadioGroup);
-		mCitRadioGroup = (RadioGroup) findViewById(R.id.citRadioGroup);
-		mBornResRadioGroup = (RadioGroup) findViewById(R.id.bornResRadioGroup);
-
-		mBornResRadioGroup
-				.setOnCheckedChangeListener(new OnCheckedChangeListener() {
-					@Override
-					public void onCheckedChanged(RadioGroup group, int checkedId) {
-						if (checkedId == R.id.bornResYes) {
-							mPobSpinner.setEnabled(false);
-							mPobSpinner.setVisibility(View.INVISIBLE);
-							mPobPrompt.setTextColor(Color.GRAY);
-							mEntryyearSpinner.setEnabled(false);
-							mEntryyearSpinner.setVisibility(View.INVISIBLE);
-							mEntryYearPrompt.setTextColor(Color.GRAY);
-						} else {
-							mPobSpinner.setEnabled(true);
-							mPobSpinner.setVisibility(View.VISIBLE);
-							mPobPrompt.setTextColor(Color.WHITE);
-							mEntryyearSpinner.setEnabled(true);
-							mEntryyearSpinner.setVisibility(View.VISIBLE);
-							mEntryYearPrompt.setTextColor(Color.WHITE);
-						}
-					}
-				});
-
-		// Spinners
-
-		mAgeSpinner = (Spinner) findViewById(R.id.ageSpinner);
-		ArrayAdapter<CharSequence> ageAdapter = new ArrayAdapter<CharSequence>(
-				this, android.R.layout.simple_spinner_item);
-		ageAdapter
-				.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		ageAdapter.add("  ");
-		for (int i = MIN_AGE; i <= MAX_AGE; i++) {
-			ageAdapter.add(Integer.toString(i));
-		}
-		mAgeSpinner.setAdapter(ageAdapter);
-
-		mKidsSpinner = (Spinner) findViewById(R.id.kidsSpinner);
-		ArrayAdapter<CharSequence> kidsAdapter = new ArrayAdapter<CharSequence>(
-				this, android.R.layout.simple_spinner_item);
-		kidsAdapter
-				.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		kidsAdapter.add("  ");
-		for (int i = MIN_KIDS; i <= MAX_KIDS; i++) {
-			kidsAdapter.add(Integer.toString(i));
-		}
-		mKidsSpinner.setAdapter(kidsAdapter);
-
-		mPobSpinner = (Spinner) findViewById(R.id.pobSpinner);
-		ArrayAdapter<CharSequence> pobAdapter = ArrayAdapter
-				.createFromResource(this, R.array.countries_array,
-						android.R.layout.simple_spinner_item);
-		pobAdapter
-				.setDropDownViewResource(R.layout.multiline_spinner_dropdown_item);
-		mPobSpinner.setAdapter(pobAdapter);
-
-		final String[] countries = getResources().getStringArray(
-				R.array.countries_array);
-
-		mPorSpinner = (Spinner) findViewById(R.id.porSpinner);
-		ArrayAdapter<CharSequence> porAdapter = ArrayAdapter
-				.createFromResource(this, R.array.countries_array,
-						android.R.layout.simple_spinner_item);
-		porAdapter
-				.setDropDownViewResource(R.layout.multiline_spinner_dropdown_item);
-		mPorSpinner.setAdapter(porAdapter);
-
-		/*
-		 * mPorSpinner .setOnItemSelectedListener(new
-		 * Spinner.OnItemSelectedListener() { public void
-		 * onItemSelected(AdapterView<?> parent, View v, int pos, long id) { int
-		 * parentId = parent.getId(); if (parentId != R.id.porSpinner) return;
-		 * if (pos > countries.length) return; String countrySelected =
-		 * String.valueOf(mPorSpinner .getSelectedItem()); if (countrySelected
-		 * == "United States" || countrySelected == " " || countrySelected ==
-		 * "Estats Units (EUA)" || countrySelected ==
-		 * "Estados Unidos de Am�rica") { for (int i = 0; i <
-		 * mRaceView.getChildCount(); i++) { View view =
-		 * mRaceView.getChildAt(i); view.setVisibility(View.VISIBLE); }
-		 * mRaceView.setVisibility(View.VISIBLE);
-		 * 
-		 * } else { for (int i = 0; i < mRaceView.getChildCount(); i++) { View
-		 * view = mRaceView.getChildAt(i); view.setVisibility(View.GONE); }
-		 * 
-		 * mRaceView.setVisibility(View.GONE); }
-		 * 
-		 * }
-		 * 
-		 * public void onNothingSelected(AdapterView<?> parent) { // do nothing
-		 * } });
-		 */
-		mLangSpinner = (Spinner) findViewById(R.id.langSpinner);
-		ArrayAdapter<CharSequence> langAdapter = ArrayAdapter
-				.createFromResource(this, R.array.langs_array,
-						android.R.layout.simple_spinner_item);
-		langAdapter
-				.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		mLangSpinner.setAdapter(langAdapter);
-
-		
-
-		mEmpSpinner = (Spinner) findViewById(R.id.empSpinner);
-		ArrayAdapter<CharSequence> empAdapter = ArrayAdapter
-				.createFromResource(this, R.array.emp_array,
-						android.R.layout.simple_spinner_item);
-		empAdapter
-				.setDropDownViewResource(R.layout.multiline_spinner_dropdown_item);
-		mEmpSpinner.setAdapter(empAdapter);
-
-
-		
-		// Checkboxes
-
-		mWhiteBox = (CheckBox) findViewById(R.id.whiteBox);
-		mBlackBox = (CheckBox) findViewById(R.id.blackBox);
-		mLatinoBox = (CheckBox) findViewById(R.id.latinoBox);
-		mNativeAmericanBox = (CheckBox) findViewById(R.id.nativeamericanBox);
-		mAsianBox = (CheckBox) findViewById(R.id.asianBox);
-		mOtherBox = (CheckBox) findViewById(R.id.otherBox);
-
-		mPorSpinner
-				.setOnItemSelectedListener(new Spinner.OnItemSelectedListener() {
-					public void onItemSelected(AdapterView<?> parent, View v,
-							int pos, long id) {
-						int parentId = parent.getId();
-						if (parentId != R.id.porSpinner)
-							return;
-						if (pos > countries.length)
-							return;
-
-						countrySelected = String.valueOf(mPorSpinner
-								.getSelectedItem());
-
-						// Log.i(TAG, countrySelected);
-
-						if (countrySelected.equals(DR1)
-								|| countrySelected.equals(DR2)
-								|| countrySelected.equals(DR3)
-								|| countrySelected.equals(DR4)) {
-
-							for (int i = 0; i < mRaceView.getChildCount(); i++) {
-								View view = mRaceView.getChildAt(i);
-								view.setVisibility(View.VISIBLE);
-							}
-							mRaceView.setVisibility(View.VISIBLE);
-
-						} else {
-							for (int i = 0; i < mRaceView.getChildCount(); i++) {
-								View view = mRaceView.getChildAt(i);
-								view.setVisibility(View.GONE);
-							}
-
-							mRaceView.setVisibility(View.GONE);
-						}
-					}
-
-					public void onNothingSelected(AdapterView<?> parent) {
-						// do nothing
-					}
-				});
+		setContentView(R.layout.registration_new);
 
 		Context context = getApplicationContext();
 		PropertyHolder.init(context);
+
+        survey_code_entry = (EditText) findViewById(R.id.surveyCodeEntry);
 
 		final Button saveRegistrationButton = (Button) findViewById(R.id.save_reg_button);
 		saveRegistrationButton.setOnClickListener(new View.OnClickListener() {
@@ -305,9 +93,6 @@ public class Registration extends Activity {
 				PropertyHolder.setWithdrawn(false);
 				PropertyHolder.setStoreMyData(true);
 				
-				// 19 December 2013: end research change
-//				PropertyHolder.setShareData(true);
-				PropertyHolder.setShareData(false);
 
 				Intent schedulingIntent = new Intent(
 						getResources().getString(R.string.internal_message_id)
@@ -326,74 +111,29 @@ public class Registration extends Activity {
 
 				String thisSDK = Integer.toString(Build.VERSION.SDK_INT);
 
-				String sex = "x";
-				String married = "x";
-				String cit = "x";
-				String bornRes = "x";
-				String white = "x";
-				String black = "x";
-				String latino = "x";
-				String nativeamerican = "x";
-				String asian = "x";
-				String other = "x";
 
-				int sexId = mSexRadioGroup.getCheckedRadioButtonId();
-				if (sexId == R.id.sexMale)
-					sex = "m";
-				if (sexId == R.id.sexFemale)
-					sex = "f";
+				String user_code = "";
+                CharSequence survey_code_chars = survey_code_entry.getText();
+                if(survey_code_chars != null && survey_code_chars.length() > 0){
+                    user_code = survey_code_chars.toString();
+                }
 
-				int marriedId = mMarriedRadioGroup.getCheckedRadioButtonId();
-				if (marriedId == R.id.marriedYes)
-					married = "y";
-				if (marriedId == R.id.marriedNo)
-					married = "n";
+                PropertyHolder.setUserCode(user_code);
 
-				int citId = mCitRadioGroup.getCheckedRadioButtonId();
-				if (citId == R.id.citYes)
-					cit = "y";
-				if (citId == R.id.citNo)
-					cit = "n";
 
-				int bornResId = mBornResRadioGroup.getCheckedRadioButtonId();
-				if (bornResId == R.id.bornResYes)
-					bornRes = "y";
-				if (bornResId == R.id.bornResNo)
-					bornRes = "n";
+                JSONObject response_json = new JSONObject();
+                try{
+                response_json.put(JSON_KEY_PHONE_LANG, phoneLanguage);
+                    response_json.put(JSON_KEY_VERSION, version);
+                    response_json.put(JSON_KEY_SDK, thisSDK);
+                    response_json.put(JSON_KEY_USER_CODE, user_code);
 
-				String age = String.valueOf(mAgeSpinner.getSelectedItem());
-				String kids = String.valueOf(mKidsSpinner.getSelectedItem());
-				String pob = String.valueOf(mPobSpinner.getSelectedItem());
-				String por = String.valueOf(mPorSpinner.getSelectedItem());
-				String entryyear = String.valueOf(mEntryyearSpinner
-						.getSelectedItem());
-				String lang = String.valueOf(mLangSpinner.getSelectedItem());
-				String ed = "";
-				String inc = "";
-				String hh = "";
-				String emp = String.valueOf(mEmpSpinner
-						.getSelectedItemPosition());
 
-				if (mWhiteBox.isChecked())
-					white = "y";
-				if (mBlackBox.isChecked())
-					black = "y";
-				if (mLatinoBox.isChecked())
-					latino = "y";
-				if (mNativeAmericanBox.isChecked())
-					nativeamerican = "y";
-				if (mAsianBox.isChecked())
-					asian = "y";
-				if (mOtherBox.isChecked())
-					other = "y";
+                } catch(JSONException e){
 
-				String responses = age + "," + sex + "," + por + "," + white
-						+ "," + black + "," + latino + "," + nativeamerican
-						+ "," + asian + "," + other + "," + married + ","
-						+ kids + "," + bornRes + "," + pob + "," + entryyear
-						+ "," + cit + "," + lang + "," + ed + "," + inc + ","
-						+ hh + "," + emp + "," + phoneLanguage + "," + version
-						+ "," + thisSDK;
+                }
+
+				String responses = response_json.toString();
 
 				ContentResolver ucr = getContentResolver();
 
@@ -418,7 +158,6 @@ public class Registration extends Activity {
 				// start the intent
 				startActivity(intent2ASM);
 				finish();
-				return;
 			}
 		});
 

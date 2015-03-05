@@ -467,11 +467,7 @@ public class PropertyHolder {
 
 	public static boolean getShareData() {
 
-		// 19 December changes to end data collection:
-
-		// boolean share = sharedPreferences.getBoolean("SHARE_DATA",
-		// !getProVersion());
-		boolean share = sharedPreferences.getBoolean("SHARE_DATA", false);
+		boolean share = sharedPreferences.getBoolean("SHARE_DATA", true);
 
 		return share;
 	}
@@ -560,7 +556,33 @@ public class PropertyHolder {
 		editor.commit();
 	}
 
-	/**
+
+    /**
+     * Gets the user code stored in shared preferences. This user ID refers to the
+     * unique row ID for this user in the User table of the PMP mobility
+     * database. Returns a default value of -1 if the USER_ID flag has not been
+     * explicitly set previously.
+     *
+     * @return The logged in user's user ID if a user is logged in, -1 if no one
+     *         is logged in.
+     */
+    public static String getUserCode() {
+        return sharedPreferences.getString("USER_CODE", null);
+    }
+
+    /**
+     * Sets the USER_CODE in the shared preferences to the given value.
+     *
+     * @param _userCode
+     *            The value to which to set the USER_ID.
+     */
+    public static void setUserCode(String _userCode) {
+        editor.putString("USER_CODE", _userCode);
+        editor.commit();
+    }
+
+
+    /**
 	 * Gets the public key stored in shared preferences.
 	 * 
 	 * @return The current phone's public key if set, na otherwise.
@@ -688,5 +710,12 @@ public class PropertyHolder {
 	public static String getConsentTime() {
 		return sharedPreferences.getString("CONSENT_TIME", "");
 	}
+
+    public static String USER_KEY = "user_key";
+
+    public static String getUserKey() {
+        return sharedPreferences.getString(USER_KEY, UtilLocal.CAMPUS_MAPPER_ANONYMOUS_API_KEY);
+    }
+
 
 }

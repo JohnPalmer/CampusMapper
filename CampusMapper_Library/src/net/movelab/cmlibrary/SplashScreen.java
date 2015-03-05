@@ -63,11 +63,6 @@ public class SplashScreen extends Activity {
 			PropertyHolder.setProVersion(true);
 		}
 	
-	// 18 December 2013: end of data collection:
-	if(PropertyHolder.getShareData()){
-		PropertyHolder.setShareData(false);
-		buildEndResearchAnnouncement();		
-	} else{
 
 		if (Util.trafficCop(this))
 			finish();
@@ -88,16 +83,11 @@ public class SplashScreen extends Activity {
 			context.sendBroadcast(scheduler);
 		}
 
-		if (PropertyHolder.getUploadOldFiles()) {
-			Intent oldFileUploaderIntent = new Intent(SplashScreen.this,
-					OldFileUploader.class);
-			startService(oldFileUploaderIntent);
-		}
 
 		Intent intent = new Intent(SplashScreen.this, MapMyData.class);
 		startActivity(intent);
 		finish();
-	}
+
 	}
 	private void buildEndResearchAnnouncement() {
 		final AlertDialog.Builder builder = new AlertDialog.Builder(this);
@@ -138,11 +128,6 @@ public class SplashScreen extends Activity {
 									context.sendBroadcast(scheduler);
 								}
 
-								if (PropertyHolder.getUploadOldFiles()) {
-									Intent oldFileUploaderIntent = new Intent(SplashScreen.this,
-											OldFileUploader.class);
-									startService(oldFileUploaderIntent);
-								}
 
 								Intent intent = new Intent(SplashScreen.this, MapMyData.class);
 								startActivity(intent);

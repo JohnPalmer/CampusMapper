@@ -84,23 +84,13 @@ public class Intro extends Activity {
 			@Override
 			public void onClick(View v) {
 
-				if (PropertyHolder.getProVersion()) {
-
-					PropertyHolder.setShareData(false);
-
-					Intent i = new Intent(Intro.this, MapMyData.class);
-					startActivity(i);
-
-					finish();
-
-				} else {
 					Intent i = new Intent(Intro.this, UnderAgeMessage.class);
 					// start the intent
 					startActivity(i);
 					finish();
 				}
 
-			}
+
 		});
 
 	}

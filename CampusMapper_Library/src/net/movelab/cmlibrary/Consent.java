@@ -97,15 +97,6 @@ public class Consent extends Activity {
 			@Override
 			public void onClick(View v) {
 				
-				if (PropertyHolder.getProVersion()) {
-					
-					PropertyHolder.setShareData(false);
-					
-					Intent i = new Intent(Consent.this, MapMyData.class);
-					startActivity(i);
-
-
-				} 
 				finish();
 				return;
 			}
