@@ -19,14 +19,13 @@
  * with Space Mapper.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package net.movelab.campus_mobility;
+package net.movelab.mobility;
 
-import net.movelab.cmlibrary.UploadQueueContentProvider;
+import net.movelab.cmlibrary.SpaceMapperContentProvider;
 
+public class SpaceMapperResearchContentProvider extends SpaceMapperContentProvider {
 
-public class SpaceMapperResearchUploadQueueContentProvider extends UploadQueueContentProvider {
-
-	private static final String AUTHORITY = "net.movelab.campus_mapper.uploadqueueprovider";
+	private static final String AUTHORITY = "net.movelab.campus_mapper.spacemapperfixprovider";
 	
 	@Override
 	protected String getAuthority() {
@@ -34,4 +33,5 @@ public class SpaceMapperResearchUploadQueueContentProvider extends UploadQueueCo
 		return AUTHORITY;
 	}
 
+	
 }

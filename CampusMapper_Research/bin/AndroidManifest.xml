@@ -137,13 +137,13 @@
         <service android:name="net.movelab.cmlibrary.OldFileUploader" />
 
         <provider
-            android:name="net.movelab.campus_mobility.SpaceMapperResearchContentProvider"
+            android:name="net.movelab.mobility.SpaceMapperResearchContentProvider"
             android:authorities="net.movelab.campus_mapper.spacemapperfixprovider"
             android:enabled="true"
             android:exported="false" >
         </provider>
         <provider
-            android:name="net.movelab.campus_mobility.SpaceMapperResearchUploadQueueContentProvider"
+            android:name="net.movelab.mobility.SpaceMapperResearchUploadQueueContentProvider"
             android:authorities="net.movelab.campus_mapper.uploadqueueprovider"
             android:enabled="true"
             android:exported="false" >
