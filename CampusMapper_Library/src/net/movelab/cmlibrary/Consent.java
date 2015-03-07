@@ -25,7 +25,9 @@
 package net.movelab.cmlibrary;
 
 import java.util.Date;
+
 import net.movelab.cmlibrary.R;
+
 import android.app.Activity;
 import android.content.ContentResolver;
 import android.content.Context;
@@ -37,74 +39,85 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 /**
  * Displays the IRB consent form and allows users to consent or decline.
- * 
+ *
  * @author John R.B. Palmer
- * 
  */
 public class Consent extends Activity {
 
-	Context context;
-	
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
+    Context context;
 
-		setContentView(R.layout.consent);
-		context = getApplicationContext();
-		PropertyHolder.init(context);
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-		TextView consent = (TextView) findViewById(R.id.consenttext);
-		consent.setText(Html.fromHtml(getString(R.string.consent_text)));
-		consent.setTextColor(Color.WHITE);
-		consent.setTextSize(getResources()
-				.getDimension(R.dimen.textsize_normal));
+        setContentView(R.layout.consent);
+        context = getApplicationContext();
+        PropertyHolder.init(context);
 
-		final Button consentButton = (Button) findViewById(R.id.consent_button);
-		consentButton.setOnClickListener(new View.OnClickListener() {
+        TextView consent = (TextView) findViewById(R.id.consenttext);
+        consent.setText(Html.fromHtml(getString(R.string.consent_text)));
+        consent.setTextColor(Color.WHITE);
+        consent.setTextSize(getResources()
+                .getDimension(R.dimen.textsize_normal));
 
-			@Override
-			public void onClick(View v) {
+        final Button consentButton = (Button) findViewById(R.id.consent_button);
+        consentButton.setOnClickListener(new View.OnClickListener() {
 
-				Date now = new Date(System.currentTimeMillis());
-				String consentTime = Util.userDate(now);
-				PropertyHolder.setConsentTime(consentTime);
-				PropertyHolder.setConsent(true);
+            @Override
+            public void onClick(View v) {
 
-				if (PropertyHolder.isRegistered()) {
-					if (PropertyHolder.getUserId() != null) {
-						ContentResolver ucr = getContentResolver();
-						ucr.insert(Util.getUploadQueueUri(context), UploadContentValues
-								.createUpload("CON", consentTime));
+                Date now = new Date(System.currentTimeMillis());
+                String consentTime = Util.userDate(now);
+                PropertyHolder.setConsentTime(consentTime);
+                PropertyHolder.setConsent(true);
 
-					}
-					Intent i = new Intent(Consent.this, MapMyData.class);
-					startActivity(i);
-					finish();
-					return;
-				} else {
+                if (PropertyHolder.isRegistered()) {
+                    if (PropertyHolder.getUserId() != null) {
+                        ContentResolver ucr = getContentResolver();
 
-					Intent i = new Intent(Consent.this, Registration.class);
-					// start the intent
-					startActivity(i);
-					finish();
-					return;
-				}
-			}
-		});
+                        JSONObject json_data = new JSONObject();
+                        String json_data_string;
+                        try {
+                            json_data.put(DataCodeBook.CONSENT_KEY_CONSENT_TIME, consentTime);
+                            json_data_string = json_data.toString();
+                            ucr.insert(Util.getUploadQueueUri(context), UploadContentValues
+                                    .createUpload(DataCodeBook.CONSENT_PREFIX, json_data_string));
+                        } catch (JSONException e) {
+                            // todo
+                        }
 
-		final Button consentDeclineButton = (Button) findViewById(R.id.consent_decline_button);
-		consentDeclineButton.setOnClickListener(new View.OnClickListener() {
+                    }
+                    Intent i = new Intent(Consent.this, MapMyData.class);
+                    startActivity(i);
+                    finish();
+                    return;
+                } else {
 
-			@Override
-			public void onClick(View v) {
-				
-				finish();
-				return;
-			}
-		});
+                    Intent i = new Intent(Consent.this, Registration.class);
+                    // start the intent
+                    startActivity(i);
+                    finish();
+                    return;
+                }
+            }
+        });
 
-	}
+        final Button consentDeclineButton = (Button) findViewById(R.id.consent_decline_button);
+        consentDeclineButton.setOnClickListener(new View.OnClickListener() {
+
+            @Override
+            public void onClick(View v) {
+
+                finish();
+                return;
+            }
+        });
+
+    }
 
 }

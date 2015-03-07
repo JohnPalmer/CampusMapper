@@ -83,159 +83,159 @@ import com.google.android.maps.MapController;
 import com.google.android.maps.MapView;
 import com.google.android.maps.Overlay;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 /**
  * Allows user to view their own data in a map (from the database on their phone
  * -- not from the server).
- * 
+ *
  * @author John R.B. Palmer
- * 
- * 
  */
 public class MapMyData extends FragmentActivity {
-	String TAG = "MapMyData";
-	private ToggleButton mServiceButton;
+    String TAG = "MapMyData";
+    private ToggleButton mServiceButton;
 
-	boolean getIntro = false;
-	boolean isPro = false;
+    boolean getIntro = false;
+    boolean isPro = false;
 
-	boolean loadingData;
-	boolean updatingDatabase;
-	boolean savingCsv;
+    boolean loadingData;
+    boolean updatingDatabase;
+    boolean savingCsv;
 
 
+    GeoPoint point;
+    boolean satToggle;
+    String stringLat;
+    String stringLng;
+    String stringAlt;
+    String stringAcc;
+    String stringProvider;
+    String stringTime;
 
-	GeoPoint point;
-	boolean satToggle;
-	String stringLat;
-	String stringLng;
-	String stringAlt;
-	String stringAcc;
-	String stringProvider;
-	String stringTime;
+    boolean shareData;
 
-	boolean shareData;
+    Double lastLat = null;
+    Double lastLon = null;
+    Double lastGeoLat = null;
+    Double lastGeoLon = null;
 
-	Double lastLat = null;
-	Double lastLon = null;
-	Double lastGeoLat = null;
-	Double lastGeoLon = null;
+    int startDay;
+    int startMonth;
+    int startYear;
 
-	int startDay;
-	int startMonth;
-	int startYear;
+    int endDay;
+    int endMonth;
+    int endYear;
 
-	int endDay;
-	int endMonth;
-	int endYear;
+    private int lastRecId = 0;
 
-	private int lastRecId = 0;
+    public static boolean reloadData = false;
 
-	public static boolean reloadData = false;
+    boolean drawConfidenceCircles;
+    boolean drawIcons;
 
-	boolean drawConfidenceCircles;
-	boolean drawIcons;
-	
-	// TODO setting this totrue for testing until I build the on/off button
-	boolean selectNewPrivacyZone = true;
-	ArrayList<GeoPoint> privacyZones;
+    // TODO setting this totrue for testing until I build the on/off button
+    boolean selectNewPrivacyZone = true;
+    ArrayList<GeoPoint> privacyZones;
 
-	boolean isServiceOn;
+    boolean isServiceOn;
 
-	GeoPoint currentCenter;
+    GeoPoint currentCenter;
 
-	int BORDER_COLOR_MAP = 0xee4D2EFF;
-	int FILL_COLOR_MAP = 0x554D2EFF;
+    int BORDER_COLOR_MAP = 0xee4D2EFF;
+    int FILL_COLOR_MAP = 0x554D2EFF;
 
-	int BORDER_COLOR_SAT = 0xeeD9FCFF;
-	int FILL_COLOR_SAT = 0xbbD9FCFF;
+    int BORDER_COLOR_SAT = 0xeeD9FCFF;
+    int FILL_COLOR_SAT = 0xbbD9FCFF;
 
-	int PZ_BORDER_COLOR = 0xee00ff00;
-	int PZ_FILL_COLOR = 0x5500ff00;
-	
-	
-	ProgressBar progressbar;
+    int PZ_BORDER_COLOR = 0xee00ff00;
+    int PZ_FILL_COLOR = 0x5500ff00;
 
-	ArrayList<MapPoint> mPoints;
-	MapPoint[] mPointsArray;
 
-	TextView progressbarText;
+    ProgressBar progressbar;
+
+    ArrayList<MapPoint> mPoints;
+    MapPoint[] mPointsArray;
+
+    TextView progressbarText;
 
     public static String DATES_BUTTON_MESSAGE = "datesButtonMessage";
 
-	LinearLayout progressNotificationArea;
+    LinearLayout progressNotificationArea;
 
-	LinearLayout receiverNotificationArea;
+    LinearLayout receiverNotificationArea;
 
-	private TextView mReceiversOffWarning;
+    private TextView mReceiversOffWarning;
 
-	boolean _mustDraw = true;
+    boolean _mustDraw = true;
 
-	long thumbMin = -1;
-	long thumbMax = -1;
+    long thumbMin = -1;
+    long thumbMax = -1;
 
-	private int minDist = 0;
+    private int minDist = 0;
 
     Context context = this;
 
-	@Override
-	public void onCreate(Bundle icicle) {
-		super.onCreate(icicle);
+    @Override
+    public void onCreate(Bundle icicle) {
+        super.onCreate(icicle);
 
 
-		// TODO add all of the alerts from countdown activity regarding sensors
-		// off, sm off etc.
+        // TODO add all of the alerts from countdown activity regarding sensors
+        // off, sm off etc.
 
-		PropertyHolder.init(context);
-		PowerSensor.init(context);
+        PropertyHolder.init(context);
+        PowerSensor.init(context);
 
-		if (Util.trafficCop(this))
-			finish();
+        if (Util.trafficCop(this))
+            finish();
 
-		if (!PropertyHolder.getInitialStartDateSet()) {
-			Calendar now = Calendar.getInstance();
-			now.setTimeInMillis(System.currentTimeMillis());
-			PropertyHolder.setMapStartDate(now);
-			PropertyHolder.setInitialStartDateSet(true);
-		}
+        if (!PropertyHolder.getInitialStartDateSet()) {
+            Calendar now = Calendar.getInstance();
+            now.setTimeInMillis(System.currentTimeMillis());
+            PropertyHolder.setMapStartDate(now);
+            PropertyHolder.setInitialStartDateSet(true);
+        }
 
-		minDist = Util.getMinDist();
-		// Log.e("FixGet", "minDist=" + minDist);
+        minDist = Util.getMinDist();
+        // Log.e("FixGet", "minDist=" + minDist);
 
-		setContentView(R.layout.map_layout);
+        setContentView(R.layout.map_layout);
 
         receiverNotificationArea = (LinearLayout) findViewById(R.id.mapReceiverNotificationArea);
 
-		mReceiversOffWarning = (TextView) findViewById(R.id.mapReceiversOffWarning);
+        mReceiversOffWarning = (TextView) findViewById(R.id.mapReceiversOffWarning);
 
 
-		getIntro = PropertyHolder.getIntro();
-		isPro = PropertyHolder.getProVersion();
+        getIntro = PropertyHolder.getIntro();
+        isPro = PropertyHolder.getProVersion();
 
-		AppRater.app_launched(this);
+        AppRater.app_launched(this);
 
-		privacyZones = new ArrayList<GeoPoint>();
+        privacyZones = new ArrayList<GeoPoint>();
 
-	}
+    }
 
 
-	@Override
-	protected void onResume() {
+    @Override
+    protected void onResume() {
 
-	
-		Context context = getApplicationContext();
 
-		Log.e("TAPMAP", "selectPZ=" + selectNewPrivacyZone);
-		
-		if (Util.trafficCop(this))
-			finish();
+        Context context = getApplicationContext();
 
-		if (reloadData) {
-			mPoints.clear();
-			lastRecId = 0;
-		}
+        Log.e("TAPMAP", "selectPZ=" + selectNewPrivacyZone);
 
-		isServiceOn = PropertyHolder.isServiceOn();
-		shareData = PropertyHolder.getShareData();
+        if (Util.trafficCop(this))
+            finish();
+
+        if (reloadData) {
+            mPoints.clear();
+            lastRecId = 0;
+        }
+
+        isServiceOn = PropertyHolder.isServiceOn();
+        shareData = PropertyHolder.getShareData();
 
         setNotificationArea();
 
@@ -255,19 +255,16 @@ public class MapMyData extends FragmentActivity {
                 // now schedule or unschedule
                 Intent intent = new Intent(
                         getString(R.string.internal_message_id) + schedule);
-                if(this_context != null)
+                if (this_context != null)
                     this_context.sendBroadcast(intent);
                 if (on) {
                     isServiceOn = true;
                     final long ptNow = PropertyHolder.ptStart();
 
                     ContentResolver ucr = getContentResolver();
-
                     ucr.insert(
                             Util.getUploadQueueUri(this_context),
-                            UploadContentValues.createUpload("ONF", "on,"
-                                    + Util.iso8601(System.currentTimeMillis())
-                                    + "," + ptNow));
+                            UploadContentValues.createUpload(DataCodeBook.ON_OFF_PREFIX, Util.makeOnfJsonString(true, ptNow)));
                 } else {
                     isServiceOn = false;
                     final long ptNow = PropertyHolder.ptStop();
@@ -276,19 +273,10 @@ public class MapMyData extends FragmentActivity {
                             FileUploader.class);
                     // Stop service if it is currently running
                     stopService(stopUploaderIntent);
-
-
                     ContentResolver ucr = getContentResolver();
-
-                    ucr.insert(Util.getUploadQueueUri(this_context),
-                            UploadContentValues.createUpload(
-                                    "ONF",
-                                    "off,"
-                                            + Util.iso8601(System
-                                            .currentTimeMillis())
-                                            + "," + ptNow));
-
-
+                    ucr.insert(
+                            Util.getUploadQueueUri(this_context),
+                            UploadContentValues.createUpload(DataCodeBook.ON_OFF_PREFIX, Util.makeOnfJsonString(false, ptNow)));
 
                 }
 
@@ -298,11 +286,11 @@ public class MapMyData extends FragmentActivity {
         });
 
 
-		super.onResume();
+        super.onResume();
 
-	}
+    }
 
-    private void setNotificationArea(){
+    private void setNotificationArea() {
         if (isServiceOn) {
             final LocationManager manager = (LocationManager) getSystemService(Context.LOCATION_SERVICE);
 
@@ -329,7 +317,7 @@ public class MapMyData extends FragmentActivity {
 
                             }
                         });
-            } else{
+            } else {
                 receiverNotificationArea.setVisibility(View.INVISIBLE);
             }
         } else {
@@ -338,53 +326,53 @@ public class MapMyData extends FragmentActivity {
 
     }
 
-	@Override
-	protected void onPause() {
-		super.onPause();
-	}
+    @Override
+    protected void onPause() {
+        super.onPause();
+    }
 
 
-	private void buildFlushGPSAlert() {
-		final AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		builder.setMessage(getResources().getString(R.string.renew_gps_alert))
-				.setCancelable(true)
-				.setPositiveButton(getResources().getString(R.string.ok),
-						new DialogInterface.OnClickListener() {
-							public void onClick(final DialogInterface dialog,
-									final int id) {
+    private void buildFlushGPSAlert() {
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage(getResources().getString(R.string.renew_gps_alert))
+                .setCancelable(true)
+                .setPositiveButton(getResources().getString(R.string.ok),
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(final DialogInterface dialog,
+                                                final int id) {
 
-								Util.flushGPSFlag = true;
+                                Util.flushGPSFlag = true;
 
-								dialog.cancel();
-							}
-						})
+                                dialog.cancel();
+                            }
+                        })
 
-				.setNegativeButton(getResources().getString(R.string.cancel),
-						new DialogInterface.OnClickListener() {
-							public void onClick(final DialogInterface dialog,
-									final int id) {
-								dialog.cancel();
-							}
-						});
+                .setNegativeButton(getResources().getString(R.string.cancel),
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(final DialogInterface dialog,
+                                                final int id) {
+                                dialog.cancel();
+                            }
+                        });
 
-		final AlertDialog alert = builder.create();
-		alert.show();
-	}
+        final AlertDialog alert = builder.create();
+        alert.show();
+    }
 
-	private void buildAlertMessageIntro() {
-		final AlertDialog.Builder builder = new AlertDialog.Builder(this);
-		builder.setMessage(getResources().getText(R.string.main_text))
-				.setCancelable(true)
-				.setNeutralButton(getResources().getString(R.string.ok),
-						new DialogInterface.OnClickListener() {
-							public void onClick(final DialogInterface dialog,
-									final int id) {
-								dialog.dismiss();
-							}
-						});
-		final AlertDialog alert = builder.create();
-		alert.show();
-	}
+    private void buildAlertMessageIntro() {
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage(getResources().getText(R.string.main_text))
+                .setCancelable(true)
+                .setNeutralButton(getResources().getString(R.string.ok),
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(final DialogInterface dialog,
+                                                final int id) {
+                                dialog.dismiss();
+                            }
+                        });
+        final AlertDialog alert = builder.create();
+        alert.show();
+    }
 
 
 }

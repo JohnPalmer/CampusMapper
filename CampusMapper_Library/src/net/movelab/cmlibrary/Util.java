@@ -23,15 +23,42 @@
 
 package net.movelab.cmlibrary;
 
+import android.app.Notification;
+import android.app.NotificationManager;
+import android.app.PendingIntent;
+import android.content.Context;
+import android.content.Intent;
+import android.content.pm.PackageInfo;
+import android.content.pm.PackageManager;
+import android.database.Cursor;
+import android.net.ConnectivityManager;
+import android.net.NetworkInfo;
+import android.net.Uri;
+import android.os.Environment;
+import android.os.StatFs;
+import android.util.Base64;
+import android.util.Log;
+import android.widget.Toast;
+
+import net.movelab.cmlibrary.Fix.Fixes;
+
+import org.apache.http.HttpResponse;
+import org.apache.http.StatusLine;
+import org.apache.http.client.ClientProtocolException;
+import org.apache.http.client.methods.HttpPost;
+import org.apache.http.entity.StringEntity;
+import org.apache.http.impl.client.DefaultHttpClient;
+import org.apache.http.params.BasicHttpParams;
+import org.apache.http.params.HttpConnectionParams;
+import org.apache.http.params.HttpParams;
+import org.json.JSONException;
+import org.json.JSONObject;
+
 import java.io.BufferedInputStream;
-import java.io.ByteArrayInputStream;
 import java.io.ByteArrayOutputStream;
-import java.io.DataOutputStream;
 import java.io.File;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
-import java.net.HttpURLConnection;
-import java.net.URL;
 import java.security.InvalidKeyException;
 import java.security.KeyFactory;
 import java.security.NoSuchAlgorithmException;
@@ -46,36 +73,6 @@ import javax.crypto.Cipher;
 import javax.crypto.IllegalBlockSizeException;
 import javax.crypto.NoSuchPaddingException;
 
-import net.movelab.cmlibrary.R;
-import net.movelab.cmlibrary.Fix.Fixes;
-
-import android.app.Notification;
-import android.app.NotificationManager;
-import android.app.PendingIntent;
-import android.content.Context;
-import android.content.Intent;
-import android.database.Cursor;
-import android.net.ConnectivityManager;
-import android.net.NetworkInfo;
-import android.net.Uri;
-import android.os.Environment;
-import android.os.StatFs;
-import android.util.Base64;
-import android.util.Log;
-import android.widget.Toast;
-
-import org.apache.http.HttpResponse;
-import org.apache.http.StatusLine;
-import org.apache.http.client.ClientProtocolException;
-import org.apache.http.client.methods.HttpPost;
-import org.apache.http.entity.StringEntity;
-import org.apache.http.impl.client.DefaultHttpClient;
-import org.apache.http.params.BasicHttpParams;
-import org.apache.http.params.HttpConnectionParams;
-import org.apache.http.params.HttpParams;
-import org.json.JSONException;
-import org.json.JSONObject;
-
 /**
  * Various static fields and methods used in the application, some taken from
  * Human Mobility Project.
@@ -86,6 +83,10 @@ import org.json.JSONObject;
  */
 public class Util {
 
+
+    // general  controls
+    public static boolean debriefing_surveys_on = false;
+    public static boolean pro_versions_on = false;
 
     public final static int PRIVACY_ZONE_RADIUS = 500;
 
@@ -111,7 +112,8 @@ public class Util {
 
     public static boolean PASSED_INTRO = false;
 
-    public static long TIME_TO_PRO = 1 * WEEKS;
+    // TODO note that I am setting this to 100 weeks just to make sure it is not triggered during the study period by accident
+    public static long TIME_TO_PRO = 100 * WEEKS;
 
     public static int UPLOADS_TO_PRO = 1000;
 
@@ -770,10 +772,6 @@ public class Util {
         return result;
     }
 
-    public static  String JSON_KEY_USER_UUID = "user_UUID";
-    public static  String JSON_KEY_USER_CODE = "user_code";
-    public static String JSON_KEY_TYPE = "type";
-    public static String JSON_KEY_ENCRYPTED_MESSAGE = "encrypted_message";
 
     public static boolean uploadEncryptedString(Context context,
                                                 String filePrefix, String stringToUpload, String uploadurl) {
@@ -789,10 +787,11 @@ public class Util {
             bytes = encryptRSA(context, stringToUpload.getBytes("UTF-8"));
             encoded_string = Base64.encodeToString(bytes, Base64.DEFAULT);
 
-            json_to_post.put(JSON_KEY_USER_UUID, PropertyHolder.getUserId());
-            json_to_post.put(JSON_KEY_USER_CODE, PropertyHolder.getUserCode());
-            json_to_post.put(JSON_KEY_TYPE, filePrefix);
-            json_to_post.put(JSON_KEY_ENCRYPTED_MESSAGE, encoded_string);
+            json_to_post.put(DataCodeBook.API_JSON_KEY_USER_UUID, PropertyHolder.getUserId());
+            json_to_post.put(DataCodeBook.API_JSON_KEY_USER_CODE, PropertyHolder.getUserCode());
+            json_to_post.put(DataCodeBook.API_JSON_KEY_TYPE, filePrefix);
+            json_to_post.put(DataCodeBook.API_JSON_KEY_APP_VERSION, getAppVersion(context));
+            json_to_post.put(DataCodeBook.API_JSON_KEY_ENCRYPTED_MESSAGE, encoded_string);
 
 
         } catch (UnsupportedEncodingException e) {
@@ -895,4 +894,38 @@ public class Util {
 
     }
 
+
+    public static String makeOnfJsonString(boolean on, long usage_time) {
+        String result = "";
+        JSONObject onf_json_data = new JSONObject();
+        try {
+            onf_json_data.put(DataCodeBook.ON_OFF_KEY_ON_OR_OFF, "on");
+            onf_json_data.put(DataCodeBook.ON_OFF_KEY_TIME, Util.iso8601(System.currentTimeMillis()));
+            onf_json_data.put(DataCodeBook.ON_OFF_KEY_USAGE_TIME, usage_time);
+            result = onf_json_data.toString();
+        } catch (JSONException e) {
+            //todo
+        }
+        return result;
+
+    }
+
+    public static String getAppVersion(Context context){
+        String version = "";
+        PackageInfo pInfo = null;
+        try {
+            PackageManager pm = context.getPackageManager();
+            if (pm != null) {
+                pInfo = pm.getPackageInfo(
+                        context.getPackageName(), 0);
+            }
+        } catch (PackageManager.NameNotFoundException e) {
+            //todo
+        }
+
+        if (pInfo != null) {
+            version = pInfo.versionName;
+        }
+        return version;
+    }
 }

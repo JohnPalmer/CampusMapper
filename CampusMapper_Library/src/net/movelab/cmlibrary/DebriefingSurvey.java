@@ -34,102 +34,116 @@ import android.view.View.OnClickListener;
 import android.widget.Button;
 import android.widget.CheckBox;
 import android.widget.RadioGroup;
+
 import net.movelab.cmlibrary.R;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 /**
  * Displays the Debriefing Survey.
- * 
+ *
  * @author John R.B. Palmer
- * 
  */
 public class DebriefingSurvey extends Activity {
 
-	private CheckBox dbqHowFoundFriendBox;
-	private CheckBox dbqHowFoundAdBox;
-	private CheckBox dbqHowFoundMarketBox;
-	private CheckBox dbqHowFoundOtherBox;
+    private CheckBox dbqHowFoundFriendBox;
+    private CheckBox dbqHowFoundAdBox;
+    private CheckBox dbqHowFoundMarketBox;
+    private CheckBox dbqHowFoundOtherBox;
 
-	private RadioGroup dbqFriendsRadioGroup;
-	private RadioGroup dbqBatteryRadioGroup;
-	private RadioGroup dbqBehavior1RadioGroup;
-	private RadioGroup dbqBehavior2RadioGroup;
+    private RadioGroup dbqFriendsRadioGroup;
+    private RadioGroup dbqBatteryRadioGroup;
+    private RadioGroup dbqBehavior1RadioGroup;
+    private RadioGroup dbqBehavior2RadioGroup;
 
-	private Button dbSubmitButton;
-	private Button dbCancelButton;
+    private Button dbSubmitButton;
+    private Button dbCancelButton;
 
-	Context context;
+    Context context;
 
-	@Override
-	public void onCreate(Bundle savedInstanceState) {
-		super.onCreate(savedInstanceState);
+    @Override
+    public void onCreate(Bundle savedInstanceState) {
+        super.onCreate(savedInstanceState);
 
-		setContentView(R.layout.debriefing_survey);
+        setContentView(R.layout.debriefing_survey);
 
-		context = getApplicationContext();
+        context = getApplicationContext();
 
-		dbqHowFoundFriendBox = (CheckBox) findViewById(R.id.dbHowFoundFriendBox);
-		dbqHowFoundAdBox = (CheckBox) findViewById(R.id.dbHowFoundAdBox);
-		dbqHowFoundMarketBox = (CheckBox) findViewById(R.id.dbHowFoundMarketBox);
-		dbqHowFoundOtherBox = (CheckBox) findViewById(R.id.dbHowFoundOtherBox);
+        dbqHowFoundFriendBox = (CheckBox) findViewById(R.id.dbHowFoundFriendBox);
+        dbqHowFoundAdBox = (CheckBox) findViewById(R.id.dbHowFoundAdBox);
+        dbqHowFoundMarketBox = (CheckBox) findViewById(R.id.dbHowFoundMarketBox);
+        dbqHowFoundOtherBox = (CheckBox) findViewById(R.id.dbHowFoundOtherBox);
 
-		dbqFriendsRadioGroup = (RadioGroup) findViewById(R.id.dbqFriendsRadioGroup);
-		dbqBatteryRadioGroup = (RadioGroup) findViewById(R.id.dbqBatteryRadioGroup);
-		dbqBehavior1RadioGroup = (RadioGroup) findViewById(R.id.dbqBehavior1RadioGroup);
-		dbqBehavior2RadioGroup = (RadioGroup) findViewById(R.id.dbqBehavior2RadioGroup);
+        dbqFriendsRadioGroup = (RadioGroup) findViewById(R.id.dbqFriendsRadioGroup);
+        dbqBatteryRadioGroup = (RadioGroup) findViewById(R.id.dbqBatteryRadioGroup);
+        dbqBehavior1RadioGroup = (RadioGroup) findViewById(R.id.dbqBehavior1RadioGroup);
+        dbqBehavior2RadioGroup = (RadioGroup) findViewById(R.id.dbqBehavior2RadioGroup);
 
-		dbSubmitButton = (Button) findViewById(R.id.dbSaveButton);
-		dbCancelButton = (Button) findViewById(R.id.dbCancelButton);
+        dbSubmitButton = (Button) findViewById(R.id.dbSaveButton);
+        dbCancelButton = (Button) findViewById(R.id.dbCancelButton);
 
-	}
+    }
 
-	@Override
-	protected void onResume() {
+    @Override
+    protected void onResume() {
 
-		dbSubmitButton.setOnClickListener(new OnClickListener() {
+        dbSubmitButton.setOnClickListener(new OnClickListener() {
 
-			@Override
-			public void onClick(View v) {
+            @Override
+            public void onClick(View v) {
 
-				String responses = (dbqHowFoundFriendBox.isChecked() ? "y"
-						: "n")
-						+ (dbqHowFoundAdBox.isChecked() ? "y" : "n")
-						+ (dbqHowFoundMarketBox.isChecked() ? "y" : "n")
-						+ (dbqHowFoundOtherBox.isChecked() ? "y" : "n")
-						+ (dbqFriendsRadioGroup.getCheckedRadioButtonId() == R.id.dbqFriendsYes ? "y"
-								: "n")
-						+ (dbqBatteryRadioGroup.getCheckedRadioButtonId() == R.id.dbqFriendsYes ? "y"
-								: "n")
-						+ (dbqBehavior1RadioGroup.getCheckedRadioButtonId() == R.id.dbqFriendsYes ? "y"
-								: "n")
-						+ (dbqBehavior2RadioGroup.getCheckedRadioButtonId() == R.id.dbqFriendsYes ? "y"
-								: "n");
+                JSONObject json_data = new JSONObject();
+                String json_data_string;
+                try {
+                    json_data.put(DataCodeBook.DEBRIEFING_KEY_HOW_FOUND_FRIEND, (dbqHowFoundFriendBox.isChecked() ? "y" : "n"));
+                    json_data.put(DataCodeBook.DEBRIEFING_KEY_HOW_FOUND_AD, (dbqHowFoundAdBox.isChecked() ? "y" : "n"));
+                    json_data.put(DataCodeBook.DEBRIEFING_KEY_HOW_FOUND_MARKET, (dbqHowFoundMarketBox.isChecked() ? "y" : "n"));
+                    json_data.put(DataCodeBook.DEBRIEFING_KEY_HOW_FOUND_OTHER, (dbqHowFoundOtherBox.isChecked() ? "y" : "n"));
+                    json_data.put(DataCodeBook.DEBRIEFING_KEY_FRIENDS_USING_APP, (dbqFriendsRadioGroup.getCheckedRadioButtonId() == R.id.dbqFriendsYes ? "y"
+                            : "n"));
+                    json_data.put(DataCodeBook.DEBRIEFING_KEY_FRIENDS_USING_APP, (dbqFriendsRadioGroup.getCheckedRadioButtonId() == R.id.dbqFriendsYes ? "y"
+                            : "n"));
+                    json_data.put(DataCodeBook.DEBRIEFING_KEY_BATTERY_PROBLEMS, (dbqBatteryRadioGroup.getCheckedRadioButtonId() == R.id.dbqBatteryYes ? "y"
+                            : "n"));
+                    json_data.put(DataCodeBook.DEBRIEFING_KEY_BEHAVIOR_1, (dbqBehavior1RadioGroup.getCheckedRadioButtonId() == R.id.dbqBehavior1Yes ? "y"
+                            : "n"));
+                    json_data.put(DataCodeBook.DEBRIEFING_KEY_BEHAVIOR_2, (dbqBehavior2RadioGroup.getCheckedRadioButtonId() == R.id.dbqBehavior2Yes ? "y"
+                            : "n"));
 
-				ContentResolver ucr = getContentResolver();
+                    json_data_string = json_data.toString();
 
-				ucr.insert(Util.getUploadQueueUri(context),
-						UploadContentValues.createUpload("DEB", responses));
+                    ContentResolver ucr = getContentResolver();
 
-				Intent i = new Intent(DebriefingSurvey.this, FileUploader.class);
-				startService(i);
+                    ucr.insert(Util.getUploadQueueUri(context),
+                            UploadContentValues.createUpload(DataCodeBook.DEBREIFING_PREFIX, json_data_string));
 
-				finish();
+                } catch (JSONException e) {
+                    //todo
+                }
 
-			}
 
-		});
+                Intent i = new Intent(DebriefingSurvey.this, FileUploader.class);
+                startService(i);
 
-		dbCancelButton.setOnClickListener(new OnClickListener() {
+                finish();
 
-			@Override
-			public void onClick(View v) {
+            }
 
-				finish();
+        });
 
-			}
+        dbCancelButton.setOnClickListener(new OnClickListener() {
 
-		});
+            @Override
+            public void onClick(View v) {
 
-		super.onResume();
+                finish();
 
-	}
+            }
+
+        });
+
+        super.onResume();
+
+    }
 }

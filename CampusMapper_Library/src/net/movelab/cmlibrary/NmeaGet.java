@@ -37,167 +37,182 @@ import android.os.Build;
 import android.os.IBinder;
 import android.os.Parcel;
 import android.os.RemoteException;
+
 import net.movelab.cmlibrary.R;
+
+import org.json.JSONException;
+import org.json.JSONObject;
 
 /**
  * Space Mapper's service for recording NMEA sentences.
- * <p>
+ * <p/>
  * Dependencies: SpaceMapperBroadcastReceiver.java, FixGet.java, Settings.java,
  * Withdraw.java.
- * <p>
- * 
+ * <p/>
+ *
  * @author John R.B. Palmer
  */
 
 @TargetApi(Build.VERSION_CODES.ECLAIR)
 public class NmeaGet extends Service {
-	private LocationManager locationManager;
-	GpsNmeaListener mGpsNmeaListener;
-	StopReceiver stopReceiver;
-	IntentFilter stopFilter;
-	boolean NmeaInProgress = false;
-	String TAG = "NmeaGet";
-	String bestNmeaLocation = null;
-	String bestNmeaLocationTime = null;
-	float bestNmeaLocationHdop = -1f;
-	Context context;
+    private LocationManager locationManager;
+    GpsNmeaListener mGpsNmeaListener;
+    StopReceiver stopReceiver;
+    IntentFilter stopFilter;
+    boolean NmeaInProgress = false;
+    String TAG = "NmeaGet";
+    String bestNmeaLocation = null;
+    String bestNmeaLocationTime = null;
+    float bestNmeaLocationHdop = -1f;
+    Context context;
 
-	@Override
-	public void onCreate() {
+    @Override
+    public void onCreate() {
 
-		context = getApplicationContext();
-		if (PropertyHolder.isInit() == false)
-			PropertyHolder.init(context);
+        context = getApplicationContext();
+        if (PropertyHolder.isInit() == false)
+            PropertyHolder.init(context);
 
-		locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
-		mGpsNmeaListener = null;
+        locationManager = (LocationManager) getSystemService(LOCATION_SERVICE);
+        mGpsNmeaListener = null;
 
-	}
+    }
 
-	public void onStart(Intent intent, int startId) {
+    public void onStart(Intent intent, int startId) {
 
-		stopReceiver = null;
-		if (NmeaInProgress == false) {
-			NmeaInProgress = true;
-			bestNmeaLocation = null;
-			bestNmeaLocationTime = null;
-			bestNmeaLocationHdop = -1;
+        stopReceiver = null;
+        if (NmeaInProgress == false) {
+            NmeaInProgress = true;
+            bestNmeaLocation = null;
+            bestNmeaLocationTime = null;
+            bestNmeaLocationHdop = -1;
 
-			stopFilter = new IntentFilter(getResources().getString(
-					R.string.internal_message_id)
-					+ Util.MESSAGE_STOP_FIXGET);
-			stopReceiver = new StopReceiver();
-			registerReceiver(stopReceiver, stopFilter);
+            stopFilter = new IntentFilter(getResources().getString(
+                    R.string.internal_message_id)
+                    + Util.MESSAGE_STOP_FIXGET);
+            stopReceiver = new StopReceiver();
+            registerReceiver(stopReceiver, stopFilter);
 
-			if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)
-					&& PropertyHolder.getShareData()) {
+            if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)
+                    && PropertyHolder.getShareData()) {
 
-				mGpsNmeaListener = new GpsNmeaListener();
-				locationManager.addNmeaListener(mGpsNmeaListener);
-			}
+                mGpsNmeaListener = new GpsNmeaListener();
+                locationManager.addNmeaListener(mGpsNmeaListener);
+            }
 
-		}
+        }
 
-	}
+    }
 
-	@Override
-	public void onDestroy() {
+    @Override
+    public void onDestroy() {
 
-		removeNmeaUpdates();
+        removeNmeaUpdates();
 
-		if (stopReceiver != null) {
-			unregisterReceiver(stopReceiver);
-		}
-		// mGpsNmeaListener = null;
-		// locationManager = null;
-		NmeaInProgress = false;
+        if (stopReceiver != null) {
+            unregisterReceiver(stopReceiver);
+        }
+        // mGpsNmeaListener = null;
+        // locationManager = null;
+        NmeaInProgress = false;
 
-	}
+    }
 
-	/**
-	 * Returns Object that receives client interactions.
-	 * 
-	 * @return The Object that receives interactions from clients.
-	 */
-	@Override
-	public IBinder onBind(Intent intent) {
-		return mBinder;
-	}
+    /**
+     * Returns Object that receives client interactions.
+     *
+     * @return The Object that receives interactions from clients.
+     */
+    @Override
+    public IBinder onBind(Intent intent) {
+        return mBinder;
+    }
 
-	// This is the object that receives interactions from clients.
-	private final IBinder mBinder = new Binder() {
-		@Override
-		protected boolean onTransact(int code, Parcel data, Parcel reply,
-				int flags) throws RemoteException {
-			return super.onTransact(code, data, reply, flags);
-		}
-	};
+    // This is the object that receives interactions from clients.
+    private final IBinder mBinder = new Binder() {
+        @Override
+        protected boolean onTransact(int code, Parcel data, Parcel reply,
+                                     int flags) throws RemoteException {
+            return super.onTransact(code, data, reply, flags);
+        }
+    };
 
-	private class GpsNmeaListener implements GpsStatus.NmeaListener {
+    private class GpsNmeaListener implements GpsStatus.NmeaListener {
 
-		@Override
-		public void onNmeaReceived(long time, String nmea_sentence) {
+        @Override
+        public void onNmeaReceived(long time, String nmea_sentence) {
 
-			if (PropertyHolder.getShareData() && nmea_sentence.contains("GGA")) {
+            if (PropertyHolder.getShareData() && nmea_sentence.contains("GGA")) {
 
-				float thisHdop = -1;
-				try {
-					thisHdop = Float.valueOf(nmea_sentence.split(",")[8]);
+                float thisHdop = -1;
+                try {
+                    thisHdop = Float.valueOf(nmea_sentence.split(",")[8]);
 
-				} catch (Exception e) {
+                } catch (Exception e) {
 
-				} finally {
+                } finally {
 
-					if (thisHdop >= 0) {
+                    if (thisHdop >= 0) {
 
-						if (bestNmeaLocation == null
-								|| bestNmeaLocationHdop == -1f) {
-							bestNmeaLocation = nmea_sentence;
-							bestNmeaLocationTime = Util.iso8601(time);
-							bestNmeaLocationHdop = thisHdop;
+                        if (bestNmeaLocation == null
+                                || bestNmeaLocationHdop == -1f) {
+                            bestNmeaLocation = nmea_sentence;
+                            bestNmeaLocationTime = Util.iso8601(time);
+                            bestNmeaLocationHdop = thisHdop;
 
-						} else {
+                        } else {
 
-							if (thisHdop < bestNmeaLocationHdop) {
+                            if (thisHdop < bestNmeaLocationHdop) {
 
-								bestNmeaLocation = nmea_sentence;
-								bestNmeaLocationTime = Util.iso8601(time);
-								bestNmeaLocationHdop = thisHdop;
+                                bestNmeaLocation = nmea_sentence;
+                                bestNmeaLocationTime = Util.iso8601(time);
+                                bestNmeaLocationHdop = thisHdop;
 
-							}
-						}
-					}
-				}
-			}
-		}
+                            }
+                        }
+                    }
+                }
+            }
+        }
 
-	}
+    }
 
-	private void removeNmeaUpdates() {
-		if (mGpsNmeaListener != null)
-			locationManager.removeNmeaListener(mGpsNmeaListener);
-	}
+    private void removeNmeaUpdates() {
+        if (mGpsNmeaListener != null)
+            locationManager.removeNmeaListener(mGpsNmeaListener);
+    }
 
-	public class StopReceiver extends BroadcastReceiver {
+    public class StopReceiver extends BroadcastReceiver {
 
-		@Override
-		public void onReceive(Context context, Intent intent) {
+        @Override
+        public void onReceive(Context context, Intent intent) {
 
-			if (bestNmeaLocationHdop >= 0 && bestNmeaLocation != null) {
+            if (bestNmeaLocationHdop >= 0 && bestNmeaLocation != null) {
 
-				ContentResolver ucr = getContentResolver();
-				ucr.insert(Util.getUploadQueueUri(context), UploadContentValues
-						.createUpload("NME", bestNmeaLocationTime + ","
-								+ bestNmeaLocation));
+                JSONObject nme_json_data = new JSONObject();
+                String nme_json_data_string;
 
-			}
+                try {
 
-			removeNmeaUpdates();
-			NmeaInProgress = false;
-			stopSelf();
+                    nme_json_data.put(DataCodeBook.NMEA_KEY_TIME, bestNmeaLocationTime);
+                    nme_json_data.put(DataCodeBook.NMEA_KEY_LOCATION_MESSAGE, bestNmeaLocation);
+                    nme_json_data.put(DataCodeBook.NMEA_KEY_HDOP, bestNmeaLocationHdop);
+                    nme_json_data_string = nme_json_data.toString();
+                    ContentResolver ucr = getContentResolver();
+                    ucr.insert(Util.getUploadQueueUri(context), UploadContentValues
+                            .createUpload(DataCodeBook.NMEA_PREFIX, nme_json_data_string));
+                } catch (JSONException e) {
+                    //todo
+                }
 
-		}
+            }
 
-	}
+            removeNmeaUpdates();
+            NmeaInProgress = false;
+            stopSelf();
+
+        }
+
+    }
 
 }

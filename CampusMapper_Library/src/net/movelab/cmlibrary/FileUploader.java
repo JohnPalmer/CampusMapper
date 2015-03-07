@@ -36,6 +36,9 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.IBinder;
 
+import org.json.JSONException;
+import org.json.JSONObject;
+
 /**
  * Uploads files to the server. The tryUploads() method is mostly taken from the
  * Funf code.
@@ -160,9 +163,18 @@ public class FileUploader extends Service {
 			PropertyHolder.setNeedsDebriefingSurvey(true);
 			Util.createProNotification(context);
 
+            JSONObject pro_json_data = new JSONObject();
+            String pro_json_data_string;
+            try{
+                pro_json_data.put(DataCodeBook.PRO_UPGRADE_PRO_MESSAGE, "pro upgrade");
+                pro_json_data_string = pro_json_data.toString();
 			ContentResolver ucr = getContentResolver();
 			ucr.insert(Util.getUploadQueueUri(context),
-					UploadContentValues.createUpload("PRO", "pro upgrade"));
+					UploadContentValues.createUpload(DataCodeBook.PRO_UPGRADE_PREFIX, pro_json_data_string));
+            } catch(JSONException e){
+                //todo
+            }
+
 			tryUploads();
 
 		}
