@@ -237,6 +237,8 @@ public class MapMyData extends FragmentActivity {
 		isServiceOn = PropertyHolder.isServiceOn();
 		shareData = PropertyHolder.getShareData();
 
+        setNotificationArea();
+
         // service button
         mServiceButton = (ToggleButton) findViewById(R.id.service_button);
         mServiceButton.setChecked(isServiceOn);
@@ -256,6 +258,7 @@ public class MapMyData extends FragmentActivity {
                 if(this_context != null)
                     this_context.sendBroadcast(intent);
                 if (on) {
+                    isServiceOn = true;
                     final long ptNow = PropertyHolder.ptStart();
 
                     ContentResolver ucr = getContentResolver();
@@ -266,7 +269,7 @@ public class MapMyData extends FragmentActivity {
                                     + Util.iso8601(System.currentTimeMillis())
                                     + "," + ptNow));
                 } else {
-
+                    isServiceOn = false;
                     final long ptNow = PropertyHolder.ptStop();
                     // stop uploader
                     Intent stopUploaderIntent = new Intent(MapMyData.this,
@@ -289,12 +292,10 @@ public class MapMyData extends FragmentActivity {
 
                 }
 
+                setNotificationArea();
+
             }
         });
-
-
-
-        receiverNotificationArea.setVisibility(View.VISIBLE);
 
 
 		super.onResume();
@@ -308,10 +309,11 @@ public class MapMyData extends FragmentActivity {
             if (!manager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
                 if (!manager
                         .isProviderEnabled(LocationManager.NETWORK_PROVIDER)) {
-
+                    receiverNotificationArea.setVisibility(View.VISIBLE);
                     mReceiversOffWarning.setText(getResources().getString(
                             R.string.noGPSnoNet));
                 } else {
+                    receiverNotificationArea.setVisibility(View.VISIBLE);
 
                     mReceiversOffWarning.setText(getResources().getString(
                             R.string.noGPS));
@@ -327,49 +329,11 @@ public class MapMyData extends FragmentActivity {
 
                             }
                         });
-
+            } else{
+                receiverNotificationArea.setVisibility(View.INVISIBLE);
             }
-
         } else {
-
-
-            mReceiversOffWarning.setText(getResources().getString(
-                    R.string.main_text_off));
-
-            mReceiversOffWarning.setOnTouchListener(new View.OnTouchListener() {
-
-                @Override
-                public boolean onTouch(View v, MotionEvent e) {
-
-                    if (e.getAction() == MotionEvent.ACTION_DOWN) {
-                        receiverNotificationArea.setBackgroundColor(getResources()
-                                .getColor(R.color.push_button_color));
-                    }
-                    if (e.getAction() == MotionEvent.ACTION_UP) {
-                        receiverNotificationArea.setBackgroundColor(getResources()
-                                .getColor(R.color.dark_grey));
-                    }
-
-
-                    return false;
-                }
-
-            });
-
-            mReceiversOffWarning.setOnClickListener(new View.OnClickListener() {
-
-                @Override
-                public void onClick(View v) {
-
-
-                    Intent intent = new Intent(
-                            getString(R.string.internal_message_id)
-                                    + Util.MESSAGE_SCHEDULE);
-                    sendBroadcast(intent);
-
-                }
-            });
-
+            receiverNotificationArea.setVisibility(View.INVISIBLE);
         }
 
     }

@@ -172,7 +172,7 @@
     <string name="intro_button_under">I am under 18 years old.</string>
     <string name="intro_heading">Welcome to Mobility Mapper</string>
     <string name="intro_subheading">Introduction</string>
-    <string name="main_text_off">Mobility Mapper is off. \nClick here to turn it back on.</string>
+    <string name="main_text_off">Mobility Mapper is off. \nClick here to turn it on.</string>
     <string name="location_found">LOCATION FOUND</string>
     <string name="checking_location">Locating</string>
     <string name="countdown_text">Countdown to next measurement:</string>
