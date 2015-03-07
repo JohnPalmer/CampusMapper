@@ -188,10 +188,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Util.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="Util.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/Util.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="795" column="0" selection-start="29987" selection-end="29987" vertical-scroll-proportion="0.56684494" vertical-offset="14404" max-vertical-offset="17172">
+            <state line="795" column="0" selection-start="29987" selection-end="29987" vertical-scroll-proportion="0.0" vertical-offset="14404" max-vertical-offset="17172">
               <folding>
                 <element signature="e#0#34453#0" expanded="true" />
                 <element signature="imports" expanded="true" />
@@ -202,6 +202,15 @@
                 <element signature="e#32895#32993#0" expanded="true" />
                 <element signature="e#33180#33272#0" expanded="true" />
               </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CampusMapper_Research/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="26" selection-start="2204" selection-end="2204" vertical-scroll-proportion="0.30748662" vertical-offset="623" max-vertical-offset="2826">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -313,7 +322,6 @@
         <option value="$PROJECT_DIR$/CampusMapper_Library/res/values-es/strings.xml" />
         <option value="$PROJECT_DIR$/CampusMapper_Library/res/values-ca/strings.xml" />
         <option value="$PROJECT_DIR$/CampusMapper_Library/res/layout/about.xml" />
-        <option value="$PROJECT_DIR$/CampusMapper_Research/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/CampusMapper_Library/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/CampusMapper_Library/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/CampusMapper_Library/res/layout/map_layout.xml" />
@@ -328,6 +336,7 @@
         <option value="$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/Registration.java" />
         <option value="$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/DataCodeBook.java" />
         <option value="$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/Util.java" />
+        <option value="$PROJECT_DIR$/CampusMapper_Research/AndroidManifest.xml" />
       </list>
     </option>
   </component>
@@ -661,7 +670,7 @@
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32943144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -1070,13 +1079,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CampusMapper_Research/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="135" column="0" selection-start="7213" selection-end="7213" vertical-scroll-proportion="0.6631016" vertical-offset="2452" max-vertical-offset="2826">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CampusMapper_Library/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="8" column="221" selection-start="710" selection-end="710" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2844">
@@ -1340,7 +1342,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/Util.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="795" column="0" selection-start="29987" selection-end="29987" vertical-scroll-proportion="0.56684494" vertical-offset="14404" max-vertical-offset="17172">
+        <state line="795" column="0" selection-start="29987" selection-end="29987" vertical-scroll-proportion="0.0" vertical-offset="14404" max-vertical-offset="17172">
           <folding>
             <element signature="e#0#34453#0" expanded="true" />
             <element signature="imports" expanded="true" />
@@ -1351,6 +1353,13 @@
             <element signature="e#32895#32993#0" expanded="true" />
             <element signature="e#33180#33272#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CampusMapper_Research/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="26" selection-start="2204" selection-end="2204" vertical-scroll-proportion="0.30748662" vertical-offset="623" max-vertical-offset="2826">
+          <folding />
         </state>
       </provider>
     </entry>
