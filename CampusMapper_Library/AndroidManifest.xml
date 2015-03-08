@@ -104,6 +104,8 @@
                 <action android:name="android.intent.action.LAUNCHER" />
                 <action android:name="net.movelab.cmlibrary.SCHEDULE_SERVICE" />
                 <action android:name="net.movelab.cmlibrary.UNSCHEDULE_SERVICE" />
+                <action android:name="android.net.wifi.supplicant.CONNECTION_CHANGE" />
+                <action android:name="android.intent.action.POWER_CONNECTED" />
             </intent-filter>
         </receiver>
         <receiver android:name="net.movelab.cmlibrary.PowerSensor" >

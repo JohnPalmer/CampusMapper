@@ -107,8 +107,7 @@ public class Util {
     public final static long DAYS = HOURS * 24;
     public final static long WEEKS = DAYS * 7;
 
-    // TODO set back to 1 * HOURS (or something else). Usng short interval for testing
-    public static long UPLOAD_INTERVAL = 1 * MINUTES;
+    public static long UPLOAD_INTERVAL = 8 * HOURS;
 
     public static boolean PASSED_INTRO = false;
 

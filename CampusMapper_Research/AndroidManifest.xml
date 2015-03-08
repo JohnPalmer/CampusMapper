@@ -24,8 +24,8 @@
 
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="net.movelab.mobility"
-    android:versionCode="2"
-    android:versionName="0.02" >
+    android:versionCode="3"
+    android:versionName="0.03" >
 
     <uses-sdk
         android:minSdkVersion="8"
@@ -104,6 +104,8 @@
                 <action android:name="android.intent.action.LAUNCHER" />
                 <action android:name="net.movelab.campus_mapper.SCHEDULE_SERVICE" />
                 <action android:name="net.movelab.campus_mapper.UNSCHEDULE_SERVICE" />
+                <action android:name="android.net.wifi.supplicant.CONNECTION_CHANGE" />
+                <action android:name="android.intent.action.POWER_CONNECTED" />
             </intent-filter>
         </receiver>
         <receiver android:name="net.movelab.cmlibrary.PowerSensor" >
