@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Mobility Mapper is a mobile phone app for studying activity spaces on campuses. It is based in part on code from the Human Mobility Project.
+  ~ Campus Mobility is a mobile phone app for studying activity spaces on campuses. It is based in part on code from the Human Mobility Project.
   ~
   ~ Copyright (c) 2015 John R.B. Palmer.
   ~
-  ~ Mobility Mapper is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+  ~ Campus Mobility is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
   ~
-  ~ Mobility Mapper is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+  ~ Campus Mobility is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
   ~
   ~ You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses.
   ~
@@ -35,7 +35,7 @@
     <string name="warning_calendar_start_date">Nota: Has escogido una fecha de inicio posterior a la fecha de finalización. Cambia una o la otra, si deseas ver los datos en el mapa.</string>
     <string name="warning_calendar_end_date">Nota: Has escogido una fecha de finalización anterior a la fecha de inicio. Cambias una o la otra, si deseas ver los datos en el mapa.</string>
     <string name="save_db_label">Enviar</string>
-    <string name="pro_welcome">Te acabas de actualizar gratis a Mobility Mapper Pro. Puedes dejar de participar en el Activity-Space Project en cualquier momento cambiando la configuración de tu participación en el menú Preferencias.\n\n¡Muchas gracias!</string>
+    <string name="pro_welcome">Te acabas de actualizar gratis a Campus Mobility Pro. Puedes dejar de participar en el Activity-Space Project en cualquier momento cambiando la configuración de tu participación en el menú Preferencias.\n\n¡Muchas gracias!</string>
     <string name="dbq_battery_prompt">¿Has tenido problemas con la duración de la batería del teléfono mientras se ejecuta la aplicación?</string>
     <string name="db_howfound_friend">De un amigo o conocido</string>
     <string name="db_howfound_ad">De un anuncio</string>
@@ -47,9 +47,9 @@
     <string name="dbq_friends_prompt">¿Conoces a alguien más que use la aplicación?</string>
     <string name="dbq_behavior1_prompt">¿Crees que esta aplicación ha causado un cambio en tu comportamiento?</string>
     <string name="dbq_behavior2_prompt">¿Pensaste en que esta aplicación se estava ejecutando en tu día a día?</string>
-    <string name="proconversion_notification_initial">Actualización de Mobility Mapper</string>
-    <string name="proconversion_notification_subject">Actualización de Mobility Mapper</string>
-    <string name="proconversion_notification">Has recibido una actualización gratuita a Mobility Mapper Pro.</string>
+    <string name="proconversion_notification_initial">Actualización de Campus Mobility</string>
+    <string name="proconversion_notification_subject">Actualización de Campus Mobility</string>
+    <string name="proconversion_notification">Has recibido una actualización gratuita a Campus Mobility Pro.</string>
     <string name="offline_warning">Estas desconectado de la internet. Por favor, comprueba tu conexión a Internet y vuelva a intentarlo.</string>
     <string name="uploading">Cargando</string>
     <string name="location">localización</string>
@@ -96,7 +96,7 @@
     <string name="latest_station_time_label">"Última: "</string>
     <string name="tracking_notification_initial">Gravando tu actividad-espacial.</string>
     <string name="tracking_notification">Gravando tu actividad-espacial</string>
-    <string name="tracking_notification_subject">Mobility Mapper está gravando</string>
+    <string name="tracking_notification_subject">Campus Mobility está gravando</string>
     <string name="menu_flush_gps">Actualiza GPS</string>
     <string name="renew_gps_alert">Quisieras eliminar y bajarte un nuevo A-GPS data? Si lo haces, el GPS funcionará major si tienes uns buena conexión de datos i el GPS parece que no funciona correctamente. No obstante, esto puede producir un retraso en las estimaciones de tus localizaciones.</string>
     <string name="first_fix_time">Primer punto en el espacio-tiempo:</string>
@@ -107,14 +107,14 @@
     <string name="toggle_zax">Eje temporal</string>
     <string name="toggle_xyax">Eje espacial</string>
     <string name="lifeline_button">Espacio-tiempo</string>
-    <string name="made_with_SM">Imagen hecho con el Mobility Mapper</string>
+    <string name="made_with_SM">Imagen hecho con el Campus Mobility</string>
     <string name="menu_share">Compartir la aplicación</string>
     <string name="share_with">Compartir vía</string>
-    <string name="rate_heading">Evaluar el Mobility Mapper</string>
+    <string name="rate_heading">Evaluar el Campus Mobility</string>
     <string name="rate_no">No, gracias</string>
     <string name="rate_later">Recuérdamelo más tarde</string>
-    <string name="rate_yes">Evaluar el Mobility Mapper</string>
-    <string name="rate_prompt">Si te gusta utalizar el Mobility Mapper, por favor dedica un momento para evaluarlo. Gracias por tu apoyo!</string>
+    <string name="rate_yes">Evaluar el Campus Mobility</string>
+    <string name="rate_prompt">Si te gusta utalizar el Campus Mobility, por favor dedica un momento para evaluarlo. Gracias por tu apoyo!</string>
     <string name="menu_rate">Evaluar la aplicación</string>
     <string name="menu_map_save">Guardar mapa</string>
     <string name="menu_map_share">Compartir mapa</string>
@@ -125,10 +125,10 @@
     <string name="data_SD_error">Error al guardar el archivo en la tarjeta SD.</string>
     <string name="data_SD_unavailable">Tarjeta SD no disponible - archivo no se puede guardar.</string>
     <string name="data_saved">Los datos se han guardado como </string>
-    <string name="withdraw_error">Todos los datos del Mobility Mapper ha sido borrado de tu teléfono, pero se produjo un error al tratar de ponerse en contacto con el servidor de Mobility Mapper. Por favor, comprueba tu conexión a Internet y vuelva a intentarlo.</string>
+    <string name="withdraw_error">Todos los datos del Campus Mobility ha sido borrado de tu teléfono, pero se produjo un error al tratar de ponerse en contacto con el servidor de Campus Mobility. Por favor, comprueba tu conexión a Internet y vuelva a intentarlo.</string>
     <string name="cancel">Anular</string>
     <string name="withdraw_warning_yes">Sí, eliminar los datos ahora</string>
-    <string name="withdraw_warning">ATENCIÓN: Todos los datos Mobility Mapper ha guardado en la memoria del teléfono interna y todos los datos enviados al servidor de Mobility Mapper serán eliminados. Esto no se puede deshacer. ¿Seguro que desea continuar?</string>
+    <string name="withdraw_warning">ATENCIÓN: Todos los datos Campus Mobility ha guardado en la memoria del teléfono interna y todos los datos enviados al servidor de Campus Mobility serán eliminados. Esto no se puede deshacer. ¿Seguro que desea continuar?</string>
     <string name="new_fix_blinker">Nueva localización!</string>
     <string name="time_label">Fecha y Hora: </string>
     <string name="lat_label">Latitud: </string>
@@ -145,12 +145,12 @@
     <string name="menu_toggle_view">Satélite/Mapa</string>
     <string name="data_off_alert">Guardar mis datos está apagado. Haz clic aquí para acceder al menú de Preferencias y activarlo</string>
     <string name="noGPSAlert">"Tu GPS está deconectado. Quieres activarlo?".</string>
-    <string name="noGPSnoNetAlert">Tu GPS y tu receptor de localizaciones inalámbrico están desactivados. Mobility Mapper no puede obtener tu localización sin uno de ellos activados. Quieres activarlos?</string>
+    <string name="noGPSnoNetAlert">Tu GPS y tu receptor de localizaciones inalámbrico están desactivados. Campus Mobility no puede obtener tu localización sin uno de ellos activados. Quieres activarlos?</string>
     <string name="noGPS">Tu GPS está apagado. \nPor favor, haz clic aquí para activarlo.</string>
-    <string name="noGPSnoNet">Mobility Mapper no puede localizarte porque tu GPS y tu receptor inalám. están desactivados. \nPor favor, haz clic aquí para activarlos.</string>
+    <string name="noGPSnoNet">Campus Mobility no puede localizarte porque tu GPS y tu receptor inalám. están desactivados. \nPor favor, haz clic aquí para activarlos.</string>
     <string name="consent_date_prompt">Has aceptado apretando el botón de Aceptar en la hora y fecha indicadas aquí. Puedes cambiar tu opinión en cualquier momento utilizando el Menú de Activity-Space Project en el proyecto de investigación.</string>
-    <string name="delete_mydata_query">Queres borrar algún Dato que Mobility Mapper ha guardado en tu teléfono?</string>
-    <string name="more_data_later">En el futuro Mobility Mapper incluirá instrumentos de análisis de datos adicionales</string>
+    <string name="delete_mydata_query">Queres borrar algún Dato que Campus Mobility ha guardado en tu teléfono?</string>
+    <string name="more_data_later">En el futuro Campus Mobility incluirá instrumentos de análisis de datos adicionales</string>
     <string name="help">Ayuda</string>
     <string name="user_guide">Guía del Usuario</string>
     <string name="faqs">FAQs</string>
@@ -168,13 +168,13 @@
     <string name="menu_upload_now">Carga ahora</string>
     <string name="intro_button_over">Tengo como mínimo 18 años</string>
     <string name="intro_button_under">Tengo menos de 18 años.</string>
-    <string name="intro_heading">Bienvenido a Mobility Mapper</string>
+    <string name="intro_heading">Bienvenido a Campus Mobility</string>
     <string name="intro_subheading">Introducción</string>
-    <string name="main_text_off">Mobility Mapper está deconectado. \nHaz clic aquí para volver a activarlo.</string>
+    <string name="main_text_off">Campus Mobility está deconectado. \nHaz clic aquí para volver a activarlo.</string>
     <string name="location_found">LOCALIZACIÓN ENCONTRADA</string>
     <string name="checking_location">Localizándote</string>
     <string name="countdown_text">Cuenta atrás para la nueva localización:</string>
-    <string name="main_text">Gracias por participar! \n\nEn cualquier momento puedes salir de Mobility Mapper. No te preocupes, el programa se continuará ejecutando en el teléfono. \n\nUtiliza el botón del menu para más opciones.</string>
+    <string name="main_text">Gracias por participar! \n\nEn cualquier momento puedes salir de Campus Mobility. No te preocupes, el programa se continuará ejecutando en el teléfono. \n\nUtiliza el botón del menu para más opciones.</string>
     <string name="heading_mydata_spinner">Período</string>
     <string name="text_mydata_spinner">Por cuantos días?</string>
     <string name="heading_mydata_button">Guardar datos</string>
@@ -184,7 +184,7 @@
     <string name="withdraw_lock_subheading"></string>
     <string name="withdraw_lock_text">Has dejado de participar en el estudio y eliminado todos los datos de Expáciate de tu teléfono y del servidor. Para tu información, este código es el ID de usuario que el programa te ha asignado a ti solamente mientras has participado. Si quieres volver a participar en el estudio en el futuro, necesitarás reinstalar la aplicación en tu teléfono y el programa te asignará automáticamente un nuevo ID usuario. </string>
     <string name="withdraw_delete_button">Dejar de participar y eliminar todos los datos</string>
-    <string name="withdraw_delete_text">Haz clic aquí para dejar de participar en el estudio y eliminar permanentemente todos los datos de Mobility Mapper de tu teléfono y del servidor del proyecto de investigación. Necesitarás una conexión de Internet para completar este proceso.</string>
+    <string name="withdraw_delete_text">Haz clic aquí para dejar de participar en el estudio y eliminar permanentemente todos los datos de Campus Mobility de tu teléfono y del servidor del proyecto de investigación. Necesitarás una conexión de Internet para completar este proceso.</string>
     <string name="withdraw_heading">Dejar de participar</string>
     <string name="withdraw_subheading"></string>
     <string name="save_data_button">Guardar datos</string>
@@ -220,7 +220,7 @@
     <string name="menu_settings">Preferencias</string>
     <string name="menu_data">Mis Datos</string>
     <string name="menu_help">Ayuda</string>
-    <string name="SplashHeading">Mobility Mapper</string>
+    <string name="SplashHeading">Campus Mobility</string>
     <string name="SexPrompt">Sexo:</string>
     <string name="born_res_prompt">¿Nació en el mismo país en el que actualmente reside?</string>
     <string name="age_prompt">Edad:</string>
@@ -233,10 +233,10 @@
     <string name="nhousehold_prompt_short">Miembros en el hogar, incluyéndote a ti:</string>
     <string name="emp_prompt">Situación laboral:</string>
     <string name="save_reg_label">Enviar Respuestas</string>
-    <string name="service_is_on">Mobility Mapper está activado</string>
-    <string name="service_is_off">Mobility Mapper está desconectado</string>
+    <string name="service_is_on">Campus Mobility está activado</string>
+    <string name="service_is_off">Campus Mobility está desconectado</string>
     <string name="text_interval_spinner">Localízame cada: </string>
-    <string name="banner_image_content_description">Icono de Mobility Mapper</string>
+    <string name="banner_image_content_description">Icono de Campus Mobility</string>
     <string name="consent_heading">Formulario de consentimiento</string>
     <string name="consent_instructions">Por favor lee el siguiente formulario de consentimiento. Puedes aceptar electrónicamente, clicando el botón aceptar de la pantalla. Si tienes preguntas, mándalas a activity.space.project@gmail.com.</string>
     <string name="consent_signature_button">Acepto</string>
@@ -246,8 +246,8 @@
     <string name="consent_decline_button">No acepto</string>
     <string name="intro_text">
 <![CDATA[
-<p>Gracias por instalar la app! Mobility Mapper es parte de un estudio académico sobre el movimiento de las personas y los espacios en los cuales desarrollan sus actividades diarias. Si participas en este estudio como voluntario/a, Mobility Mapper guardará en tu teléfono tus localizaciones en intervalos de tiempo predeterminados y los mandará a investigadores de la Universidad Autonoma de Barcelona.</p>
-<p>Toda la información que nos proporciones está encryptado y será guardada de forma confidencial. Las únicas personas que tendrán acceso a ellas son los investigadores de Mobility Mapper, y solamente los resultados totalmente anónimos serán los únicos que se compartirán con otros investigadores.</p>
+<p>Gracias por instalar la app! Campus Mobility es parte de un estudio académico sobre el movimiento de las personas y los espacios en los cuales desarrollan sus actividades diarias. Si participas en este estudio como voluntario/a, Campus Mobility guardará en tu teléfono tus localizaciones en intervalos de tiempo predeterminados y los mandará a investigadores de la Universidad Autonoma de Barcelona.</p>
+<p>Toda la información que nos proporciones está encryptado y será guardada de forma confidencial. Las únicas personas que tendrán acceso a ellas son los investigadores de Campus Mobility, y solamente los resultados totalmente anónimos serán los únicos que se compartirán con otros investigadores.</p>
 <p>Tienes que tener como mínimo 18 años para participar.</p>
 <p>Si tienes alguna pregunta, por favor visita nuestra página web o mándanos un email en la dirección que tienes aquí abajo</p>
 <p>Si quieres continuar, por favor lee y acepta electrónicamente el formulario de consentimiento de la página siguiente. Muchas gracias por tu interés y participación!</p>
@@ -255,9 +255,9 @@
     </string>
     <string name="about_html">
 <![CDATA[
-<p>Mobility Mapper version 1.00</p>
+<p>Campus Mobility version 1.00</p>
 
-<p>Mobility Mapper form parte de un proyecto académico sobre el espacio y los lugares en los que se encuentran las personas al desarrollar sus actividades y vida diaria. Escrito por John R.B. Palmer está parcialmente basado en el código del Human Mobility Project, escrito por Chang Y. Chung, Kathleen Li, y Necati E. Ozgencil. El código de Mobility Mapper está disponible en http://github.com/JohnPalmer/CampusMapper.</p>
+<p>Campus Mobility form parte de un proyecto académico sobre el espacio y los lugares en los que se encuentran las personas al desarrollar sus actividades y vida diaria. Escrito por John R.B. Palmer está parcialmente basado en el código del Human Mobility Project, escrito por Chang Y. Chung, Kathleen Li, y Necati E. Ozgencil. El código de Campus Mobility está disponible en http://github.com/JohnPalmer/CampusMapper.</p>
 
 <p>Copyright &#169; 2015 John R.B. Palmer</p>
  
