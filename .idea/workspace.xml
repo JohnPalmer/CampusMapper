@@ -76,28 +76,10 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="strings.xml" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/values/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="36" column="0" selection-start="2719" selection-end="3151" vertical-scroll-proportion="0.53125" vertical-offset="737" max-vertical-offset="18612">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="MapMyData.java" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="MapMyData.java" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/MapMyData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="212" column="0" selection-start="6970" selection-end="6970" vertical-scroll-proportion="0.0" vertical-offset="2272" max-vertical-offset="5058">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/values-ca/strings.xml">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="375" column="32" selection-start="32099" selection-end="32099" vertical-scroll-proportion="0.0" vertical-offset="8842" max-vertical-offset="19350">
+            <state line="212" column="0" selection-start="6970" selection-end="6970" vertical-scroll-proportion="0.11908932" vertical-offset="2272" max-vertical-offset="5058">
               <folding />
             </state>
           </provider>
@@ -182,10 +164,10 @@
         <option value="$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/SpaceMapperBroadcastReceiver.java" />
         <option value="$PROJECT_DIR$/CampusMapper_Research/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/CampusMapper_Library/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/CampusMapper_Library/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/CampusMapper_Library/res/values-ca/strings.xml" />
         <option value="$PROJECT_DIR$/CampusMapper_Library/res/values-es/strings.xml" />
         <option value="$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/MapMyData.java" />
+        <option value="$PROJECT_DIR$/CampusMapper_Library/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/CampusMapper_Library/res/values-ca/strings.xml" />
       </list>
     </option>
   </component>
@@ -332,24 +314,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="values-ca" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CampusMapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CampusMapper_Library" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="values" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -396,6 +360,7 @@
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/CampusMapper_Library/res/values" />
       <recent name="$PROJECT_DIR$/CampusMapper_Library/res/layout" />
     </key>
   </component>
@@ -587,7 +552,7 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="52" width="1366" height="692" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -608,7 +573,7 @@
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Application Servers" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33821377" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="true" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.33821377" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
@@ -967,20 +932,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/values-ca/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="375" column="32" selection-start="32099" selection-end="32099" vertical-scroll-proportion="0.0" vertical-offset="8842" max-vertical-offset="19350">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/MapMyData.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="212" column="0" selection-start="6970" selection-end="6970" vertical-scroll-proportion="0.0" vertical-offset="2272" max-vertical-offset="5058">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/values-es/strings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="362" column="13" selection-start="31804" selection-end="31804" vertical-scroll-proportion="0.0" vertical-offset="8554" max-vertical-offset="18882">
@@ -988,9 +939,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/values/strings.xml">
+    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/MapMyData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="36" column="0" selection-start="2719" selection-end="3151" vertical-scroll-proportion="0.53125" vertical-offset="737" max-vertical-offset="18612">
+        <state line="212" column="0" selection-start="6970" selection-end="6970" vertical-scroll-proportion="0.11908932" vertical-offset="2272" max-vertical-offset="5058">
           <folding />
         </state>
       </provider>

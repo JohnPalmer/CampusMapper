@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-
 <!--
   ~ Campus Mobility is a mobile phone app for studying activity spaces on campuses. It is based in part on code from the Human Mobility Project.
   ~
@@ -25,250 +24,254 @@
 
 <resources>
 
-    <string name="visit_website">Web</string>    
-    <string name="no_sharing_msg">There is no data collection being done at this time and data sharing functions have been disabled. Please check the project website for more information. Thank you very much for your interest!</string>    
-    <string name="end_research_msg">Data collection has now ended and this app will no longer share data with the research team but you are free to continue to use it. Please check the project website for more information. Thank you very much for participating!</string>
-    <string name="on">On</string>
-    <string name="off">Off</string>
     <string name="package_name" translatable="false">net.movelab.cmlibrary</string>
     <string name="internal_message_id" translatable="false">net.movelab.cmlibrary</string>
     <string name="content_provider_authority_uploadqueue" translatable="false">net.movelab.cmlibrary.uploadqueueprovider</string>
     <string name="content_provider_authority_fixes" translatable="false">net.movelab.cmlibrary.spacemapperfixprovider</string>
-    <string name="warning_calendar_start_date">Note: You have picked a start date that is after your end date. Change one or the other if you want to view data on the map.</string>
-    <string name="warning_calendar_end_date">Note: You have picked an end date that is before your start date. Change one or the other if you want to view data on the map.</string>
-    <string name="save_db_label">Submit</string>
-    <string name="pro_welcome">You have just been given a free upgrade to Campus Mobility Pro. You can stop participating in the Activity-Space Project at any time by changing the Participation settings on your Preferences menu.\n\nThank you very much!</string>
-    <string name="dbq_battery_prompt">Did you have problems with your phone’s battery life while running the application?</string>
-    <string name="db_howfound_friend">From a friend or acquaintance</string>
-    <string name="db_howfound_ad">From an advertisement</string>
-    <string name="db_howfound_market">On Google Play</string>
-    <string name="db_howfound_other">Other</string>
-    <string name="db_heading">Survey</string>
-    <string name="db_subheading">If you have a moment, we would appreciate your feedback!</string>
-    <string name="dbq_howfound_prompt">How did you hear about this application? (Check all that apply.)</string>
-    <string name="dbq_friends_prompt">Do you know anyone else who used the application?</string>
-    <string name="dbq_behavior1_prompt">Do you think that having the application running on your phone caused you to change your behavior at all? </string>
-    <string name="dbq_behavior2_prompt">Did you think about the fact that the application was running while you went about your daily activities?</string>
-    <string name="proconversion_notification_initial">Campus Mobility upgrade</string>
-    <string name="proconversion_notification_subject">Campus Mobility upgrade</string>
-    <string name="proconversion_notification">You have a received a free upgrade to Campus Mobility Pro.</string>
-    <string name="offline_warning">You are offline. Please check your internet connection and try again.</string>
-    <string name="uploading">Uploading</string>
-    <string name="location">location</string>
-    <string name="locations">locations</string>
-    <string name="thank_you_for_participating">Thank you for participating!</string>
-    <string name="map_settings">Map Settings</string>
-    <string name="start_date_heading">Start Date</string>
-    <string name="start_date">start date</string>
-    <string name="limit_start_date">Limit map start date?</string>
-    <string name="end_date_heading">End Date</string>
-    <string name="end_date_text">Limit map end date?</string>
-    <string name="end_date">End Date</string>
-    <string name="sat">Satellite</string>
-    <string name="use_sat_q">Use satellite image?</string>
-    <string name="acc">Accuracy</string>
-    <string name="toggleacc_q">Display accuracy circles?</string>
-    <string name="icons">Icons</string>
-    <string name="display_icons_q">Display location icons?</string>
-    <string name="data_settings_label">Data Settings</string>
-    <string name="storage_size_heading">User Data \nSize</string>
-    <string name="volunteer">Volunteer?</string>
-    <string name="share_data_text">Share data with \nresearchers?</string>
-    <string name="participation_heading">Participation</string>
-    <string name="participation_time_label">Total participation time:</string>
-    <string name="nlocations_shared_label">Number of locations shared:</string>
-    <string name="pending_uploads_heading">Pending \nUploads</string>
-    <string name="files_deleted">files deleted</string>
-    <string name="locations_deleted">locations deleted</string>
-    <string name="calculating">calculating</string>
-    <string name="available">available</string>
-    <string name="used">used</string>
-    <string name="present">present</string>
-    <string name="withdraw_message_pro">You have successfully withdrawn from the study. You can return to it at any time in the preferences menu. Thank you for your interest and participation.</string>
-    <string name="filenameprefix_map">mySpaceMapperMap</string>
-    <string name="filenameprefix_csv">mySpaceMapperLocations</string>
-    <string name="more_info">More Information</string>
-    <string name="currently_sharing">You are currently sharing data with the activity-space project. This setting may be changed after you have participated for at least one week and shared at least 1,000 location fixes.</string>
-    <string name="stats_button">Statistics</string>
+    <string name="app_name" translatable="false">Campus Mobility</string>
+    <string name="user_guide_html" translatable="FALSE">
+<![CDATA[
+under constuction
+     ]]>
+    </string>
+
+
+    <string name="visit_website">Web</string>
+    
+        <string name="no_sharing_msg">En aquests moments no s\'estan guardant dades i les funcions d\'intercanvi de dades s\'han deshabilitat. Si us plau, consulteu el lloc web del projecte per a més informació. Moltes gràcies pel vostre interès!</string>    
+    
+    <string name="end_research_msg">La recol·lecció de dades ha finalitzat de manera que aquesta aplicació ja no comparteix les seves dades amb l\'equip de recerca, però si voleu, podeu continuar utilitzant l\’aplicació.  Si us plau, consulteu el lloc web del projecte per a més informació. Moltes gràcies per la vostra participació en aquest projecte!</string>
+    <string name="on">Encès</string>
+    <string name="off">Apagat</string>
+    <string name="warning_calendar_start_date">Avís: Has escollit una data d\'inici posterior a la data de finalització. Canvia una o l\'altra, per veure les dades al mapa.</string>
+    <string name="warning_calendar_end_date">Avís: Has escollit una data de finalització anterior a la data d\'inici. Canvia una o l\'altra, per veure les dades al mapa.</string>
+    <string name="save_db_label">Enviar</string>
+    <string name="pro_welcome">T\'acabes d\'actualitzar gratuïtament a Campus Mobility Pro. Pots deixar de participar en el Activity-Space Project en qualsevol moment canviant la configuració de la teva participació al menú Preferències.\n\nMoltes gràcies!</string>
+    <string name="dbq_battery_prompt">Has tingut problemes amb la durada de la bateria del telèfon mentre s\'utilitza l\'aplicació?</string>
+    <string name="db_howfound_friend">D\'un amic o conegut</string>
+    <string name="db_howfound_ad">D\'un anunci</string>
+    <string name="db_howfound_market">En el Google Play</string>
+    <string name="db_howfound_other">Altre</string>
+    <string name="db_heading">Enquesta</string>
+    <string name="db_subheading">Si tens un moment, agraïrem els teus comentaris!</string>
+    <string name="dbq_howfound_prompt">Com es va assabentar d\'aquesta aplicació? (Pots marcar-ne més d\'una.)</string>
+    <string name="dbq_friends_prompt">Coneixes algú més que faci servir l\'aplicació?</string>
+    <string name="dbq_behavior1_prompt">Creus que aquesta aplicació  pot haver modificat el teu comportament?</string>
+    <string name="dbq_behavior2_prompt">Has pensat en que aquesta aplicació s\'estava executant en el teu dia a dia?</string>
+    <string name="proconversion_notification_initial">Actualització de Campus Mobility</string>
+    <string name="proconversion_notification_subject">Actualització de Campus Mobility</string>
+    <string name="proconversion_notification">Has rebut una actualització gratuïta a Campus Mobility Pro.</string>
+    <string name="offline_warning">T\'ha desconnectat Internet. Si us plau, comprova la teva connexió a Internet i torna-ho a intentar.</string>
+    <string name="uploading">Carrega</string>
+    <string name="location">localització</string>
+    <string name="locations">localitzacions</string>
+    <string name="thank_you_for_participating">Gràcies per participar!</string>
+    <string name="map_settings">Configuració del mapa</string>
+    <string name="start_date_heading">Data d\'inici</string>
+    <string name="start_date">data d\'inici</string>
+    <string name="limit_start_date">Determina la data \nd\'inici del mapa?</string>
+    <string name="end_date_heading">Data final</string>
+    <string name="end_date_text">Determina la data \nfinal del mapa?</string>
+    <string name="end_date">data final</string>
+    <string name="sat">Satèl·lit</string>
+    <string name="use_sat_q">Utilitzar la imatge de satèl·lit?</string>
+    <string name="acc">Precisió</string>
+    <string name="toggleacc_q">Mostra la precisió de les localitzacions?</string>
+    <string name="icons">Icones</string>
+    <string name="display_icons_q">Mostra les icones?</string>
+    <string name="data_settings_label">Configuració de les dades</string>
+    <string name="storage_size_heading">Mida de la base de \ndades de l\'usuari.</string>
+    <string name="volunteer">Vols ser un/a voluntari/a?</string>
+    <string name="share_data_text">Comparteix les dades amb als investigadors?</string>
+    <string name="participation_heading">Participació</string>
+    <string name="participation_time_label">Durada total de la participació:</string>
+    <string name="nlocations_shared_label">Quantitat de localitzacions compartits:</string>
+    <string name="pending_uploads_heading">Càrregues \npendents</string>
+    <string name="files_deleted">arxius esborrats</string>
+    <string name="locations_deleted">localitzacions esborrades</string>
+    <string name="calculating">calculant</string>
+    <string name="available">disponibles</string>
+    <string name="used">utilitzats</string>
+    <string name="present">actualment</string>
+    <string name="withdraw_message_pro">Has deixat de participar a l\'estudi. Pots tornar a participar-hi en qualsevol moment a través del menú de preferències. Gràcies pel teu interès i participació.</string>
+    <string name="filenameprefix_map">meuSpaceMapperMapa</string>
+    <string name="filenameprefix_csv">meveSpaceMapperLocalitzacions</string>
+    <string name="more_info">més informació</string>
+    <string name="currently_sharing">Actualment estàs compartint dades amb l\'Activity-Space Project. Aquesta configuració es pot canviar després d\'haver participat com a mínim una setmana i d`haver compartit almenys 1.000 estimacions de les teves localitzacions.</string>
+    <string name="stats_button">Estadístiques</string>
     <string name="menu_asp">Activity-Space Project</string>
-    <string name="saving_data">Saving data.</string>
-    <string name="database_updating_text">Updating database. Please wait...</string>
-    <string name="mapdata_loading_text">Loading location data.</string>
-    <string name="first_station_time_label">"First: "</string>
-    <string name="latest_station_time_label">"Latest: "</string>
-    <string name="tracking_notification_initial">Tracking your activity-space</string>
-    <string name="tracking_notification">Tracking your activity-space.</string>
-    <string name="tracking_notification_subject">Campus Mobility Tracking</string>
-    <string name="menu_flush_gps">Refresh GPS</string>
-    <string name="renew_gps_alert">Would you like to delete and download new A-GPS data? Doing so may improve GPS performance if you currently have a good data connection and your GPS appears to be stuck. However, you may experience a delay in GPS location estimates, particularly if your data connection is slow.</string>
-    <string name="first_fix_time">First Spacetime Point:</string>
-    <string name="last_fix_time">Last Spacetime Point:</string>
-    <string name="progress_text">Loading spacetime data. Please wait...</string>
-    <string name="message_store_data">Store My Data is currently off. Please go to the Preferences menu and turn it on if you would like to create a lifeline.</string>
-    <string name="message_no_data">You do not yet have enough data to build a lifeline. Collect at least two location estimates and then try again.</string>
-    <string name="toggle_zax">Toggle Time Axis</string>
-    <string name="toggle_xyax">Toggle Space Axes</string>
-    <string name="lifeline_button">Spacetime</string>
-    <string name="made_with_SM">Made with Campus Mobility</string>
-    <string name="menu_share">Share App</string>
-    <string name="share_with">Share with</string>
-    <string name="rate_heading">Rate Campus Mobility</string>
-    <string name="rate_no">No, thanks</string>
-    <string name="rate_later">Remind me later</string>
-    <string name="rate_yes">Rate Campus Mobility</string>
-    <string name="rate_prompt">If you enjoy using Campus Mobility, please take a moment to rate it. Thanks for your support!</string>
-    <string name="menu_rate">Rate App</string>
-    <string name="menu_map_save">Save Map</string>
-    <string name="menu_map_share">Share Map</string>
-    <string name="menu_map_settings">Map Settings</string>
-    <string name="heading_map_interval">Map Interval</string>
-    <string name="text_map_interval_spinner">Map locations during last: </string>
-    <string name="my_location">Location</string>
-    <string name="data_SD_error">Error writing file to SD card.</string>
-    <string name="data_SD_unavailable">SD Card Not Available - file cannot be saved.</string>
-    <string name="data_saved">Data saved as </string>
-    <string name="withdraw_error">All Campus Mobility data has been deleted from your phone, but an error occurred while trying to contact the Campus Mobility server. Please check your internet connection and try again.</string>
-    <string name="cancel">Cancel</string>
-    <string name="withdraw_warning_yes">Yes, withdraw and delete data now</string>
-    <string name="withdraw_warning">WARNING: All of the Campus Mobility data you have saved on your phone\'s internal memory and all data sent to the Campus Mobility server will be deleted. This cannot be undone. Are you sure you wish to proceed?</string>
-    <string name="new_fix_blinker">New Fix!</string>
-    <string name="time_label">Time and Date: </string>
-    <string name="lat_label">Latitude: </string>
-    <string name="lon_label">Longitude: </string>
-    <string name="alt_label">Altitude (m): </string>
-    <string name="acc_label">Accuracy (m): </string>
-    <string name="prov_label">Provider: </string>
-    <string name="list_my_data_heading">My Data List</string>
-    <string name="list_data_button">View Raw Data</string>
-    <string name="my_data_heading">My Data</string>
-    <string name="GPL">View GPL</string>
-    <string name="LGPL">View LGPL</string>
-    <string name="menu_center_map">Re-Center</string>
-    <string name="menu_toggle_view">Toggle Sat./Map</string>
-    <string name="data_off_alert">Store My Data is currently off. Click here to go to the Preferences menu and turn it on</string>
-    <string name="noGPSAlert">"Your GPS receiver is disabled. Do you want to enable it?".</string>
-    <string name="noGPSnoNetAlert">Your GPS and network location receivers are both disabled. Campus Mobility will not be able to locate without at least one of these. Do you want to enable them?</string>
-    <string name="noGPS">Your GPS receiver is off. \nPlease click here to turn it on.</string>
-    <string name="noGPSnoNet">Campus Mobility cannot locate you because your GPS and network location receivers are both off. \nPlease click here to turn them on.</string>
-    <string name="consent_date_prompt">You indicated your consent by clicking the Consent button at the time and date shown below. You may withdraw your consent at any time by using the Activity-Space Project/Withdraw menu.</string>
-    <string name="delete_mydata_query">Would you like to delete any Campus Mobility data already stored on your phone?</string>
-    <string name="more_data_later">More data analysis tools will be included in future updates</string>
-    <string name="help">Help</string>
-    <string name="user_guide">User Guide</string>
+    <string name="saving_data">Guardant les dades.</string>
+    <string name="database_updating_text">Actualitzant la base de dades. Si us plau, espera...</string>
+    <string name="mapdata_loading_text">Carregant les dades de localització.</string>
+    <string name="first_station_time_label">"Primera: "</string>
+    <string name="latest_station_time_label">"Última: "</string>
+    <string name="tracking_notification_initial">Gravant la teva activitat-espai.</string>
+    <string name="tracking_notification">Gravant la teva activitat-espai.</string>
+    <string name="tracking_notification_subject">Campus Mobility està gravant</string>
+    <string name="menu_flush_gps">Actualitza GPS</string>
+    <string name="renew_gps_alert">Voldries eliminar i baixar un nou A-GPS data ? Fer-ho millorarà el funcionament del GPS si tens una bona connexió de dades i el GPS sembla que no funciona correctament. No obstant, això pot resultar en un endarreriment en les estimacions de les teves localitzacions.</string>
+    <string name="first_fix_time">Primer punt en l\'espai-temps:</string>
+    <string name="last_fix_time">Últim punt en l\'espai-temps:</string>
+    <string name="progress_text">Carregant dades. Si us plau, esperi...</string>
+    <string name="message_store_data">Guardi meves dades està desactivat. Si us plau, aneu al menú de Preferències i encendre\'l si voleu crear una línia de vida.</string>
+    <string name="message_no_data">No tenim encara dades suficients per construir una línia de vida. Recull almenys dues estimacions de localització i torni a intentar-ho.</string>
+    <string name="toggle_zax">Eix temporal</string>
+    <string name="toggle_xyax">Eix espacial</string>
+    <string name="lifeline_button">L\'espai-temps</string>
+    <string name="made_with_SM">Imatge fet amb l\'Campus Mobility</string>
+    <string name="menu_share">Comparteix l\'aplicació</string>
+    <string name="share_with">Comparteix via</string>
+    <string name="rate_heading">Avaluar l\'Campus Mobility</string>
+    <string name="rate_no">No, gràcies</string>
+    <string name="rate_later">Recorda\'m-ho més tard</string>
+    <string name="rate_yes">Avaluar l\'Campus Mobility</string>
+    <string name="rate_prompt">Si t\'agrada utilitzar l\'Campus Mobility, si us plau dedica un moment per avaluar-lo. Gràcies pel teu suport!</string>
+    <string name="menu_rate">Avaluar l\'aplicació</string>
+    <string name="menu_map_save">Guardar el Mapa</string>
+    <string name="menu_map_share">Compartir el Mapa</string>
+    <string name="menu_map_settings">Configuració del Mapa</string>
+    <string name="heading_map_interval">Interval</string>
+    <string name="text_map_interval_spinner">Localitzacions al Mapa durant les últimes: </string>
+    <string name="my_location">Localització</string>
+    <string name="data_SD_error">Error al guardar l\’arxiu a la tarja SD.</string>
+    <string name="data_SD_unavailable">Tarja SD No Disponible – l\’arxiu no es pot guardar.</string>
+    <string name="data_saved">Les dades s\’han guardat com </string>
+    <string name="withdraw_error">Tota la informació de l\’Campus Mobility ha estat esborrada del teu telèfon però s\’ha produït un error al tractar de posar-se en contacte amb el servidor de l\’Campus Mobility. Si us plau, comprova la teva connexió a Internet i torna-ho a intentar.</string>
+    <string name="cancel">Anul.lar</string>
+    <string name="withdraw_warning_yes">Si, vull eliminar les dades ara</string>
+    <string name="withdraw_warning">ATENCIÓ: Tota la informació de l\’Campus Mobility s\’ha guardat a la memòria interna del telèfon i totes les dades enviades al servidor de l\’Campus Mobility s\’eliminaran. Aquest procés no es pot desfer. Estàs segur/a que vols continuar?</string>
+    <string name="new_fix_blinker">Nova Localització!</string>
+    <string name="time_label">Data i Hora: </string>
+    <string name="lat_label">Latitud: </string>
+    <string name="lon_label">Longitud: </string>
+    <string name="alt_label">Altitud (m): </string>
+    <string name="acc_label">Precisió (m): </string>
+    <string name="prov_label">Proveïdor: </string>
+    <string name="list_my_data_heading">Llista de Dades</string>
+    <string name="list_data_button">Veure Dades</string>
+    <string name="my_data_heading">Les meves dades</string>
+    <string name="GPL">Veure GPL</string>
+    <string name="LGPL">Veure LGPL</string>
+    <string name="menu_center_map">Re-Centrar</string>
+    <string name="menu_toggle_view">Satèl.lit./Mapa</string>
+    <string name="data_off_alert">Guardar les meves dades està apagat. Clica aquí per accedir al menú de Preferències i activar-lo. </string>
+    <string name="noGPSAlert">"El teu GPS està desconnectat. Vols activar-lo?".</string>
+    <string name="noGPSnoNetAlert">El teu GPS i el teu receptor de localitzacions sense fils estan desactivats. Campus Mobility no pot obtenir la teva localització sense com a mínim un d\’ells activat. Vols activar-los ?</string>
+    <string name="noGPS">El teu GPS està desactivat. \nSi us plau, clica aquí per activar-lo.</string>
+    <string name="noGPSnoNet">Campus Mobility no pot localitzar-te perquè el teu GPS i el teu receptor sense fils estan apagats. \nSi us plau, clica aquí per activar-los.</string>
+    <string name="consent_date_prompt">Apretant el botó d\’Acceptar, has acceptat a l\’hora i la data indicades aquí. Pots canviar d\’opinió respecte la teva participació en el projecte d\’investigació en qualsevol moment utilitzant el menú d\’Activity-Space Project.</string>
+    <string name="delete_mydata_query">Vols esborrar algunes dades que Campus Mobility ha guardat al teu telèfon?</string>
+    <string name="more_data_later"> Campus Mobility inclourà instruments d\’anàlisi addicionals en el futur proper</string>
+    <string name="help">Ajuda</string>
+    <string name="user_guide">Guia de l\’usuari/a</string>
     <string name="faqs">FAQs</string>
-    <string name="about">About</string>
-    <string name="review_consent">Consent Form</string>
-    <string name="contact">Contact</string>
-    <string name="withdraw_consent">Withdraw</string>
-    <string name="contact_heading">Contact</string>
-    <string name="thanks_for_interest">Thank you for your interest!</string>
+    <string name="about">Sobre</string>
+    <string name="review_consent">Formulari de consentiment</string>
+    <string name="contact">Contacte</string>
+    <string name="withdraw_consent">Vull revocar el meu consentiment</string>
+    <string name="contact_heading">Contacte</string>
+    <string name="thanks_for_interest">Gràcies pel teu interès!</string>
     <string name="ok">OK</string>
-    <string name="underage_message">You must be at least 18 to volunteer as a Campus Mobility research subject, but you are welcome to visit our website to learn more or to contact us with any questions or suggestions.</string>
+    <string name="underage_message">Per tal de participar al projecte Campus Mobility com a voluntari i per tant com a subjecte de recerca cal que siguis major de 18 anys. Pots visitar la nostra pàgina per conèixer-nos més o per posar-te en contacte amb nosaltres per resoldre qualsevol pregunta o fer-nos arribar qualsevol suggerència.</string>
     <string name="project_website">TO_BE_ADDED</string>
     <string name="project_email">TO_BE_ADDED</string>
-    <string name="menu_locate_now">Locate Now</string>
-    <string name="menu_upload_now">Upload Now</string>
-    <string name="intro_button_over">I am at least 18 years old</string>
-    <string name="intro_button_under">I am under 18 years old.</string>
-    <string name="intro_heading">Welcome to Campus Mobility</string>
-    <string name="intro_subheading">Introduction</string>
-    <string name="main_text_off">Campus Mobility is off. \nClick here to turn it on.</string>
-    <string name="location_found">LOCATION FOUND</string>
-    <string name="checking_location">Locating</string>
-    <string name="countdown_text">Countdown to next measurement:</string>
-    <string name="main_text">Thank you for participating! \n\nYou can exit at any time and Campus Mobility will continue to work in the background. \n\nUse the menu button for more options.</string>
-    <string name="heading_mydata_spinner">Storage Period</string>
-    <string name="text_mydata_spinner">Store data for how many days?</string>
-    <string name="heading_mydata_button">Store Data</string>
-    <string name="text_mydata_button">Store data on the phone?</string>
-    <string name="user_id">User ID:</string>
-    <string name="withdraw_lock_heading">Withdrawn</string>
+    <string name="menu_locate_now">Localitza\’m ara</string>
+    <string name="menu_upload_now">Carrega Ara</string>
+    <string name="intro_button_over">Sóc major de 18 anys</string>
+    <string name="intro_button_under">Tinc menys de 18 anys.</string>
+    <string name="intro_heading">Benvingut/da a Campus Mobility</string>
+    <string name="intro_subheading">Introducció</string>
+    <string name="main_text_off">Campus Mobility està desactivat. \nClica aquí per tornar a activar-lo.</string>
+    <string name="location_found">LOCALITZACIÓ TROBADA</string>
+    <string name="checking_location">Localitzant-te</string>
+    <string name="countdown_text">Compte enrere per la nova localització:</string>
+    <string name="main_text">Gràcies per participar! \n\nEn qualsevol moment pots sortir de l\’Campus Mobility. No et preocupis, el programa es continuarà executant al teu telèfon. \n\nUtilitza el botó del menú per més opcions.</string>
+    <string name="heading_mydata_spinner">Període</string>
+    <string name="text_mydata_spinner">Per quants dies?</string>
+    <string name="heading_mydata_button">Guardar dades</string>
+    <string name="text_mydata_button">Vols guardar les dades al telèfon?</string>
+    <string name="user_id">ID usuari:</string>
+    <string name="withdraw_lock_heading">Vull deixar de participar</string>
     <string name="withdraw_lock_subheading"></string>
-    <string name="withdraw_lock_text">You have withdrawn from the study and deleted all Campus Mobility data on your phone and on the server. For future reference, the code below is the unique user ID that was assigned to you while you were participating. If you would like to participate in the study in the future, you will need to reinstall the app on your phone and you will be automatically assigned a new user ID. </string>
-    <string name="withdraw_delete_button">Withdraw and Delete All Data</string>
-    <string name="withdraw_delete_text">Click here to withdraw from the study and permanently delete all Campus Mobility data from your phone and from the research server. You will need to have an internet connection to complete this step.</string>
-    <string name="withdraw_heading">Withdraw</string>
+    <string name="withdraw_lock_text">Has deixat de participar en l\’estudi i has eliminat totes les dades de l\’Campus Mobility del teu telèfon i del servidor. Per la teva informació, aquest codi és l\’ID d\’usuari únic que el programa t\’ha assignat durant la teva participació. Si vols tornar a participar a l\’estudi en el futur, necessitaràs reinstal.lar l\’aplicació al teu telèfon i el programa t\’assignarà automàticament un nou ID d\’usuari. </string>
+    <string name="withdraw_delete_button">Vull deixar de participar i eliminar totes les dades</string>
+    <string name="withdraw_delete_text">Clica aquí per deixar de participar a l\’estudi i eliminar permanentment totes les dades de l\’Campus Mobility del teu telèfon i del servidor del projecte d\’investigació. Necessitaràs una connexió d\’internet per tal de completar aquest procés.</string>
+    <string name="withdraw_heading">Vull deixar de participar</string>
     <string name="withdraw_subheading"></string>
-    <string name="save_data_button">Save Data to SD Card</string>
-    <string name="map_data_button">Map Data</string>
-    <string name="save_data_prompt">Save to SD card as comma separated value file.</string>
-    <string name="map_data_prompt">View data on map.</string>
-    <string name="app_name" translatable="false">Campus Mobility</string>
-    <string name="RegistrationHeading">Registration</string>
-    <string name="RegistrationSubHeading">Please Fill Out This Initial Survey</string>
-    <string name="yes">yes</string>
+    <string name="save_data_button">Guarda les dades</string>
+    <string name="map_data_button">Representa les dades en un Mapa</string>
+    <string name="save_data_prompt">Guardar a la tarja SD com un arxiu de valor. “.csv”.</string>
+    <string name="map_data_prompt">Veure les meves dades a un mapa.</string>
+    <string name="RegistrationHeading">Registrar-se</string>
+    <string name="RegistrationSubHeading">Si us plau, completa aquesta enquesta</string>
+    <string name="yes">si</string>
     <string name="no">no</string>
-    <string name="male">male</string>
-    <string name="female">female</string>
-    <string name="married_prompt">Are you married?</string>
-    <string name="kids_prompt">How many children do you have who live with you?</string>
-    <string name="race_prompt">Race/Ethnicity</string>
-    <string name="race_subprompt">Please mark one or more boxes depending on how you identify yourself. (Categories are based on those used by the U.S. Census Bureau.)</string>
-    <string name="race_white">White</string>
-    <string name="race_black">Black, African American, or Negro</string>
-    <string name="race_latino">Hispanic/Latino/Spanish</string>
-    <string name="race_native_american">American Indian or Alaska Native</string>
-    <string name="race_asian">Asian</string>
-    <string name="race_other">Other</string>
-    <string name="specify">please specify:</string>
-    <string name="pob_prompt">In which country were you born?</string>
-    <string name="por_prompt">In which country do you currently reside?</string>
-    <string name="entryyear_prompt">When did you first move to your country of residence?</string>
-    <string name="entryyear_prompt_short">Year you first moved to country of residence:</string>
-    <string name="cit_prompt">Are you a citizen of the country in which you reside?</string>
-    <string name="heading_language">Language</string>
-    <string name="text_language_spinner">Change app language</string>
-    <string name="heading_interval">Fix Interval</string>
+    <string name="male">home</string>
+    <string name="female">dona</string>
+    <string name="married_prompt">Estàs casat/da?</string>
+    <string name="kids_prompt">Quants fills/es viuen amb tu?</string>
+    <string name="race_prompt">Raça/Ètnia</string>
+    <string name="race_subprompt">Si us plau, marca una de les caselles o més que segons t\’identifiquis en un grup o en més d\’un. (Les categories de la llista són les utilitzades al Cens dels Estats Units.)</string>
+    <string name="race_white">Blanca</string>
+    <string name="race_black">Negra o Africana-americana</string>
+    <string name="race_latino">Hispana/Llatina/Espanyola</string>
+    <string name="race_native_american">Indi Americà o nativa d\’Alaska</string>
+    <string name="race_asian">Asiàtica</string>
+    <string name="race_other">Alguna altra ètnia</string>
+    <string name="specify">Si us plau, contesta:</string>
+    <string name="pob_prompt">A quin país vas néixer?</string>
+    <string name="por_prompt">A quin país resideixes actualment?</string>
+    <string name="entryyear_prompt">Quan et vas traslladar al teu país de residència?</string>
+    <string name="entryyear_prompt_short">Any al qual et vas traslladar al teu país de residència:</string>
+    <string name="cit_prompt">Ets un/a ciutadà/ana del país al qual resideixes?</string>
+    <string name="heading_language">Idioma</string>
+    <string name="text_language_spinner">Canvia l\’idioma de l\’app.</string>
+    <string name="heading_interval">Fixi l\’Interval</string>
     <string name="on_off">On/Off</string>
-    <string name="menu_settings">Preferences</string>
-    <string name="menu_data">My Data</string>
-    <string name="menu_help">Help</string>
+    <string name="menu_settings">Preferències</string>
+    <string name="menu_data">Les meves dades</string>
+    <string name="menu_help">Ajuda</string>
     <string name="SplashHeading">Campus Mobility</string>
-    <string name="SexPrompt">Sex:</string>
-    <string name="born_res_prompt">Were you born in the same country in which you curently reside?</string>
-    <string name="age_prompt">Age:</string>
-    <string name="AgeHint">enter your age</string>
-    <string name="lang_prompt">What language do you primarily speak at home?</string>
-    <string name="ed_prompt">Highest degree or level of school completed:</string>
-    <string name="inc_prompt">What was your total household income during the past 12 months?</string>
-    <string name="inc_prompt_short">Total household income during past 12 months:</string>
-    <string name="nhousehold_prompt">How many members are in your household, including yourself?</string>
-    <string name="nhousehold_prompt_short">Members in household, including yourself:</string>
-    <string name="emp_prompt">Employment Status:</string>
-    <string name="save_reg_label">Submit Responses</string>
-    <string name="service_is_on">Campus Mobility is on</string>
-    <string name="service_is_off">Campus Mobility is off</string>
-    <string name="text_interval_spinner">Measure location every: </string>
-    <string name="banner_image_content_description">Campus Mobility Icon</string>
-    <string name="consent_heading">Consent Form</string>
-    <string name="consent_instructions">Please read the following consent form. You may electronically sign the form, indicating your consent, by clicking on the "Consent" button at the bottom of this screen. Any questions may be addressed to activity.space.project@gmail.com.</string>
-    <string name="consent_signature_button">Consent</string>
-    <string name="nfixes_text">Recorded:</string>
-    <string name="nuploads_text">Uploaded:</string>
-    <string name="thankyou">Thank you for participating!</string>
-    <string name="consent_decline_button">Decline</string>
+    <string name="SexPrompt">Sexe:</string>
+    <string name="born_res_prompt">Vas néixer al mateix país al qual resideixes actualment?</string>
+    <string name="age_prompt">Edat:</string>
+    <string name="AgeHint">Entra la teva edat</string>
+    <string name="lang_prompt">Quina llengua parles principalment a casa?</string>
+    <string name="ed_prompt">Nivell d\’estudis completat:</string>
+    <string name="inc_prompt">Quina va ser la renda familiar durant els últims 12 mesos?</string>
+    <string name="inc_prompt_short">Renda familiar durant els últims 12 mesos:</string>
+    <string name="nhousehold_prompt">Quants membres familiars conviuen a la teva llar, comptant-te tu també?</string>
+    <string name="nhousehold_prompt_short">Membres de la llar, incloent-t´hi tu:</string>
+    <string name="emp_prompt">Situació laboral:</string>
+    <string name="save_reg_label">Envia respostes</string>
+    <string name="service_is_on">Campus Mobility està activat</string>
+    <string name="service_is_off">Campus Mobility està desactivat</string>
+    <string name="text_interval_spinner">Mesura la localització cada: </string>
+    <string name="banner_image_content_description">Icona Campus Mobility</string>
+    <string name="consent_heading">Formulari de Consentiment</string>
+    <string name="consent_instructions">Si us plau llegeix el següent formulari de consentiment. Pots acceptar electrònicament clicant el botó d\’acceptar de la pantalla. Si tens qualsevol pregunta, envia-les a activity.space.project@gmail.com.</string>
+    <string name="consent_signature_button">Acceptar</string>
+    <string name="nfixes_text">Guardats:</string>
+    <string name="nuploads_text">Enviats:</string>
+    <string name="thankyou">Gràcies per la teva participació!</string>
+    <string name="consent_decline_button">No accepto</string>
     <string name="intro_text">
 <![CDATA[
-<p><b>Welcome to Campus Mobility!</b></p>
+<p><b>Benvingut\/da a Campus Mobility!</b></p>
 
-<p>Thank you for downloading Campus Mobility. This app is part of an academic research project on daily mobility habits of the university community.</p>
+<p>Gràcies per descarregar\-te Campus Mobility. Aquesta app és part d\’un projecte acadèmic que analitza els hàbits de mobilitat quotidiana de la comunitat universitària.</p>
 
-<p>If you have any questions, please email us at gemott@uab.cat</p>
+<p>Si tens alguna pregunta, si us plau envia\’ns un e-mail a gemott@uab.cat</p>
 ]]>
     </string>
     <string name="about_html">
 <![CDATA[
-<p>Campus Mobility version 1.00</p>
+<p>Campus Mobility versió 1.00</p>
 
-<p>Campus Mobility lets you map the spaces you move
-through as you go about your daily activities. It was written by John R.B.
-Palmer based in part on code from the Human Mobility Project, written by Chang Y. Chung,
-Kathleen Li, and Necati E. Ozgencil.
-
-The Campus Mobility source code is available at http://github.com/JohnPalmer/CampusMapper.</p>
-
+<p>Campus Mobility forma part d\’un projecte acadèmic sobre l\’espai i els llocs als quals es troben les persones al
+desenvolupar les seves activitats durant la seva vida diària. Escrit per John R.B. Palmer, està parcialment basat en el codi del Human Mobility Project, escrit per Chang Y. Chung, Kathleen Li, i Necati E. Ozgencil. El codi de l\’Campus Mobility està disponible a http://github.com/JohnPalmer/CampusMapper.</p>
 <p>Copyright &#169; 2015 John R.B. Palmer</p>
-
+ 
 <p> This program is free software: you can redistribute it and/or modify
     it under the terms of the GNU General Public License as published by
     the Free Software Foundation, either version 3 of the License, or
@@ -281,7 +284,6 @@ The Campus Mobility source code is available at http://github.com/JohnPalmer/Cam
 
 <p>You should have received a copy of the GNU General Public License
     along with this program.  If not, see http://www.gnu.org/licenses.</p>
-
 
 <p>The code incorporated from the Human Mobility Project is subject to the following terms:</p>
 
@@ -309,325 +311,416 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p></blockquote>
     </string>
     <string name="faqs_html">
 <![CDATA[
-<p><b>How do I participate in the research? </b></p>
+<p><b>Com participo en aquest projecte de recerca? </b></p>
 
-Just install the application on your phone, open it, and respond to the consent and registration questions. After that, make sure your phone\'s GPS and/or network location receiver is enabled and go about your normal activities. The application will run in the background and it will send your location information to the research server at regular intervals.
+Instal.la l\’aplicació al teu telèfon, obre-la, accepta les condicions i registra\’t. Una vegada completada aquesta fase inicial assegura\’t que el GPS del teu telèfon i/o el receptor de localitzacions sense fil del teu telèfon estan actius i continua amb les activitats habituals. L\’aplicació continuarà executant-se al telèfon i enviarà la informació sobre les teves localitzacions al servidor del projecte d\’investigació a intervals de temps regulars. 
 
-<p><b>Will I receive compensation for my participation?</b></p>
+<p><b>Rebré algun tipus de compensació econòmica per la meva participació?</b></p>
  
-No, but you will be able to store and map your own locations and you will be contributing to science.
+No, però podràs guardar les teves localitzacions i situar-les al mapa i sobretot, estaràs contribuint a l\’avenç de la ciència.
+
+<p><b>Puc deixar de participar en l\’estudi i desintal.lar l\’aplicació si aquesta no m\’agrada?</b></p>
  
-<p><b>Can I withdraw from the study and uninstall the application if I don\'t like it?</b></p>
+Si. La teva participació és totalment voluntària i pot acabar quan ho decideixis. Per tal de deixar de participar simplement desactiva l\’aplicació des del menú de Preferències de l\’aplicació o desintal.la-la utilitzant la configuració del teu telèfon. Si vols eliminar totes les teves dades del servidor del projecte d\’investigació, utilitza el botó desactivar del menú d\’Activity-Space Project de l\’aplicació.
+
+<p><b>Quina informació compartiré i com es protegirà la meva identitat?</b></p>
+
+L\’aplicació envia la informació següent al servidor del projecte d\’investigació: (1) el dia i hora del teu consentiment, (2) les teves respostes a les preguntes de l\’enquesta inicial, (3) la configuració d\’idioma al teu telèfon, (4) qualsevol resposta a l\’enquesta de seguiment, i (5) les localitzacions que ens envïis que consistiran en la latitud, longitud, altitud, precisió, receptor de localització 
+(i.e. GPS o xarxa sense fils), estat de la bateria i temps. Aquesta és la única informació que es recopila, està encriptada al teu telèfon abans d\’enviar-la al servidor i es desencripta i analitza per l\’equip del projecte d\’investigació només quan aquesta s\’ha eliminat del servidor. La teva informació serà utilitzada només per analitzar i contestar les preguntes de mobilitat i segregació de la població i no es compartiran amb ningú que no formi part de l\’equip d\’investigació excepte quan aquestes dades hagin estat agregades i/o transformades de forma que sigui impossible que se t\’identifiqui. 
+
+<p><b>Hi ha restriccions respecte qui pot participar al projecte?</p></b> 
+
+Si – cal que siguis major de 18 anys per tal de poder participar. A més, per tal que l\’aplicació funcioni és necessari que tinguis un dispositiu que funcioni amb tecnologia Android. 
+
+<p><b>És perillós utilitzar el meu telèfon mentre condueixo?</b></p>
  
-Yes. Your participation is entirely voluntary and you may end it whenever you wish. To stop participating, simply switch the application off from the application\'s Preferences menu or uninstall it using your phone\'s Settings menu. If you would like to delete all of your data from the research server, use the withdraw button from the application\'s Activity-Space Project menu.
+Si – si us plau, no ho facis ! La utilització dels telèfons mòbils mentre es condueix pot augmentar el risc d\’accidents, mort o qualsevol altre dany a més d\’estar prohibit en molts estats. Per tant, et demanem por favor que no utilitzis el teu telèfon mòbil mentre condueixis. 
 
-<p><b>What information will I be sharing with others and how will my identity be protected?</b></p>
+<p><b>Per què recolliu informació sobre la bateria del meu telèfon?</b></p>
 
-The application transmits the following information to the research server: (1) the date and time of your consent, (2) any answers you provide to the initial registration survey, (3) your phone\'s language settings, (4) any answers you provide to the follow-up survey, and (5) regular location updates consisting of latitude, longitude, altitude, accuracy, location provider (i.e. GPS or network), battery status, and time. This is the only information that is collected, it is encrypted on your phone before being sent to the server, and it is decrypted and analyzed by the research team only after being taken off the server. Your information will be used only for the purpose of studying population level questions about mobility and segregation and it will not be shared with anyone outside the research team except to the extent that it has first been aggregated and/or transformed in such a way as to make it impossible for you to be identified. 
+Per tal que ens ajudi a millorar l\’aplicació. Hem dissenyat l\’aplicació de manera que sigui el menys intrusiva possible amb el funcionament del telèfon de forma que si ens adonessim que l\’aplicació està utilitzant una gran càrrega de la bateria del teu telèfon, ho arreglaríem en properes versions de l\’aplicació.
 
-<p><b>Are there any restrictions on who may participate?</p></b> 
+<p><b>Com puc utilitzar la informació de la meva localització?</b></p>
 
-Yes -- you must be at least 18 years old to participate. In addition, the application will work only on devices running Android. 
+Des del menú de Preferències de l\’aplicació vés a Guarda les meves dades i clica \"si\" i escull la quantitat d\’informació que vols guardar en base al Període durant el qual vols guardar les teves dades. Les teves localitzacions es guardaran al teu telèfon durant el període que escullis i podràs situar-les a un mapa i guardar-les a la teva tarja SD des del menú de Les Meves Dades. Cal destacar que la informació que decideixis guardar al teu telèfon pel teu ús personal no està encriptada. 
 
-<p><b>Is it dangerous to use my phone while driving?</b></p>
+<p><b>Quan situo les meves dades al mapa, algunes localitzacions no es veuen bé. Per què passa això?</b></p>
+
+La precisió de les estimacions de les localitzacions depèn d\’un nombre de factors, entre els quals es troba l\’accés als senyals del satèl.lit de GPS i la connexió a les xarxes sense fils. L\’aplicació està dissenyada per avaluar la precisió de les localitzacions segons la càrrega de bateria del telèfon de manera que en alguns casos, les estimacions tindran un major marge d\’error. 
+
+<p><b>Per què l\’aplicació no guarda les meves localitzacions?</b></p>
+
+Aquest fet es pot produir-se en casos als quals ni el teu GPS ni el teu receptor de localització sense fils estiguin activats o quan el teu telèfon no pugui detectar la teva localització a un cert lloc amb la mínima precisió requerida per l\’aplicació. 
+
+<p><b>Per què l\’aplicació no envia les meves localitzacions al servidor?</b></p>
+
+Aquest fet pot ser causat perquè el telèfon no estigui connectat a Internet. Quan estiguis segur/a que el teu telèfon està connectat a Internet, clica \"Envia ara\" del menú principal.
+
+<p><b>A qui hauria de contactar si tinc més preguntes?</b></p>
  
-Yes -- please don\'t! The use of mobile phones while driving can create an increased risk of injury, death, or other harm and is prohibited in many states. We therefore ask that you please refrain from interacting with your phone while driving.  
-
-<p><b>Why do you collect information about my battery?</b></p>
-
-To help us improve the application. The application is designed to be as minimally intrusive as possible, so if we see that it is placing a heavy load on your battery, we will do our best to fix this in future updates.
-
-<p><b>How can I use my own location information?</b></p>
-
-From the application\'s Preferences menu, set the Store My Data option to \"yes\" and choose how much of your information you would like to store by picking from the Storage Period spinner. You locations will be stored on your phone during the period you select, and you will be able to map them and save them to your SD card from the My Data menu. Note that the information you choose to store on your phone for your own use is not encrypted. 
-
-<p><b>When I map my data, some of the locations look wrong. Why is that?</b></p>
-
-The accuracy of your phone\'s location estimates depends on a number of factors, including access to GPS satellite signals and connection to wireless networks. The application is designed to balance accuracy against battery load, so it will sometimes use location estimates that have a large margin of error.
-
-<p><b>Why is the application not recording my location?</b></p>
-
-This could be because it is not turned on, because neither your GPS nor your network location receivers are enabled, or because your phone is simply unable to detect your location in a given place within the minimum accuracy required by the application.
-
-<p><b>Why is the application not uploading my locations to the server?</b></p>
-
-This could be because your phone does not have an internet connection. Once you are sure the phone is connected to the internet, try cliking \"Upload Now\" from the main menu.
-
-<p><b>Who should I contact if I have additional questions?</b></p>
- 
-John Palmer is the principal investigator for this project and a Ph.D. student at Princeton\'s Woodrow Wilson School and Office of Population Research. For any questions about this project, please contact him at the email address shown below.
+John Palmer, estudiant de doctorat de la Woodrow Wilson School i l\’Office of Population Research de la Universitat de Princeton, és l\’investigador principal d\’aquest projecte. Per qualsevol pregunta relativa a aquest projecte, posa\’t en contacte amb mi a l\’adreça de correu que tens aquí. 
 
     ]]>
     </string>
     <string name="consent_text">
 <![CDATA[
-<p><b>CONSENT FORM</b></p>
-<p>TO BE ADDED</p>
-        ]]>
+<p><b>FORMULARI DE CONSENTIMENT – “Campus Mobility”</b></p>
+<p>Investigadors:</p>
+<p>1. Grup d\’Estudis de Mobilitat, Transport i Territori (GEMOTT), Departament de Geografia, Universitat Autònoma de Barcelona. Carrer de la Fortuna, Facultat de Filosofia i Lletres (Edifici B), Departament de Geografia - Campus de la UAB - 08193, Bellaterra (Cerdanyola del Vallès), Barcelona, Espanya. Tel. +34 935814805. gemott@uab.cat</p>
+
+<p>2. ICREA Movement Ecology Laboratory, Centre d\’Estudis Avançats de Blanes – Consejo Superior de Investigaciones Científicas (CEAB-CSIC). Accés Cala Sant Francesc, 14, 17300, Blanes, Girona, Espanya. www.movelab.net</p>
+
+<p>3. Centre de Política de Sòl i Valoracions, Universitat Politècnica de Catalunya. Av. Diagonal, 649, 4ta planta (Arq. Legal), 08028, Barcelona, Barcelona, Espanya. www.upc.edu\/cpsv\/</p>
+
+<p>Mitjançant aquest formulari, la persona involucrada en aquest projecte:</p>
+
+<p>1. És conscient que ha de ser major de 18 anys d\’edat per a participar al projecte.</p>
+<p>2. Entén que se li sol\·licitarà permís per a executar l\’aplicació al seu telèfon mòbil i que aquesta transmetrà informació sobre la seva ubicació física, els seus desplaçaments, l\’estat de la bateria del seu dispositiu i la configuració d\’idioma, a l’equip investigador del projecte.</p>
+<p>3. És conscient de que l\’ús de telèfons mòbils, mentre es condueix, pot crear un major risc de lesions, mort o altres danys i està prohibida en molts indrets. Així, es compromet a abstenir-se d\’interactuar amb l\’aplicació durant la conducció.</p>
+<p>4. Entén que la seguretat és la màxima prioritat en tots els aspectes d\’aquest projecte i es compromet a utilitzar el seu telèfon de forma segura en tot moment.</p>
+<p>5. És conscient que el propòsit d’aquesta investigació és el d\’analitzar la mobilitat quotidiana sobre el territori.</p>
+<p>6. Entén que es prendran les mesures corresponents de protecció i privacitat de les dades proporcionades. La informació, resultant del projecte, no serà utilitzada per a cap propòsit diferent al de la investigació portada a terme per l\’equip investigador.</p>
+<p>7. Entén que la participació és voluntària, de manera que pot retirar el seu consentiment i desvincular-se del projecte en qualsevol moment, sense que això comporti penalització. L\’equip investigador es compromet a eliminar tota la informació davant sol\·licitud expressa.</p>
+<p>8. Mitjançant el seu consentiment, respecte d’aquest formulari, no renuncia a cap dret legal ni eximeix al GEMOTT, ni a cap de les persones vinculades, de les seves responsabilitats per negligències.</p>
+<p>Amb l\’exposat, la persona involucrada dóna consentiment per a participar com a voluntari o voluntària al projecte “Campus Mobility”.</p>
+]]>
     </string>
     <string name="contact_info">
 <![CDATA[
-TO BE ADDED
-     ]]>
-    </string>
-    <string name="user_guide_html" translatable="FALSE">
-<![CDATA[
-under constuction
+<p><b>TO BE ADDED</b></p>
      ]]>
     </string>
 
+    <string-array name="ed_array">
+        <item></item>
+        <item>Sense estudis primaris </item>
+        <item>Escola primària</item>
+        <item>Escola secundària</item>
+        <item>Un curs univesitari o més</item>
+        <item>Associate degree (e.g., AA, AS)</item>
+        <item>Graduat/da universitari/a</item>
+        <item>Estudis post-graduats de Màster</item>
+        <item>Titulacions Professionals (i.e. metge, dentista, advocat/da)</item>
+        <item>Doctorat</item>
+    </string-array>
+    <string-array name="incs_array">
+        <item></item>
+        <item>Menys de $10,000</item>
+        <item>Entre $10,000 i $19,000</item>
+        <item>Entre $20,000 i $29,000</item>
+        <item>Entre $30,000 i $39,000</item>
+        <item>Entre $40,000 i $49,000</item>
+        <item>Entre $50,000 i $59,000</item>
+        <item>Entre $60,000 i $69,000</item>
+        <item>Entre $70,000 i $79,000</item>
+        <item>Entre $80,000 i $89,000</item>
+        <item>Entre $90,000 i $99,000</item>
+        <item>Entre $100,000 i $149,000</item>
+        <item>$150,000 o més</item>
+    </string-array>
+    <string-array name="emp_array">
+        <item></item>
+        <item>Treballador/a per compte aliena</item>
+        <item>Treballador/a per compte promi</item>
+        <item>Aturat/da buscant feina</item>
+        <item>Aturat/da però sense buscar feina actualment</item>
+        <item>Mestressa de casa</item>
+        <item>Estudiant</item>
+        <item>Jubilat/da</item>
+        <item>No puc treballar</item>
+    </string-array>
+    <string-array name="storage_size_array">
+        <item>1 dia</item>
+        <item>2 dies</item>
+        <item>3 dies</item>
+        <item>4 dies</item>
+        <item>5 dies</item>
+        <item>6 dies</item>
+        <item>7 dies</item>
+        <item>30 dies</item>
+    </string-array>
+    <string-array name="interval_array">
+        <item>15 segons</item>
+        <item>30 segons</item>
+        <item>1 minut</item>
+        <item>2 minuts</item>
+        <item>5 minuts</item>
+        <item>10 minuts</item>
+        <item>30 minuts</item>
+        <item>1 hora</item>
+    </string-array>
+    <string-array name="map_interval_array">
+        <item>1 hora</item>
+        <item>2 hores</item>
+        <item>3 hores</item>
+        <item>4 hores</item>
+        <item>5 hores</item>
+        <item>6 hores</item>
+        <item>7 hores</item>
+        <item>8 hores</item>
+        <item>9 hores</item>
+        <item>10 hores</item>
+        <item>11 hores</item>
+        <item>12 hores</item>
+        <item>24 hores</item>
+        <item>48 hores</item>
+        <item>1 setmana</item>
+    </string-array>
     <string-array name="countries_array">
         <item></item>
-        <item>United States</item>
-        <item>Spain</item>
-        <item>Afghanistan</item>
-        <item>Albania</item>
-        <item>Algeria</item>
-        <item>American Samoa</item>
+        <item>Estats Units (EUA)</item>
+        <item>Espanya</item>
+        <item>Afganistan</item>
+        <item>Åland, illes</item>
+        <item>Albània</item>
+        <item>Alemanya</item>
+        <item>Algèria</item>
         <item>Andorra</item>
         <item>Angola</item>
         <item>Anguilla</item>
-        <item>Antarctica</item>
-        <item>Antigua and Barbuda</item>
+        <item>Antàrtida</item>
+        <item>Antigua i Barbuda</item>
+        <item>Antilles Neerlandeses</item>
+        <item>Aràbia Saudita</item>
         <item>Argentina</item>
-        <item>Armenia</item>
+        <item>Armènia</item>
         <item>Aruba</item>
-        <item>Australia</item>
-        <item>Austria</item>
-        <item>Azerbaijan</item>
+        <item>Austràlia</item>
+        <item>Àustria</item>
+        <item>Azerbaidjan</item>
+        <item>Bahames</item>
         <item>Bahrain</item>
-        <item>Bangladesh</item>
+        <item>Bangla Desh</item>
         <item>Barbados</item>
-        <item>Belarus</item>
-        <item>Belgium</item>
+        <item>Bèlgica</item>
         <item>Belize</item>
-        <item>Benin</item>
-        <item>Bermuda</item>
+        <item>Benín</item>
+        <item>Bermudes</item>
         <item>Bhutan</item>
-        <item>Bolivia</item>
-        <item>Bosnia and Herzegovina</item>
+        <item>Bielorússia</item>
+        <item>Bolívia</item>
+        <item>Bòsnia i Hercegovina</item>
         <item>Botswana</item>
-        <item>Bouvet Island</item>
-        <item>Brazil</item>
-        <item>British Indian Ocean Territory</item>
-        <item>British Virgin Islands</item>
+        <item>Bouvet</item>
+        <item>Brasil</item>
         <item>Brunei</item>
-        <item>Bulgaria</item>
+        <item>Bulgària</item>
         <item>Burkina Faso</item>
         <item>Burundi</item>
-        <item>Cambodia</item>
-        <item>Cameroon</item>
-        <item>Canada</item>
-        <item>Cape Verde</item>
-        <item>Cayman Islands</item>
-        <item>Central African Republic</item>
-        <item>Chad</item>
-        <item>Chile</item>
-        <item>China</item>
-        <item>Christmas Island</item>
-        <item>Cocos (Keeling) Islands</item>
-        <item>Colombia</item>
-        <item>Comoros</item>
-        <item>Congo</item>
-        <item>Cook Islands</item>
+        <item>Caiman, illes</item>
+        <item>Cambodja</item>
+        <item>Camerun</item>
+        <item>Canadà</item>
+        <item>Cap Verd</item>
+        <item>Centreafricana, República</item>
+        <item>Christmas, illa</item>
+        <item>Cocos, illes</item>
+        <item>Colòmbia</item>
+        <item>Comores</item>
+        <item>Congo, República del</item>
+        <item>Congo, República Democràtica del</item>
+        <item>Cook, illes</item>
+        <item>Corea del Nord</item>
+        <item>Corea del Sud</item>
+        <item>Costa d\'Ivori</item>
         <item>Costa Rica</item>
-        <item>Cote d\'Ivoire</item>
-        <item>Croatia</item>
+        <item>Croàcia</item>
         <item>Cuba</item>
-        <item>Cyprus</item>
-        <item>Czech Republic</item>
-        <item>Democratic Republic of the Congo</item>
-        <item>Denmark</item>
+        <item>Dinamarca</item>
         <item>Djibouti</item>
         <item>Dominica</item>
-        <item>Dominican Republic</item>
-        <item>East Timor</item>
-        <item>Ecuador</item>
-        <item>Egypt</item>
-        <item>El Salvador</item>
-        <item>Equatorial Guinea</item>
+        <item>Dominicana, República</item>
+        <item>Egipte</item>
+        <item>Equador</item>
+        <item>Emirats Àrabs Units</item>
         <item>Eritrea</item>
-        <item>Estonia</item>
-        <item>Ethiopia</item>
-        <item>Faeroe Islands</item>
-        <item>Falkland Islands</item>
+        <item>Eslovàquia</item>
+        <item>Eslovènia</item>
+        <item>Espanya</item>
+        <item>Estats Units (EUA)</item>
+        <item>Estònia</item>
+        <item>Etiòpia</item>
+        <item>Fèroe, illes</item>
         <item>Fiji</item>
-        <item>Finland</item>
-        <item>Former Yugoslav Republic of Macedonia</item>
-        <item>France</item>
-        <item>French Guiana</item>
-        <item>French Polynesia</item>
-        <item>French Southern Territories</item>
+        <item>Filipines</item>
+        <item>Finlàndia</item>
+        <item>França</item>
         <item>Gabon</item>
-        <item>Georgia</item>
-        <item>Germany</item>
+        <item>Gàmbia</item>
+        <item>Geòrgia</item>
+        <item>Geòrgia del Sud i Sandwich del Sud, illes</item>
         <item>Ghana</item>
         <item>Gibraltar</item>
-        <item>Greece</item>
-        <item>Greenland</item>
+        <item>Grècia</item>
         <item>Grenada</item>
+        <item>Grenlàndia</item>
         <item>Guadeloupe</item>
+        <item>Guaiana Francesa</item>
         <item>Guam</item>
         <item>Guatemala</item>
-        <item>Guinea</item>
-        <item>Guinea-Bissau</item>
+        <item>República de Guinea</item>
+        <item>Guinea Bissau</item>
+        <item>Guinea Equatorial</item>
         <item>Guyana</item>
-        <item>Haiti</item>
-        <item>Heard Island and McDonald Islands</item>
-        <item>Honduras</item>
+        <item>Haití</item>
+        <item>Heard, illa i McDonald, illes</item>
+        <item>Hondures</item>
         <item>Hong Kong</item>
-        <item>Hungary</item>
-        <item>Iceland</item>
-        <item>India</item>
-        <item>Indonesia</item>
+        <item>Hongria</item>
+        <item>Iemen</item>
+        <item>Illes Perifèriques Menors dels EUA</item>
+        <item>Índia</item>
+        <item>Indonèsia</item>
         <item>Iran</item>
         <item>Iraq</item>
-        <item>Ireland</item>
+        <item>Irlanda</item>
+        <item>Islàndia</item>
         <item>Israel</item>
-        <item>Italy</item>
+        <item>Itàlia</item>
         <item>Jamaica</item>
-        <item>Japan</item>
-        <item>Jordan</item>
+        <item>Japó</item>
+        <item>Jordània</item>
         <item>Kazakhstan</item>
         <item>Kenya</item>
+        <item>Kirguizistan</item>
         <item>Kiribati</item>
         <item>Kuwait</item>
-        <item>Kyrgyzstan</item>
         <item>Laos</item>
-        <item>Latvia</item>
-        <item>Lebanon</item>
         <item>Lesotho</item>
-        <item>Liberia</item>
-        <item>Libya</item>
+        <item>Letònia</item>
+        <item>Líban</item>
+        <item>Libèria</item>
+        <item>Líbia</item>
         <item>Liechtenstein</item>
-        <item>Lithuania</item>
-        <item>Luxembourg</item>
+        <item>Lituània</item>
+        <item>Luxemburg</item>
         <item>Macau</item>
+        <item>Macedònia</item>
         <item>Madagascar</item>
+        <item>Malàisia</item>
         <item>Malawi</item>
-        <item>Malaysia</item>
         <item>Maldives</item>
         <item>Mali</item>
         <item>Malta</item>
-        <item>Marshall Islands</item>
-        <item>Martinique</item>
-        <item>Mauritania</item>
-        <item>Mauritius</item>
+        <item>Malvines, illes</item>
+        <item>Mariannes Septentrionals, illes</item>
+        <item>Marroc</item>
+        <item>Marshall, illes</item>
+        <item>Martinica</item>
+        <item>Maurici</item>
+        <item>Mauritània</item>
         <item>Mayotte</item>
-        <item>Mexico</item>
-        <item>Micronesia</item>
-        <item>Moldova</item>
-        <item>Monaco</item>
-        <item>Mongolia</item>
+        <item>Mèxic</item>
+        <item>Micronèsia, Estats Federats de</item>
+        <item>Moçambic</item>
+        <item>Moldàvia</item>
+        <item>Mònaco</item>
+        <item>Mongòlia</item>
+        <item>Montenegro</item>
         <item>Montserrat</item>
-        <item>Morocco</item>
-        <item>Mozambique</item>
         <item>Myanmar</item>
-        <item>Namibia</item>
+        <item>Namíbia</item>
         <item>Nauru</item>
         <item>Nepal</item>
-        <item>Netherlands</item>
-        <item>Netherlands Antilles</item>
-        <item>New Caledonia</item>
-        <item>New Zealand</item>
         <item>Nicaragua</item>
-        <item>Niger</item>
-        <item>Nigeria</item>
+        <item>Níger</item>
+        <item>Nigèria</item>
         <item>Niue</item>
-        <item>Norfolk Island</item>
-        <item>North Korea</item>
-        <item>Northern Marianas</item>
-        <item>Norway</item>
+        <item>Norfolk, illa</item>
+        <item>Noruega</item>
+        <item>Nova Caledònia</item>
+        <item>Nova Zelanda</item>
         <item>Oman</item>
+        <item>Països Baixos</item>
         <item>Pakistan</item>
         <item>Palau</item>
-        <item>Panama</item>
-        <item>Papua New Guinea</item>
-        <item>Paraguay</item>
-        <item>Peru</item>
-        <item>Philippines</item>
-        <item>Pitcairn Islands</item>
-        <item>Poland</item>
+        <item>Palestina</item>
+        <item>Panamà</item>
+        <item>Papua Nova Guinea</item>
+        <item>Paraguai</item>
+        <item>Perú</item>
+        <item>Pitcairn, illes</item>
+        <item>Polinèsia Francesa</item>
+        <item>Polònia</item>
         <item>Portugal</item>
         <item>Puerto Rico</item>
         <item>Qatar</item>
-        <item>Reunion</item>
+        <item>Regne Unit</item>
+        <item>Reunió, illa de la</item>
         <item>Romania</item>
-        <item>Russia</item>
+        <item>Rússia</item>
         <item>Rwanda</item>
-        <item>Sao Tome and Principe</item>
-        <item>Saint Helena</item>
-        <item>Saint Kitts and Nevis</item>
+        <item>Sàhara Occidental</item>
+        <item>Saint Kitts i Nevis</item>
         <item>Saint Lucia</item>
-        <item>Saint Pierre and Miquelon</item>
-        <item>Saint Vincent and the Grenadines</item>
+        <item>Saint-Pierre i Miquelon</item>
+        <item>Saint Vincent i les Grenadines</item>
+        <item>Salomó</item>
+        <item>Salvador, El</item>
         <item>Samoa</item>
+        <item>Samoa Nord-americana</item>
         <item>San Marino</item>
-        <item>Saudi Arabia</item>
+        <item>Santa Helena</item>
+        <item>São Tomé i Príncipe</item>
         <item>Senegal</item>
+        <item>Sèrbia</item>
         <item>Seychelles</item>
         <item>Sierra Leone</item>
-        <item>Singapore</item>
-        <item>Slovakia</item>
-        <item>Slovenia</item>
-        <item>Solomon Islands</item>
-        <item>Somalia</item>
-        <item>South Africa</item>
-        <item>South Georgia and the South Sandwich Islands</item>
-        <item>South Korea</item>
-        <item>Spain</item>
+        <item>Singapur</item>
+        <item>Síria</item>
+        <item>Somàlia</item>
         <item>Sri Lanka</item>
+        <item>Sud-àfrica</item>
         <item>Sudan</item>
-        <item>Suriname</item>
-        <item>Svalbard and Jan Mayen</item>
-        <item>Swaziland</item>
-        <item>Sweden</item>
-        <item>Switzerland</item>
-        <item>Syria</item>
+        <item>Suècia</item>
+        <item>Suïssa</item>
+        <item>Surinam</item>
+        <item>Svalbard i Jan Mayen</item>
+        <item>Swazilàndia</item>
+        <item>Tadjikistan</item>
+        <item>Tailàndia</item>
         <item>Taiwan</item>
-        <item>Tajikistan</item>
-        <item>Tanzania</item>
-        <item>Thailand</item>
-        <item>The Bahamas</item>
-        <item>The Gambia</item>
+        <item>Tanzània</item>
+        <item>Territori Britànic de l\'Oceà Índic</item>
+        <item>Territoris Francesos del Sud</item>
+        <item>Timor Oriental</item>
         <item>Togo</item>
         <item>Tokelau</item>
         <item>Tonga</item>
-        <item>Trinidad and Tobago</item>
-        <item>Tunisia</item>
-        <item>Turkey</item>
+        <item>Trinitat i Tobago</item>
+        <item>Tunísia</item>
         <item>Turkmenistan</item>
-        <item>Turks and Caicos Islands</item>
+        <item>Turks i Caicos, illes</item>
+        <item>Turquia</item>
         <item>Tuvalu</item>
-        <item>Virgin Islands</item>
+        <item>Txad</item>
+        <item>Txeca, República</item>
+        <item>Ucraïna</item>
         <item>Uganda</item>
-        <item>Ukraine</item>
-        <item>United Arab Emirates</item>
-        <item>United Kingdom</item>
-        <item>United States</item>
-        <item>United States Minor Outlying Islands</item>
-        <item>Uruguay</item>
+        <item>Uruguai</item>
         <item>Uzbekistan</item>
         <item>Vanuatu</item>
-        <item>Vatican City</item>
-        <item>Venezuela</item>
+        <item>Vaticà, Ciutat del</item>
+        <item>Veneçuela</item>
+        <item>Verges Britàniques, illes</item>
+        <item>Verges Nord-americanes, illes</item>
         <item>Vietnam</item>
-        <item>Wallis and Futuna</item>
-        <item>Western Sahara</item>
-        <item>Yemen</item>
-        <item>Yugoslavia</item>
-        <item>Zambia</item>
+        <item>Wallis i Futuna</item>
+        <item>Xile</item>
+        <item>Xina</item>
+        <item>Xipre</item>
+        <item>Zàmbia</item>
         <item>Zimbabwe</item>
     </string-array>
     <string-array name="langs_array">
         <item></item>
-        <item>English (en)</item>
-        <item>Español (es)</item>
         <item>Català (ca)</item>
+        <item>Español (es)</item>
         <item>Euskara (eu)</item>
         <item>Galego (gl)</item>
         <item>Asturianu (ast)</item>
         <item>Aragonés (an)</item>
+        <item>English (en)</item>
         <item>Afrikaans (af)</item>
         <item>Alemannisch (als)</item>
         <item>Aragonés (an)</item>
@@ -813,7 +906,7 @@ under constuction
         <item>Чӑваш (cv)</item>
         <item>Armenian (hy)</item>
         <item>Georgian (ka)</item>
-        <item>Hebrew (he)</item>
+        <item>Ivrit / Hebrew (he)</item>
         <item>Yiddish (yi)</item>
         <item>Arabic (ar)</item>
         <item>fārsi (fa)</item>
@@ -848,82 +941,7 @@ under constuction
         <item>吴语 (wuu)</item>
         <item>文言 (lzh)</item>
         <item>粵語 (yue)</item>
-        <item>other language</item>
-    </string-array>
-    <string-array name="ed_array">
-        <item></item>
-        <item>No schooling completed</item>
-        <item>Primary / elementary school</item>
-        <item>High school (diploma or equivalent, such as GED)</item>
-        <item>One or more years of college</item>
-        <item>Associates degree (e.g., AA, AS)</item>
-        <item>Bachelor\'s degree (e.g., BA, AB, BS)</item>
-        <item>Master\'s degree (e.g., MA, MS, MEng, MEd, MSW, MBA)</item>
-        <item>Professional degree (e.g., MD, DDS, DVM, LLB, JD)</item>
-        <item>Doctorate degree (e.g., PhD, EdD)</item>
-    </string-array>
-    <string-array name="incs_array">
-        <item></item>
-        <item>Less than $10,000</item>
-        <item>$10,000 to $19,000</item>
-        <item>$20,000 to $29,000</item>
-        <item>$30,000 to $39,000</item>
-        <item>$40,000 to $49,000</item>
-        <item>$50,000 to $59,000</item>
-        <item>$60,000 to $69,000</item>
-        <item>$70,000 to $79,000</item>
-        <item>$80,000 to $89,000</item>
-        <item>$90,000 to $99,000</item>
-        <item>$100,000 to $149,000</item>
-        <item>$150,000 or more</item>
-    </string-array>
-    <string-array name="emp_array">
-        <item></item>
-        <item>Employed for wages</item>
-        <item>Self-employed</item>
-        <item>Out of work and looking for work</item>
-        <item>Out of work but not currently looking for work</item>
-        <item>A homemaker</item>
-        <item>A student</item>
-        <item>Retired</item>
-        <item>Unable to work</item>
-    </string-array>
-    <string-array name="storage_size_array">
-        <item>1 day</item>
-        <item>2 days</item>
-        <item>3 days</item>
-        <item>4 days</item>
-        <item>5 days</item>
-        <item>6 days</item>
-        <item>7 days</item>
-        <item>30 days</item>
-    </string-array>
-    <string-array name="interval_array">
-        <item>15 seconds</item>
-        <item>30 seconds</item>
-        <item>1 minute</item>
-        <item>2 minutes</item>
-        <item>5 minutes</item>
-        <item>10 minutes</item>
-        <item>30 minutes</item>
-        <item>1 hour</item>
-    </string-array>
-    <string-array name="map_interval_array">
-        <item>1 hour</item>
-        <item>2 hours</item>
-        <item>3 hours</item>
-        <item>4 hours</item>
-        <item>5 hour</item>
-        <item>6 hours</item>
-        <item>7 hours</item>
-        <item>8 hours</item>
-        <item>9 hour</item>
-        <item>10 hours</item>
-        <item>11 hours</item>
-        <item>12 hours</item>
-        <item>24 hours</item>
-        <item>48 hours</item>
-        <item>1 week</item>
+        <item>otra idioma</item>
     </string-array>
 
 </resources>
