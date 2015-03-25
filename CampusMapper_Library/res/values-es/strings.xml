@@ -24,6 +24,21 @@
 
 <resources>
 
+    <string name="popup_a">"¡Hola! Los datos que estás generando están siendo correctamente registrados. Te animamos a seguir con la prueba durante el resto de la semana. Muchas gracias por tu colaboración; ¡la participación de los voluntarios es clave para conocer la movilidad de la comunidad universitaria!"</string>
+    <string name="popup_b1">"¡Hola! Tu participación en el proyecto Campus Mobility está siendo un éxito. Tu información ha sido correctamente registrada durante 3 días. Te animamos a seguir con la prueba durante el resto de la semana. Muchas gracias por tu colaboración; ¡la participación de los voluntarios es clave para conocer la movilidad de la comunidad universitaria!"</string>
+    <string name="popup_b2">"¡Hola! Te instalaste la app Campus Mobility pero no estamos recibiendo tus datos correctamente. Si estás teniendo problemas con la app, dirígete a gemott@uab.cat. ¡Muchas gracias por tu colaboración!"</string>
+    <string name="popup_c1">"¡Hola! ¿Nos podrías decir en qué modo de transporte has efectuado tu último desplazamiento?"</string>
+
+    <string name="popup_c2">"¡Muchas gracias por tu colaboración!"</string>
+
+    <string-array name="popup_transport_mode_array">
+        <item>Caminando</item>
+        <item>En bicicleta</item>
+        <item>En transporte privado</item>
+        <item>En tren, ferrocarril o metro</item>
+        <item>En autobús</item>
+    </string-array>
+
     <string name="email">Correo electrónico</string>
     <string name="email_hint">correu electrònic</string>
     <string name="password">Contraseña</string>
@@ -252,7 +267,7 @@
     <string name="consent_decline_button">CANCELA</string>
     <string name="intro_text">
 <![CDATA[
-<p><b>Bienvenido/da a Campus Mobility!</b></p>
+<p><b>¡Bienvenido/da a Campus Mobility!</b></p>
 
 <p>Gracias por descargarte Campus Mobility. Esta app forma parte de un proyecto académico que analiza los hábitos de movilidad cotidiana de la comunidad universitaria.</p>
 
@@ -350,9 +365,9 @@ John Palmer es el investigador principal de este proyecto y es un estudiante de 
 <p>Investigadores:</p>
 <p>1. <b>Grupo de Estudios en Movilidad, Transporte y Territorio (GEMOTT)</b>, Departamento de Geografía, Universidad Autónoma de Barcelona. Carrer de la Fortuna, Facultad de Filosofía y Letras (Edificio B), Departamento de Geografía - Campus de la UAB - 08193, Bellaterra (Cerdanyola del Vallès), Barcelona, España. Tel. +34 935814805. gemott@uab.cat</p>
 
-<p>2. <b>ICREA Movement Ecology Laboratory</b>, Centro de Estudios Avanzados de Blanes– Consejo Superior de Investigaciones Científicas (CEAB-CSIC). Acceso Cala Sant Francesc, 14, 17300, Blanes, Girona, España. www.movelab.net</p>
+<p>2. <b>ICREA Movement Ecology Laboratory (ICREA-MoveLab)</b>, Centro de Estudios Avanzados de Blanes– Consejo Superior de Investigaciones Científicas (CEAB-CSIC). Acceso Cala Sant Francesc, 14, 17300, Blanes, Girona, España. www.movelab.net</p>
 
-<p>3. <b>Centro de Política de Suelo y Valoraciones</b>, Universidad Politécnica de Cataluña. Av. Diagonal, 649, 4ta planta (Arq. Legal), 08028, Barcelona, Barcelona, España. www.upc.edu/cpsv/</p>
+<p>3. <b>Centro de Política de Suelo y Valoraciones (CPSV)</b>, Universidad Politécnica de Cataluña. Av. Diagonal, 649, 4ta planta (Arq. Legal), 08028, Barcelona, Barcelona, España. www.upc.edu/cpsv/</p>
 
 <p>Mediante este formulario, la persona involucrada en este proyecto:</p>
 <p>1. Es consciente de que tiene que ser mayor de 18 años de edad para participar en el proyecto.</p>
@@ -362,7 +377,7 @@ John Palmer es el investigador principal de este proyecto y es un estudiante de 
 <p>5. Es consciente de que el propósito de esta investigación es el de analizar la movilidad cotidiana sobre el territorio.</p>
 <p>6. Entiende que se tomarán las medidas correspondientes de protección y privacidad de los datos proporcionados. La información, resultante del proyecto, no será utilizada para ningún propósito distinto al de la investigación llevada a cabo por el equipo investigador.</p>
 <p>7. Entiende que la participación es voluntaria, por lo que puede retirar su consentimiento y desvincularse del proyecto en cualquier momento, sin que ello conlleve penalización. El equipo investigador se compromete a eliminar toda la información ante solicitud expresa.</p>
-<p>8. Mediante su consentimiento, respecto de este formulario, no renuncia a ningún derecho legal ni exime al GEMOTT, ni a ninguna de las personas vinculadas, de sus responsabilidades por negligencias.</p>
+<p>8. Mediante su consentimiento, respecto de este formulario, no renuncia a ningún derecho legal ni exime al GEMOTT, a ICREA-MoveLab, al CPSV, ni a ninguna de las personas vinculadas, de sus responsabilidades por negligencias.</p>
 <p>Con lo expuesto, la persona involucrada da consentimiento para participar como voluntario o voluntaria al proyecto "Campus Mobility".</p>
 
         ]]>
