@@ -247,12 +247,12 @@ under constuction
     <string name="nhousehold_prompt">Quants membres familiars conviuen a la teva llar, comptant-te tu també?</string>
     <string name="nhousehold_prompt_short">Membres de la llar, incloent-t´hi tu:</string>
     <string name="emp_prompt">Situació laboral:</string>
-    <string name="save_reg_label">Envia respostes</string>
+    <string name="save_reg_label">Registra\'t</string>
     <string name="service_is_on">Campus Mobility està activat</string>
     <string name="service_is_off">Campus Mobility està desactivat</string>
     <string name="text_interval_spinner">Mesura la localització cada: </string>
     <string name="banner_image_content_description">Icona Campus Mobility</string>
-    <string name="consent_heading">Formulari de Consentiment</string>
+    <string name="consent_heading">Llegeix i accepta les condicions següents:</string>
     <string name="consent_instructions">Si us plau llegeix el següent formulari de consentiment. Pots acceptar electrònicament clicant el botó d\'acceptar de la pantalla. Si tens qualsevol pregunta, envia-les a activity.space.project@gmail.com.</string>
     <string name="consent_signature_button">ACCEPTA</string>
     <string name="nfixes_text">Guardats:</string>

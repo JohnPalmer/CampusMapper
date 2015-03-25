@@ -238,12 +238,12 @@
     <string name="nhousehold_prompt">¿Cuántos miembros familiares conviven en el hogar, incluyéndose a usted?</string>
     <string name="nhousehold_prompt_short">Miembros en el hogar, incluyéndote a ti:</string>
     <string name="emp_prompt">Situación laboral:</string>
-    <string name="save_reg_label">Enviar Respuestas</string>
+    <string name="save_reg_label">Regístrate</string>
     <string name="service_is_on">Campus Mobility está activado</string>
     <string name="service_is_off">Campus Mobility está desconectado</string>
     <string name="text_interval_spinner">Localízame cada: </string>
     <string name="banner_image_content_description">Icono de Campus Mobility</string>
-    <string name="consent_heading">Formulario de consentimiento</string>
+    <string name="consent_heading">Lee y acepta las condiciones siguientes:</string>
     <string name="consent_instructions">Por favor lee el siguiente formulario de consentimiento. Puedes aceptar electrónicamente, clicando el botón aceptar de la pantalla. Si tienes preguntas, mándalas a activity.space.project@gmail.com.</string>
     <string name="consent_signature_button">ACEPTA</string>
     <string name="nfixes_text">Guardados:</string>

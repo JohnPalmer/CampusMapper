@@ -38,6 +38,14 @@
             android:orientation="vertical" >
 
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
+                android:padding="@dimen/html_text_pads"
+                android:textColor="@color/discolor"
+                android:text="@string/consent_heading"/>
+
+            <TextView
                 android:id="@+id/consenttext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
