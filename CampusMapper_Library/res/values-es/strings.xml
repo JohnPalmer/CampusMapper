@@ -246,11 +246,11 @@
     <string name="consent_decline_button">No acepto</string>
     <string name="intro_text">
 <![CDATA[
-<p>Gracias por instalar la app! Campus Mobility es parte de un estudio académico sobre el movimiento de las personas y los espacios en los cuales desarrollan sus actividades diarias. Si participas en este estudio como voluntario/a, Campus Mobility guardará en tu teléfono tus localizaciones en intervalos de tiempo predeterminados y los mandará a investigadores de la Universidad Autonoma de Barcelona.</p>
-<p>Toda la información que nos proporciones está encryptado y será guardada de forma confidencial. Las únicas personas que tendrán acceso a ellas son los investigadores de Campus Mobility, y solamente los resultados totalmente anónimos serán los únicos que se compartirán con otros investigadores.</p>
-<p>Tienes que tener como mínimo 18 años para participar.</p>
-<p>Si tienes alguna pregunta, por favor visita nuestra página web o mándanos un email en la dirección que tienes aquí abajo</p>
-<p>Si quieres continuar, por favor lee y acepta electrónicamente el formulario de consentimiento de la página siguiente. Muchas gracias por tu interés y participación!</p>
+<p><b>Bienvenido\/da a Campus Mobility!</b></p>
+
+<p>Gracias por descargarte Campus Mobility. Esta app forma parte de un proyecto académico que analiza los hábitos de movilidad cotidiana de la comunidad universitaria.</p>
+
+<p>Si tienes alguna pregunta, por favor envía un correo electrónico a gemott@uab.cat</p>
 ]]>
     </string>
     <string name="about_html">
@@ -340,22 +340,25 @@ John Palmer es el investigador principal de este proyecto y es un estudiante de 
     </string>
     <string name="consent_text">
 <![CDATA[
-<p><b>FORMULARIO ESTÁNDARD DE CONSENTIMIENTO PRESTADO POR UN ADULTO </b></p>
-<p>COMITÉ INSTITUTIONAL DE REVISIÓN [INSTITUTIONAL REVIEW BOARD] DE LA UNIVERSIDAD DE PRINCETON </p>
-<p>TÍTULO DEL PROYECTO DE INVESTIGACIÓN: Activity-Space Project</p>
-<p>INVESTIGADOR: John Palmer</p>
-<p>La Universidad de Princeton requiere el presente consentimiento informado a cualquier participante en un proyecto de investigación liderado por investigadores de la Universidad. Este proyecte ha sido aprobado por el Comité Institucional de Revisión para sujetos humanos [Institutional Review Board for Human Subjects] de la Universidad de Princeton.</p>
-<p>Se me ha:</p>
-<p>A. Proporcionado una explicación detallada sobre los procedimientos que se seguirán durante el proyecto, incluyendo aquellos que son experimentales.</p>
-<p><b><i>Entiendo que para participar en este proyecto debo tener más de 18 años. Entiendo que una aplicación continuará ejecutándose en mi teléfono y que esta aplicación enviará información sobre mis localizaciones geográficas i mi movimiento, sobre la configuración de idioma y el estado de la batería en mi teléfono, y sobre mis respuestas a las preguntas de las encuestas a los investigadores de la Universidad de Princeton.</p>
-<p>Entiendo que la utilización del teléfono móvil mientras se conduce puede aumentar el riesgo de accidente, muerte o cualquier daño y está prohibido en muchos estados. Entiendo que no debo utilizar la aplicación o mi teléfono móvil en ningún caso mientras conduzca, y estoy de acuerdo en no hacerlo. Entiendo también que la seguridad es la prioridad más importante en todos los aspectos de este proyecto y estoy de acuerdo en utilizar mi teléfono móvil en todo momento de una forma segura.</p>
-<p>Entiendo que el objetivo de este proyecto de investigación es estudiar el movimiento humano y la segregación espacial; y que no recibiré ningún tipo de compensación económica por mi participación, que podrá revisar y utilizar mi información, incluyendo las estimaciones de las localizaciones y los mapas de mis pautas de movimiento. Entiendo que se tomarán medidas razonables para proteger mi anonimato en toda la información que mande para el proyecto de investigación y que ésta no se compartirá con personas ajenas al proyecto de investigación. Esta información se utilizará solamente con fines científicos. 
-Finalmente, entiendo que el equipo del proyecto de investigación eliminará toda la información que haya transmitido si así lo solicitara a través del botón de "Dejar de participar en el proyecto” del menú de ayuda de la aplicación.</b></i></p>
-<p>B. Contestado cualquier pregunta relativa al estudio.</p>
-<p>Entiendo que:</p>
-<p>A. Mi participación es voluntaria y puedo revocar mi consentimiento y dejar de participar en el proyecto de investigación en cualquier momento. Mi negativa a participar en el proyecto de investigación no dará lugar a ninguna penalización.</p>
-<p>B. La prestación de consentimiento no implica la renuncia a cualquier derecho o exime a la Universidad de Princeton, sus agentes o al investigador responsable de este proyecto, de cualquier responsabilidad por culpa.</p>
-<p>Presto mi consentimiento a ser un participante de este proyecto de investigación. </p>
+<p><b>FORMULARIO DE CONSENTIMIENTO – “Campus Mobility”</b></p>
+<p>Investigadores:</p>
+<p>1. Grupo de Estudios en Movilidad, Transporte y Territorio (GEMOTT), Departamento de Geografía, Universidad Autónoma de Barcelona. Carrer de la Fortuna, Facultad de Filosofía y Letras (Edificio B), Departamento de Geografía - Campus de la UAB - 08193, Bellaterra (Cerdanyola del Vallès), Barcelona, España. Tel. +34 935814805. gemott@uab.cat</p>
+
+<p>2. ICREA Movement Ecology Laboratory, Centro de Estudios Avanzados de Blanes– Consejo Superior de Investigaciones Científicas (CEAB-CSIC). Acceso Cala Sant Francesc, 14, 17300, Blanes, Girona, España. www.movelab.net</p>
+
+<p>3. Centro de Política de Suelo y Valoraciones, Universidad Politécnica de Cataluña. Av. Diagonal, 649, 4ta planta (Arq. Legal), 08028, Barcelona, Barcelona, España. www.upc.edu/cpsv/</p>
+
+<p>Mediante este formulario, la persona involucrada en este proyecto:</p>
+<p>1. Es consciente de que tiene que ser mayor de 18 años de edad para participar en el proyecto.</p>
+<p>2. Entiende que se le solicitará permiso para ejecutar la aplicación en su teléfono móvil y que ésta transmitirá información sobre su ubicación física, sus desplazamientos, el estado de la batería de su dispositivo y la configuración de idioma, al equipo investigador del proyecto.</p>
+<p>3. Es consciente de que el uso de teléfonos móviles mientras se conduce puede crear un mayor riesgo de lesiones, muerte u otros daños y está prohibida en muchos lugares. Así, se compromete a abstenerse de interactuar con la aplicación durante la conducción.</p>
+<p>4. Entiende que la seguridad es la máxima prioridad en todos los aspectos de este proyecto y se compromete a utilizar su teléfono de forma segura en todo momento.</p>
+<p>5. Es consciente de que el propósito de esta investigación es el de analizar la movilidad cotidiana sobre el territorio.</p>
+<p>6. Entiende que se tomarán las medidas correspondientes de protección y privacidad de los datos proporcionados. La información, resultante del proyecto, no será utilizada para ningún propósito distinto al de la investigación llevada a cabo por el equipo investigador.</p>
+<p>7. Entiende que la participación es voluntaria, por lo que puede retirar su consentimiento y desvincularse del proyecto en cualquier momento, sin que ello conlleve penalización. El equipo investigador se compromete a eliminar toda la información ante solicitud expresa.</p>
+<p>8. Mediante su consentimiento, respecto de este formulario, no renuncia a ningún derecho legal ni exime al GEMOTT, ni a ninguna de las personas vinculadas, de sus responsabilidades por negligencias.</p>
+<p>Con lo expuesto, la persona involucrada da consentimiento para participar como voluntario o voluntaria al proyecto "Campus Mobility".</p>
+
         ]]>
     </string>
     <string name="contact_info">

@@ -211,8 +211,6 @@ public class MapMyData extends FragmentActivity {
         getIntro = PropertyHolder.getIntro();
         isPro = PropertyHolder.getProVersion();
 
-        AppRater.app_launched(this);
-
         privacyZones = new ArrayList<GeoPoint>();
 
     }

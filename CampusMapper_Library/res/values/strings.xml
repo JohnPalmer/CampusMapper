@@ -249,11 +249,11 @@
     <string name="consent_decline_button">Decline</string>
     <string name="intro_text">
 <![CDATA[
-<p>Thank you for installing the app! Campus Mobility is part of an academic study on the spaces people move through as they go about their daily activities. If you volunteer to participate in this study, Campus Mobility will record your phone\'s location at regular intervals and send this information to researchers at the Autonomous University of Barcelona.</p>
-<p>All of the information you provide will be encrypted and kept confidential. The only people with access to it will be the Campus Mobility researchers, and only anonymized results will be shared beyond the research team.</p>
-<p>You must be at least 18 years old to participate.</p>
-<p>If you have any questions, please email us at the addresses listed below</p>
-<p>If you would like to continue, please read and electronically sign the consent form on the next page. We really appreciate your interest and participation!</p>
+<p><b>Welcome to Campus Mobility!</b></p>
+
+<p>Thank you for downloading Campus Mobility. This app is part of an academic research project on daily mobility habits of the university community.</p>
+
+<p>If you have any questions, please email us at gemott@uab.cat</p>
 ]]>
     </string>
     <string name="about_html">

@@ -245,11 +245,11 @@
     <string name="consent_decline_button">No accepto</string>
     <string name="intro_text">
 <![CDATA[
-<p>Gràcies per install.lar l\’app ! Campus Mobility és part d\’un estudi acadèmic sobre el moviment de les persones i els espais als quals desarrollen les seves activitats diàries. Si participes en aquest estudi com a voluntari/ària, Campus Mobility guardarà al teu telèfon les teves localitzaciones a intervals de temps predeterminats i els enviarà a investigadors de la Universitat Autonoma de Barcelona. </p>
-<p>Tota la informació que ens proporcionis està encriptada i serà guardada de manera confidencial. Les úniques persones que hi tindran accés són els investigadors d\’Campus Mobility, i només els resultats absolutament anònims es compartiran amb d\’altres investigadors.</p>
-<p>Per tal de participar en aquest projecte has de ser major de 18 anys.</p>
-<p>Si tens alguna pregunta, si us plau, visita la nostra pàgina web o envia\’ns un email a l\’adreça que tens aquí sota</p>
-<p>Si vols continuar, si us plau llegeix i accepta electrònicament el formulari de consentiment de la pàgina següent. Moltes gràcies pel teu interès i participació!</p>
+<p><b>Benvingut\/da a Campus Mobility!</b></p>
+
+<p>Gràcies per descarregar\-te Campus Mobility. Aquesta app és part d\’un projecte acadèmic que analitza els hàbits de mobilitat quotidiana de la comunitat universitària.</p>
+
+<p>Si tens alguna pregunta, si us plau envia\’ns un e-mail a gemott@uab.cat</p>
 ]]>
     </string>
     <string name="about_html">
@@ -352,9 +352,26 @@ John Palmer, estudiant de doctorat de la Woodrow Wilson School i l\’Office of 
     </string>
     <string name="consent_text">
 <![CDATA[
-<p><b>FORMULARI DE CONSENTIMENT</b></p>
-<p>TO BE ADDED</p>
-        ]]>
+<p><b>FORMULARI DE CONSENTIMENT – “Campus Mobility”</b></p>
+<p>Investigadors:</p>
+<p>1. Grup d\’Estudis de Mobilitat, Transport i Territori (GEMOTT), Departament de Geografia, Universitat Autònoma de Barcelona. Carrer de la Fortuna, Facultat de Filosofia i Lletres (Edifici B), Departament de Geografia - Campus de la UAB - 08193, Bellaterra (Cerdanyola del Vallès), Barcelona, Espanya. Tel. +34 935814805. gemott@uab.cat</p>
+
+<p>2. ICREA Movement Ecology Laboratory, Centre d\’Estudis Avançats de Blanes – Consejo Superior de Investigaciones Científicas (CEAB-CSIC). Accés Cala Sant Francesc, 14, 17300, Blanes, Girona, Espanya. www.movelab.net</p>
+
+<p>3. Centre de Política de Sòl i Valoracions, Universitat Politècnica de Catalunya. Av. Diagonal, 649, 4ta planta (Arq. Legal), 08028, Barcelona, Barcelona, Espanya. www.upc.edu\/cpsv\/</p>
+
+<p>Mitjançant aquest formulari, la persona involucrada en aquest projecte:</p>
+
+<p>1. És conscient que ha de ser major de 18 anys d\’edat per a participar al projecte.</p>
+<p>2. Entén que se li sol\·licitarà permís per a executar l\’aplicació al seu telèfon mòbil i que aquesta transmetrà informació sobre la seva ubicació física, els seus desplaçaments, l\’estat de la bateria del seu dispositiu i la configuració d\’idioma, a l’equip investigador del projecte.</p>
+<p>3. És conscient de que l\’ús de telèfons mòbils, mentre es condueix, pot crear un major risc de lesions, mort o altres danys i està prohibida en molts indrets. Així, es compromet a abstenir-se d\’interactuar amb l\’aplicació durant la conducció.</p>
+<p>4. Entén que la seguretat és la màxima prioritat en tots els aspectes d\’aquest projecte i es compromet a utilitzar el seu telèfon de forma segura en tot moment.</p>
+<p>5. És conscient que el propòsit d’aquesta investigació és el d\’analitzar la mobilitat quotidiana sobre el territori.</p>
+<p>6. Entén que es prendran les mesures corresponents de protecció i privacitat de les dades proporcionades. La informació, resultant del projecte, no serà utilitzada per a cap propòsit diferent al de la investigació portada a terme per l\’equip investigador.</p>
+<p>7. Entén que la participació és voluntària, de manera que pot retirar el seu consentiment i desvincular-se del projecte en qualsevol moment, sense que això comporti penalització. L\’equip investigador es compromet a eliminar tota la informació davant sol\·licitud expressa.</p>
+<p>8. Mitjançant el seu consentiment, respecte d’aquest formulari, no renuncia a cap dret legal ni eximeix al GEMOTT, ni a cap de les persones vinculades, de les seves responsabilitats per negligències.</p>
+<p>Amb l\’exposat, la persona involucrada dóna consentiment per a participar com a voluntari o voluntària al projecte “Campus Mobility”.</p>
+]]>
     </string>
     <string name="contact_info">
 <![CDATA[
