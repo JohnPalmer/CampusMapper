@@ -41,6 +41,7 @@
                 android:id="@+id/consenttext"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceMedium"
                 android:padding="@dimen/html_text_pads" />
 
             <LinearLayout

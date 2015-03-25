@@ -167,12 +167,6 @@ public class FixGet extends Service {
 
             if (locationManager.isProviderEnabled(LocationManager.GPS_PROVIDER)) {
 
-                if (Util.flushGPSFlag == true) {
-
-                    clearGPS();
-                    injectNewXTRA();
-                    Util.flushGPSFlag = false;
-                }
 
                 locationListener1 = new mLocationListener();
                 locationManager.requestLocationUpdates(

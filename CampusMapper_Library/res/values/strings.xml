@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <!--
-  ~ Campus Mobility is a mobile phone app for studying activity spaces on campuses. It is based in part on code from the Human Mobility Project.
+  ~ Mobility Mapper is a mobile phone app for studying activity spaces on campuses. It is based in part on code from the Human Mobility Project.
   ~
   ~ Copyright (c) 2015 John R.B. Palmer.
   ~
-  ~ Campus Mobility is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
+  ~ Mobility Mapper is free software: you can redistribute it and/or modify it under the terms of the GNU General Public License as published by the Free Software Foundation, either version 3 of the License, or (at your option) any later version.
   ~
-  ~ Campus Mobility is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
+  ~ Mobility Mapper is distributed in the hope that it will be useful, but WITHOUT ANY WARRANTY; without even the implied warranty of MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU General Public License for more details.
   ~
   ~ You should have received a copy of the GNU General Public License along with this program. If not, see http://www.gnu.org/licenses.
   ~
@@ -35,12 +35,16 @@ under constuction
      ]]>
     </string>
 
+    <string name="email">Correu electrònic</string>
+    <string name="email_hint">correu electrònic</string>
+    <string name="password">Contrasenya</string>
+    <string name="password_hint">contrasenya</string>
 
     <string name="visit_website">Web</string>
     
         <string name="no_sharing_msg">En aquests moments no s\'estan guardant dades i les funcions d\'intercanvi de dades s\'han deshabilitat. Si us plau, consulteu el lloc web del projecte per a més informació. Moltes gràcies pel vostre interès!</string>    
     
-    <string name="end_research_msg">La recol·lecció de dades ha finalitzat de manera que aquesta aplicació ja no comparteix les seves dades amb l\'equip de recerca, però si voleu, podeu continuar utilitzant l\’aplicació.  Si us plau, consulteu el lloc web del projecte per a més informació. Moltes gràcies per la vostra participació en aquest projecte!</string>
+    <string name="end_research_msg">La recol·lecció de dades ha finalitzat de manera que aquesta aplicació ja no comparteix les seves dades amb l\'equip de recerca, però si voleu, podeu continuar utilitzant l\'aplicació.  Si us plau, consulteu el lloc web del projecte per a més informació. Moltes gràcies per la vostra participació en aquest projecte!</string>
     <string name="on">Encès</string>
     <string name="off">Apagat</string>
     <string name="warning_calendar_start_date">Avís: Has escollit una data d\'inici posterior a la data de finalització. Canvia una o l\'altra, per veure les dades al mapa.</string>
@@ -133,13 +137,13 @@ under constuction
     <string name="heading_map_interval">Interval</string>
     <string name="text_map_interval_spinner">Localitzacions al Mapa durant les últimes: </string>
     <string name="my_location">Localització</string>
-    <string name="data_SD_error">Error al guardar l\’arxiu a la tarja SD.</string>
-    <string name="data_SD_unavailable">Tarja SD No Disponible – l\’arxiu no es pot guardar.</string>
-    <string name="data_saved">Les dades s\’han guardat com </string>
-    <string name="withdraw_error">Tota la informació de l\’Campus Mobility ha estat esborrada del teu telèfon però s\’ha produït un error al tractar de posar-se en contacte amb el servidor de l\’Campus Mobility. Si us plau, comprova la teva connexió a Internet i torna-ho a intentar.</string>
+    <string name="data_SD_error">Error al guardar l\'arxiu a la tarja SD.</string>
+    <string name="data_SD_unavailable">Tarja SD No Disponible – l\'arxiu no es pot guardar.</string>
+    <string name="data_saved">Les dades s\'han guardat com </string>
+    <string name="withdraw_error">Tota la informació de l\'Campus Mobility ha estat esborrada del teu telèfon però s\'ha produït un error al tractar de posar-se en contacte amb el servidor de l\'Campus Mobility. Si us plau, comprova la teva connexió a Internet i torna-ho a intentar.</string>
     <string name="cancel">Anul.lar</string>
     <string name="withdraw_warning_yes">Si, vull eliminar les dades ara</string>
-    <string name="withdraw_warning">ATENCIÓ: Tota la informació de l\’Campus Mobility s\’ha guardat a la memòria interna del telèfon i totes les dades enviades al servidor de l\’Campus Mobility s\’eliminaran. Aquest procés no es pot desfer. Estàs segur/a que vols continuar?</string>
+    <string name="withdraw_warning">ATENCIÓ: Tota la informació de l\'Campus Mobility s\'ha guardat a la memòria interna del telèfon i totes les dades enviades al servidor de l\'Campus Mobility s\'eliminaran. Aquest procés no es pot desfer. Estàs segur/a que vols continuar?</string>
     <string name="new_fix_blinker">Nova Localització!</string>
     <string name="time_label">Data i Hora: </string>
     <string name="lat_label">Latitud: </string>
@@ -156,14 +160,14 @@ under constuction
     <string name="menu_toggle_view">Satèl.lit./Mapa</string>
     <string name="data_off_alert">Guardar les meves dades està apagat. Clica aquí per accedir al menú de Preferències i activar-lo. </string>
     <string name="noGPSAlert">"El teu GPS està desconnectat. Vols activar-lo?".</string>
-    <string name="noGPSnoNetAlert">El teu GPS i el teu receptor de localitzacions sense fils estan desactivats. Campus Mobility no pot obtenir la teva localització sense com a mínim un d\’ells activat. Vols activar-los ?</string>
+    <string name="noGPSnoNetAlert">El teu GPS i el teu receptor de localitzacions sense fils estan desactivats. Campus Mobility no pot obtenir la teva localització sense com a mínim un d\'ells activat. Vols activar-los ?</string>
     <string name="noGPS">El teu GPS està desactivat. \nSi us plau, clica aquí per activar-lo.</string>
     <string name="noGPSnoNet">Campus Mobility no pot localitzar-te perquè el teu GPS i el teu receptor sense fils estan apagats. \nSi us plau, clica aquí per activar-los.</string>
-    <string name="consent_date_prompt">Apretant el botó d\’Acceptar, has acceptat a l\’hora i la data indicades aquí. Pots canviar d\’opinió respecte la teva participació en el projecte d\’investigació en qualsevol moment utilitzant el menú d\’Activity-Space Project.</string>
+    <string name="consent_date_prompt">Apretant el botó d\'Acceptar, has acceptat a l\'hora i la data indicades aquí. Pots canviar d\'opinió respecte la teva participació en el projecte d\'investigació en qualsevol moment utilitzant el menú d\'Activity-Space Project.</string>
     <string name="delete_mydata_query">Vols esborrar algunes dades que Campus Mobility ha guardat al teu telèfon?</string>
-    <string name="more_data_later"> Campus Mobility inclourà instruments d\’anàlisi addicionals en el futur proper</string>
+    <string name="more_data_later"> Campus Mobility inclourà instruments d\'anàlisi addicionals en el futur proper</string>
     <string name="help">Ajuda</string>
-    <string name="user_guide">Guia de l\’usuari/a</string>
+    <string name="user_guide">Guia de l\'usuari/a</string>
     <string name="faqs">FAQs</string>
     <string name="about">Sobre</string>
     <string name="review_consent">Formulari de consentiment</string>
@@ -175,7 +179,7 @@ under constuction
     <string name="underage_message">Per tal de participar al projecte Campus Mobility com a voluntari i per tant com a subjecte de recerca cal que siguis major de 18 anys. Pots visitar la nostra pàgina per conèixer-nos més o per posar-te en contacte amb nosaltres per resoldre qualsevol pregunta o fer-nos arribar qualsevol suggerència.</string>
     <string name="project_website">TO_BE_ADDED</string>
     <string name="project_email">TO_BE_ADDED</string>
-    <string name="menu_locate_now">Localitza\’m ara</string>
+    <string name="menu_locate_now">Localitza\'m ara</string>
     <string name="menu_upload_now">Carrega Ara</string>
     <string name="intro_button_over">Sóc major de 18 anys</string>
     <string name="intro_button_under">Tinc menys de 18 anys.</string>
@@ -185,7 +189,7 @@ under constuction
     <string name="location_found">LOCALITZACIÓ TROBADA</string>
     <string name="checking_location">Localitzant-te</string>
     <string name="countdown_text">Compte enrere per la nova localització:</string>
-    <string name="main_text">Gràcies per participar! \n\nEn qualsevol moment pots sortir de l\’Campus Mobility. No et preocupis, el programa es continuarà executant al teu telèfon. \n\nUtilitza el botó del menú per més opcions.</string>
+    <string name="main_text">Gràcies per participar! \n\nEn qualsevol moment pots sortir de l\'Campus Mobility. No et preocupis, el programa es continuarà executant al teu telèfon. \n\nUtilitza el botó del menú per més opcions.</string>
     <string name="heading_mydata_spinner">Període</string>
     <string name="text_mydata_spinner">Per quants dies?</string>
     <string name="heading_mydata_button">Guardar dades</string>
@@ -193,9 +197,9 @@ under constuction
     <string name="user_id">ID usuari:</string>
     <string name="withdraw_lock_heading">Vull deixar de participar</string>
     <string name="withdraw_lock_subheading"></string>
-    <string name="withdraw_lock_text">Has deixat de participar en l\’estudi i has eliminat totes les dades de l\’Campus Mobility del teu telèfon i del servidor. Per la teva informació, aquest codi és l\’ID d\’usuari únic que el programa t\’ha assignat durant la teva participació. Si vols tornar a participar a l\’estudi en el futur, necessitaràs reinstal.lar l\’aplicació al teu telèfon i el programa t\’assignarà automàticament un nou ID d\’usuari. </string>
+    <string name="withdraw_lock_text">Has deixat de participar en l\'estudi i has eliminat totes les dades de l\'Campus Mobility del teu telèfon i del servidor. Per la teva informació, aquest codi és l\'ID d\'usuari únic que el programa t\'ha assignat durant la teva participació. Si vols tornar a participar a l\'estudi en el futur, necessitaràs reinstal.lar l\'aplicació al teu telèfon i el programa t\'assignarà automàticament un nou ID d\'usuari. </string>
     <string name="withdraw_delete_button">Vull deixar de participar i eliminar totes les dades</string>
-    <string name="withdraw_delete_text">Clica aquí per deixar de participar a l\’estudi i eliminar permanentment totes les dades de l\’Campus Mobility del teu telèfon i del servidor del projecte d\’investigació. Necessitaràs una connexió d\’internet per tal de completar aquest procés.</string>
+    <string name="withdraw_delete_text">Clica aquí per deixar de participar a l\'estudi i eliminar permanentment totes les dades de l\'Campus Mobility del teu telèfon i del servidor del projecte d\'investigació. Necessitaràs una connexió d\'internet per tal de completar aquest procés.</string>
     <string name="withdraw_heading">Vull deixar de participar</string>
     <string name="withdraw_subheading"></string>
     <string name="save_data_button">Guarda les dades</string>
@@ -211,11 +215,11 @@ under constuction
     <string name="married_prompt">Estàs casat/da?</string>
     <string name="kids_prompt">Quants fills/es viuen amb tu?</string>
     <string name="race_prompt">Raça/Ètnia</string>
-    <string name="race_subprompt">Si us plau, marca una de les caselles o més que segons t\’identifiquis en un grup o en més d\’un. (Les categories de la llista són les utilitzades al Cens dels Estats Units.)</string>
+    <string name="race_subprompt">Si us plau, marca una de les caselles o més que segons t\'identifiquis en un grup o en més d\'un. (Les categories de la llista són les utilitzades al Cens dels Estats Units.)</string>
     <string name="race_white">Blanca</string>
     <string name="race_black">Negra o Africana-americana</string>
     <string name="race_latino">Hispana/Llatina/Espanyola</string>
-    <string name="race_native_american">Indi Americà o nativa d\’Alaska</string>
+    <string name="race_native_american">Indi Americà o nativa d\'Alaska</string>
     <string name="race_asian">Asiàtica</string>
     <string name="race_other">Alguna altra ètnia</string>
     <string name="specify">Si us plau, contesta:</string>
@@ -225,8 +229,8 @@ under constuction
     <string name="entryyear_prompt_short">Any al qual et vas traslladar al teu país de residència:</string>
     <string name="cit_prompt">Ets un/a ciutadà/ana del país al qual resideixes?</string>
     <string name="heading_language">Idioma</string>
-    <string name="text_language_spinner">Canvia l\’idioma de l\’app.</string>
-    <string name="heading_interval">Fixi l\’Interval</string>
+    <string name="text_language_spinner">Canvia l\'idioma de l\'app.</string>
+    <string name="heading_interval">Fixi l\'Interval</string>
     <string name="on_off">On/Off</string>
     <string name="menu_settings">Preferències</string>
     <string name="menu_data">Les meves dades</string>
@@ -237,7 +241,7 @@ under constuction
     <string name="age_prompt">Edat:</string>
     <string name="AgeHint">Entra la teva edat</string>
     <string name="lang_prompt">Quina llengua parles principalment a casa?</string>
-    <string name="ed_prompt">Nivell d\’estudis completat:</string>
+    <string name="ed_prompt">Nivell d\'estudis completat:</string>
     <string name="inc_prompt">Quina va ser la renda familiar durant els últims 12 mesos?</string>
     <string name="inc_prompt_short">Renda familiar durant els últims 12 mesos:</string>
     <string name="nhousehold_prompt">Quants membres familiars conviuen a la teva llar, comptant-te tu també?</string>
@@ -249,27 +253,27 @@ under constuction
     <string name="text_interval_spinner">Mesura la localització cada: </string>
     <string name="banner_image_content_description">Icona Campus Mobility</string>
     <string name="consent_heading">Formulari de Consentiment</string>
-    <string name="consent_instructions">Si us plau llegeix el següent formulari de consentiment. Pots acceptar electrònicament clicant el botó d\’acceptar de la pantalla. Si tens qualsevol pregunta, envia-les a activity.space.project@gmail.com.</string>
-    <string name="consent_signature_button">Acceptar</string>
+    <string name="consent_instructions">Si us plau llegeix el següent formulari de consentiment. Pots acceptar electrònicament clicant el botó d\'acceptar de la pantalla. Si tens qualsevol pregunta, envia-les a activity.space.project@gmail.com.</string>
+    <string name="consent_signature_button">ACCEPTA</string>
     <string name="nfixes_text">Guardats:</string>
     <string name="nuploads_text">Enviats:</string>
     <string name="thankyou">Gràcies per la teva participació!</string>
-    <string name="consent_decline_button">No accepto</string>
+    <string name="consent_decline_button">CANCEL·LA</string>
     <string name="intro_text">
 <![CDATA[
-<p><b>Benvingut\/da a Campus Mobility!</b></p>
+<p><b>Benvingut/da a Campus Mobility!</b></p>
 
-<p>Gràcies per descarregar\-te Campus Mobility. Aquesta app és part d\’un projecte acadèmic que analitza els hàbits de mobilitat quotidiana de la comunitat universitària.</p>
+<p>Gràcies per descarregar-te Campus Mobility. Aquesta app és part d\'un projecte acadèmic que analitza els hàbits de mobilitat quotidiana de la comunitat universitària.</p>
 
-<p>Si tens alguna pregunta, si us plau envia\’ns un e-mail a gemott@uab.cat</p>
+<p>Si tens alguna pregunta, si us plau envia\'ns un e-mail a gemott@uab.cat</p>
 ]]>
     </string>
     <string name="about_html">
 <![CDATA[
 <p>Campus Mobility versió 1.00</p>
 
-<p>Campus Mobility forma part d\’un projecte acadèmic sobre l\’espai i els llocs als quals es troben les persones al
-desenvolupar les seves activitats durant la seva vida diària. Escrit per John R.B. Palmer, està parcialment basat en el codi del Human Mobility Project, escrit per Chang Y. Chung, Kathleen Li, i Necati E. Ozgencil. El codi de l\’Campus Mobility està disponible a http://github.com/JohnPalmer/CampusMapper.</p>
+<p>Campus Mobility forma part d\'un projecte acadèmic sobre l\'espai i els llocs als quals es troben les persones al
+desenvolupar les seves activitats durant la seva vida diària. Escrit per John R.B. Palmer, està parcialment basat en el codi del Human Mobility Project, escrit per Chang Y. Chung, Kathleen Li, i Necati E. Ozgencil. El codi de l\'Campus Mobility està disponible a http://github.com/JohnPalmer/CampusMapper.</p>
 <p>Copyright &#169; 2015 John R.B. Palmer</p>
  
 <p> This program is free software: you can redistribute it and/or modify
@@ -313,52 +317,52 @@ SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</p></blockquote>
 <![CDATA[
 <p><b>Com participo en aquest projecte de recerca? </b></p>
 
-Instal.la l\’aplicació al teu telèfon, obre-la, accepta les condicions i registra\’t. Una vegada completada aquesta fase inicial assegura\’t que el GPS del teu telèfon i/o el receptor de localitzacions sense fil del teu telèfon estan actius i continua amb les activitats habituals. L\’aplicació continuarà executant-se al telèfon i enviarà la informació sobre les teves localitzacions al servidor del projecte d\’investigació a intervals de temps regulars. 
+Instal.la l\'aplicació al teu telèfon, obre-la, accepta les condicions i registra\'t. Una vegada completada aquesta fase inicial assegura\'t que el GPS del teu telèfon i/o el receptor de localitzacions sense fil del teu telèfon estan actius i continua amb les activitats habituals. L\'aplicació continuarà executant-se al telèfon i enviarà la informació sobre les teves localitzacions al servidor del projecte d\'investigació a intervals de temps regulars. 
 
 <p><b>Rebré algun tipus de compensació econòmica per la meva participació?</b></p>
  
-No, però podràs guardar les teves localitzacions i situar-les al mapa i sobretot, estaràs contribuint a l\’avenç de la ciència.
+No, però podràs guardar les teves localitzacions i situar-les al mapa i sobretot, estaràs contribuint a l\'avenç de la ciència.
 
-<p><b>Puc deixar de participar en l\’estudi i desintal.lar l\’aplicació si aquesta no m\’agrada?</b></p>
+<p><b>Puc deixar de participar en l\'estudi i desintal.lar l\'aplicació si aquesta no m\'agrada?</b></p>
  
-Si. La teva participació és totalment voluntària i pot acabar quan ho decideixis. Per tal de deixar de participar simplement desactiva l\’aplicació des del menú de Preferències de l\’aplicació o desintal.la-la utilitzant la configuració del teu telèfon. Si vols eliminar totes les teves dades del servidor del projecte d\’investigació, utilitza el botó desactivar del menú d\’Activity-Space Project de l\’aplicació.
+Si. La teva participació és totalment voluntària i pot acabar quan ho decideixis. Per tal de deixar de participar simplement desactiva l\'aplicació des del menú de Preferències de l\'aplicació o desintal.la-la utilitzant la configuració del teu telèfon. Si vols eliminar totes les teves dades del servidor del projecte d\'investigació, utilitza el botó desactivar del menú d\'Activity-Space Project de l\'aplicació.
 
 <p><b>Quina informació compartiré i com es protegirà la meva identitat?</b></p>
 
-L\’aplicació envia la informació següent al servidor del projecte d\’investigació: (1) el dia i hora del teu consentiment, (2) les teves respostes a les preguntes de l\’enquesta inicial, (3) la configuració d\’idioma al teu telèfon, (4) qualsevol resposta a l\’enquesta de seguiment, i (5) les localitzacions que ens envïis que consistiran en la latitud, longitud, altitud, precisió, receptor de localització 
-(i.e. GPS o xarxa sense fils), estat de la bateria i temps. Aquesta és la única informació que es recopila, està encriptada al teu telèfon abans d\’enviar-la al servidor i es desencripta i analitza per l\’equip del projecte d\’investigació només quan aquesta s\’ha eliminat del servidor. La teva informació serà utilitzada només per analitzar i contestar les preguntes de mobilitat i segregació de la població i no es compartiran amb ningú que no formi part de l\’equip d\’investigació excepte quan aquestes dades hagin estat agregades i/o transformades de forma que sigui impossible que se t\’identifiqui. 
+L\'aplicació envia la informació següent al servidor del projecte d\'investigació: (1) el dia i hora del teu consentiment, (2) les teves respostes a les preguntes de l\'enquesta inicial, (3) la configuració d\'idioma al teu telèfon, (4) qualsevol resposta a l\'enquesta de seguiment, i (5) les localitzacions que ens envïis que consistiran en la latitud, longitud, altitud, precisió, receptor de localització 
+(i.e. GPS o xarxa sense fils), estat de la bateria i temps. Aquesta és la única informació que es recopila, està encriptada al teu telèfon abans d\'enviar-la al servidor i es desencripta i analitza per l\'equip del projecte d\'investigació només quan aquesta s\'ha eliminat del servidor. La teva informació serà utilitzada només per analitzar i contestar les preguntes de mobilitat i segregació de la població i no es compartiran amb ningú que no formi part de l\'equip d\'investigació excepte quan aquestes dades hagin estat agregades i/o transformades de forma que sigui impossible que se t\'identifiqui. 
 
 <p><b>Hi ha restriccions respecte qui pot participar al projecte?</p></b> 
 
-Si – cal que siguis major de 18 anys per tal de poder participar. A més, per tal que l\’aplicació funcioni és necessari que tinguis un dispositiu que funcioni amb tecnologia Android. 
+Si – cal que siguis major de 18 anys per tal de poder participar. A més, per tal que l\'aplicació funcioni és necessari que tinguis un dispositiu que funcioni amb tecnologia Android. 
 
 <p><b>És perillós utilitzar el meu telèfon mentre condueixo?</b></p>
  
-Si – si us plau, no ho facis ! La utilització dels telèfons mòbils mentre es condueix pot augmentar el risc d\’accidents, mort o qualsevol altre dany a més d\’estar prohibit en molts estats. Per tant, et demanem por favor que no utilitzis el teu telèfon mòbil mentre condueixis. 
+Si – si us plau, no ho facis ! La utilització dels telèfons mòbils mentre es condueix pot augmentar el risc d\'accidents, mort o qualsevol altre dany a més d\'estar prohibit en molts estats. Per tant, et demanem por favor que no utilitzis el teu telèfon mòbil mentre condueixis. 
 
 <p><b>Per què recolliu informació sobre la bateria del meu telèfon?</b></p>
 
-Per tal que ens ajudi a millorar l\’aplicació. Hem dissenyat l\’aplicació de manera que sigui el menys intrusiva possible amb el funcionament del telèfon de forma que si ens adonessim que l\’aplicació està utilitzant una gran càrrega de la bateria del teu telèfon, ho arreglaríem en properes versions de l\’aplicació.
+Per tal que ens ajudi a millorar l\'aplicació. Hem dissenyat l\'aplicació de manera que sigui el menys intrusiva possible amb el funcionament del telèfon de forma que si ens adonessim que l\'aplicació està utilitzant una gran càrrega de la bateria del teu telèfon, ho arreglaríem en properes versions de l\'aplicació.
 
 <p><b>Com puc utilitzar la informació de la meva localització?</b></p>
 
-Des del menú de Preferències de l\’aplicació vés a Guarda les meves dades i clica \"si\" i escull la quantitat d\’informació que vols guardar en base al Període durant el qual vols guardar les teves dades. Les teves localitzacions es guardaran al teu telèfon durant el període que escullis i podràs situar-les a un mapa i guardar-les a la teva tarja SD des del menú de Les Meves Dades. Cal destacar que la informació que decideixis guardar al teu telèfon pel teu ús personal no està encriptada. 
+Des del menú de Preferències de l\'aplicació vés a Guarda les meves dades i clica \"si\" i escull la quantitat d\'informació que vols guardar en base al Període durant el qual vols guardar les teves dades. Les teves localitzacions es guardaran al teu telèfon durant el període que escullis i podràs situar-les a un mapa i guardar-les a la teva tarja SD des del menú de Les Meves Dades. Cal destacar que la informació que decideixis guardar al teu telèfon pel teu ús personal no està encriptada. 
 
 <p><b>Quan situo les meves dades al mapa, algunes localitzacions no es veuen bé. Per què passa això?</b></p>
 
-La precisió de les estimacions de les localitzacions depèn d\’un nombre de factors, entre els quals es troba l\’accés als senyals del satèl.lit de GPS i la connexió a les xarxes sense fils. L\’aplicació està dissenyada per avaluar la precisió de les localitzacions segons la càrrega de bateria del telèfon de manera que en alguns casos, les estimacions tindran un major marge d\’error. 
+La precisió de les estimacions de les localitzacions depèn d\'un nombre de factors, entre els quals es troba l\'accés als senyals del satèl.lit de GPS i la connexió a les xarxes sense fils. L\'aplicació està dissenyada per avaluar la precisió de les localitzacions segons la càrrega de bateria del telèfon de manera que en alguns casos, les estimacions tindran un major marge d\'error. 
 
-<p><b>Per què l\’aplicació no guarda les meves localitzacions?</b></p>
+<p><b>Per què l\'aplicació no guarda les meves localitzacions?</b></p>
 
-Aquest fet es pot produir-se en casos als quals ni el teu GPS ni el teu receptor de localització sense fils estiguin activats o quan el teu telèfon no pugui detectar la teva localització a un cert lloc amb la mínima precisió requerida per l\’aplicació. 
+Aquest fet es pot produir-se en casos als quals ni el teu GPS ni el teu receptor de localització sense fils estiguin activats o quan el teu telèfon no pugui detectar la teva localització a un cert lloc amb la mínima precisió requerida per l\'aplicació. 
 
-<p><b>Per què l\’aplicació no envia les meves localitzacions al servidor?</b></p>
+<p><b>Per què l\'aplicació no envia les meves localitzacions al servidor?</b></p>
 
 Aquest fet pot ser causat perquè el telèfon no estigui connectat a Internet. Quan estiguis segur/a que el teu telèfon està connectat a Internet, clica \"Envia ara\" del menú principal.
 
 <p><b>A qui hauria de contactar si tinc més preguntes?</b></p>
  
-John Palmer, estudiant de doctorat de la Woodrow Wilson School i l\’Office of Population Research de la Universitat de Princeton, és l\’investigador principal d\’aquest projecte. Per qualsevol pregunta relativa a aquest projecte, posa\’t en contacte amb mi a l\’adreça de correu que tens aquí. 
+John Palmer, estudiant de doctorat de la Woodrow Wilson School i l\'Office of Population Research de la Universitat de Princeton, és l\'investigador principal d\'aquest projecte. Per qualsevol pregunta relativa a aquest projecte, posa\'t en contacte amb mi a l\'adreça de correu que tens aquí. 
 
     ]]>
     </string>
@@ -366,23 +370,23 @@ John Palmer, estudiant de doctorat de la Woodrow Wilson School i l\’Office of 
 <![CDATA[
 <p><b>FORMULARI DE CONSENTIMENT – “Campus Mobility”</b></p>
 <p>Investigadors:</p>
-<p>1. Grup d\’Estudis de Mobilitat, Transport i Territori (GEMOTT), Departament de Geografia, Universitat Autònoma de Barcelona. Carrer de la Fortuna, Facultat de Filosofia i Lletres (Edifici B), Departament de Geografia - Campus de la UAB - 08193, Bellaterra (Cerdanyola del Vallès), Barcelona, Espanya. Tel. +34 935814805. gemott@uab.cat</p>
+<p>1. <b>Grup d\'Estudis de Mobilitat, Transport i Territori (GEMOTT)</b>, Departament de Geografia, Universitat Autònoma de Barcelona. Carrer de la Fortuna, Facultat de Filosofia i Lletres (Edifici B), Departament de Geografia - Campus de la UAB - 08193, Bellaterra (Cerdanyola del Vallès), Barcelona, Espanya. Tel. +34 935814805. gemott@uab.cat</p>
 
-<p>2. ICREA Movement Ecology Laboratory, Centre d\’Estudis Avançats de Blanes – Consejo Superior de Investigaciones Científicas (CEAB-CSIC). Accés Cala Sant Francesc, 14, 17300, Blanes, Girona, Espanya. www.movelab.net</p>
+<p>2. <b>ICREA Movement Ecology Laboratory</b>, Centre d\'Estudis Avançats de Blanes – <i>Consejo Superior de Investigaciones Científicas</i> (CEAB-CSIC). Accés Cala Sant Francesc, 14, 17300, Blanes, Girona, Espanya. www.movelab.net</p>
 
-<p>3. Centre de Política de Sòl i Valoracions, Universitat Politècnica de Catalunya. Av. Diagonal, 649, 4ta planta (Arq. Legal), 08028, Barcelona, Barcelona, Espanya. www.upc.edu\/cpsv\/</p>
+<p>3. <b>Centre de Política de Sòl i Valoracions</b>, Universitat Politècnica de Catalunya. Av. Diagonal, 649, 4ta planta (Arq. Legal), 08028, Barcelona, Barcelona, Espanya. www.upc.edu\/cpsv\/</p>
 
 <p>Mitjançant aquest formulari, la persona involucrada en aquest projecte:</p>
 
-<p>1. És conscient que ha de ser major de 18 anys d\’edat per a participar al projecte.</p>
-<p>2. Entén que se li sol\·licitarà permís per a executar l\’aplicació al seu telèfon mòbil i que aquesta transmetrà informació sobre la seva ubicació física, els seus desplaçaments, l\’estat de la bateria del seu dispositiu i la configuració d\’idioma, a l’equip investigador del projecte.</p>
-<p>3. És conscient de que l\’ús de telèfons mòbils, mentre es condueix, pot crear un major risc de lesions, mort o altres danys i està prohibida en molts indrets. Així, es compromet a abstenir-se d\’interactuar amb l\’aplicació durant la conducció.</p>
-<p>4. Entén que la seguretat és la màxima prioritat en tots els aspectes d\’aquest projecte i es compromet a utilitzar el seu telèfon de forma segura en tot moment.</p>
-<p>5. És conscient que el propòsit d’aquesta investigació és el d\’analitzar la mobilitat quotidiana sobre el territori.</p>
-<p>6. Entén que es prendran les mesures corresponents de protecció i privacitat de les dades proporcionades. La informació, resultant del projecte, no serà utilitzada per a cap propòsit diferent al de la investigació portada a terme per l\’equip investigador.</p>
-<p>7. Entén que la participació és voluntària, de manera que pot retirar el seu consentiment i desvincular-se del projecte en qualsevol moment, sense que això comporti penalització. L\’equip investigador es compromet a eliminar tota la informació davant sol\·licitud expressa.</p>
-<p>8. Mitjançant el seu consentiment, respecte d’aquest formulari, no renuncia a cap dret legal ni eximeix al GEMOTT, ni a cap de les persones vinculades, de les seves responsabilitats per negligències.</p>
-<p>Amb l\’exposat, la persona involucrada dóna consentiment per a participar com a voluntari o voluntària al projecte “Campus Mobility”.</p>
+<p>1. És conscient que ha de ser major de 18 anys d\'edat per a participar al projecte.</p>
+<p>2. Entén que se li sol·licitarà permís per a executar l\'aplicació al seu telèfon mòbil i que aquesta transmetrà informació sobre la seva ubicació física, els seus desplaçaments, l\'estat de la bateria del seu dispositiu i la configuració d\'idioma, a l\'equip investigador del projecte.</p>
+<p>3. És conscient de que l\'ús de telèfons mòbils, mentre es condueix, pot crear un major risc de lesions, mort o altres danys i està prohibida en molts indrets. Així, es compromet a abstenir-se d\'interactuar amb l\'aplicació durant la conducció.</p>
+<p>4. Entén que la seguretat és la màxima prioritat en tots els aspectes d\'aquest projecte i es compromet a utilitzar el seu telèfon de forma segura en tot moment.</p>
+<p>5. És conscient que el propòsit d\'aquesta investigació és el d\'analitzar la mobilitat quotidiana sobre el territori.</p>
+<p>6. Entén que es prendran les mesures corresponents de protecció i privacitat de les dades proporcionades. La informació, resultant del projecte, no serà utilitzada per a cap propòsit diferent al de la investigació portada a terme per l\'equip investigador.</p>
+<p>7. Entén que la participació és voluntària, de manera que pot retirar el seu consentiment i desvincular-se del projecte en qualsevol moment, sense que això comporti penalització. L\'equip investigador es compromet a eliminar tota la informació davant sol·licitud expressa.</p>
+<p>8. Mitjançant el seu consentiment, respecte d\'aquest formulari, no renuncia a cap dret legal ni eximeix al GEMOTT, ni a cap de les persones vinculades, de les seves responsabilitats per negligències.</p>
+<p>Amb l\'exposat, la persona involucrada dóna consentiment per a participar com a voluntari o voluntària al projecte “Campus Mobility”.</p>
 ]]>
     </string>
     <string name="contact_info">

@@ -42,6 +42,7 @@ public class DataCodeBook {
     public static String REGISTRATION_KEY_PHONE_LANG = "phone_language";
     public static String REGISTRATION_KEY_VERSION = "version";
     public static String REGISTRATION_KEY_SDK = "sdk";
+    public static String REGISTRATION_KEY_USER_EMAIL = "user_email";
     public static String REGISTRATION_KEY_USER_CODE = "user_code";
 
 

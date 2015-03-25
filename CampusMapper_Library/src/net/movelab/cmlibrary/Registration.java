@@ -67,6 +67,7 @@ public class Registration extends Activity {
     String userId = UUID.randomUUID().toString();
 
     private EditText survey_code_entry;
+    private EditText email_entry;
 
     /**
      * Called when the activity is first created.
@@ -81,6 +82,7 @@ public class Registration extends Activity {
         PropertyHolder.init(context);
 
         survey_code_entry = (EditText) findViewById(R.id.surveyCodeEntry);
+        email_entry = (EditText) findViewById(R.id.emailEntry);
 
         final Button saveRegistrationButton = (Button) findViewById(R.id.save_reg_button);
         saveRegistrationButton.setOnClickListener(new View.OnClickListener() {
@@ -114,6 +116,13 @@ public class Registration extends Activity {
                     user_code = survey_code_chars.toString();
                 }
 
+                String user_email = "";
+                CharSequence email_chars = email_entry.getText();
+                if (email_chars != null && email_chars.length() > 0) {
+                    user_email = email_chars.toString();
+                }
+
+
                 PropertyHolder.setUserCode(user_code);
 
 
@@ -124,6 +133,7 @@ public class Registration extends Activity {
                     response_json.put(DataCodeBook.REGISTRATION_KEY_VERSION, version);
                     response_json.put(DataCodeBook.REGISTRATION_KEY_SDK, thisSDK);
                     response_json.put(DataCodeBook.REGISTRATION_KEY_USER_CODE, user_code);
+                    response_json.put(DataCodeBook.REGISTRATION_KEY_USER_EMAIL, user_email);
 
                     consent_json.put(DataCodeBook.CONSENT_KEY_CONSENT_TIME, PropertyHolder.getConsentTime());
 

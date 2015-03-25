@@ -28,21 +28,6 @@
     android:layout_height="fill_parent"
     android:orientation="vertical" >
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
-        android:gravity="center"
-        android:padding="15dip"
-        android:text="@string/intro_heading"
-        android:textColor="@color/TopHeadings"
-        android:textSize="@dimen/heading_size"
-        android:textStyle="bold" />
-
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="1dip"
-        android:background="@color/dark_yellow" />
 
     <ScrollView
         android:layout_width="fill_parent"
@@ -58,39 +43,16 @@
                 android:id="@+id/introText"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
+                android:textAppearance="?android:attr/textAppearanceLarge"
                 android:padding="@dimen/html_text_pads" />
 
-            <LinearLayout
-                android:layout_width="fill_parent"
-                android:layout_height="wrap_content"
-                android:gravity="center_horizontal"
-                android:orientation="vertical"
-                android:padding="@dimen/surveypads" >
-
-                <TextView
-                    android:id="@+id/webLink"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:padding="10dip"
-                    android:text="@string/project_website" />
-
-                <TextView
-                    android:id="@+id/emailLink"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:gravity="center_horizontal"
-                    android:padding="10dip"
-                    android:text="@string/project_email"
-                    android:textColorLink="@color/light_yellow" />
-            </LinearLayout>
         </LinearLayout>
     </ScrollView>
 
     <View
         android:layout_width="fill_parent"
         android:layout_height="1dip"
-        android:background="@color/dark_yellow" />
+        android:background="@color/white" />
 
     <LinearLayout
         android:layout_width="fill_parent"
@@ -101,18 +63,12 @@
         android:weightSum="2" >
 
         <Button
-            android:id="@+id/introButtonUnder18"
+            android:id="@+id/introButtonOK"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_weight="1"
-            android:text="@string/intro_button_under" />
+            android:text="@string/ok" />
 
-        <Button
-            android:id="@+id/introButtonOver18"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/intro_button_over" />
     </LinearLayout>
 
 </LinearLayout>

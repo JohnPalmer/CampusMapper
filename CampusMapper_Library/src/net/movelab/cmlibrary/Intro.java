@@ -51,21 +51,11 @@ public class Intro extends Activity {
 
 		TextView intro = (TextView) findViewById(R.id.introText);
 		intro.setText(Html.fromHtml(getString(R.string.intro_text)));
-		intro.setTextColor(getResources().getColor(R.color.light_yellow));
-		intro.setTextSize(getResources().getDimension(R.dimen.textsize_normal));
+//		intro.setTextColor(getResources().getColor(R.color.light_yellow));
+//		intro.setTextSize(getResources().getDimension(R.dimen.textsize_normal));
 
-		final TextView mWeb = (TextView) findViewById(R.id.webLink);
-		Linkify.addLinks(mWeb, Linkify.ALL);
-		mWeb.setLinkTextColor(getResources().getColor(R.color.light_yellow));
-		mWeb.setTextSize(getResources().getDimension(R.dimen.textsize_url));
-
-		final TextView mEmail = (TextView) findViewById(R.id.emailLink);
-		Linkify.addLinks(mEmail, Linkify.ALL);
-		mEmail.setLinkTextColor(getResources().getColor(R.color.light_yellow));
-		mEmail.setTextSize(getResources().getDimension(R.dimen.textsize_url));
-
-		final Button mIntroButtonOver = (Button) findViewById(R.id.introButtonOver18);
-		mIntroButtonOver.setOnClickListener(new View.OnClickListener() {
+		final Button mIntroButtonOK = (Button) findViewById(R.id.introButtonOK);
+        mIntroButtonOK.setOnClickListener(new View.OnClickListener() {
 
 			@Override
 			public void onClick(View v) {
@@ -79,20 +69,6 @@ public class Intro extends Activity {
 			}
 		});
 
-		final Button mIntroButtonUnder = (Button) findViewById(R.id.introButtonUnder18);
-		mIntroButtonUnder.setOnClickListener(new View.OnClickListener() {
-
-			@Override
-			public void onClick(View v) {
-
-					Intent i = new Intent(Intro.this, UnderAgeMessage.class);
-					// start the intent
-					startActivity(i);
-					finish();
-				}
-
-
-		});
 
 	}
 

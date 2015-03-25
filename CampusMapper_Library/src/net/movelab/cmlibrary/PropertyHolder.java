@@ -610,11 +610,6 @@ public class PropertyHolder {
         return sharedPreferences.getInt("N_FIXES", -1);
     }
 
-    /**
-     * Sets the user's nUploads in the shared preferences to the given value.
-     *
-     * @param _pk The value to which to set the nUploads key.
-     */
     public static void setNFixes(int _nFixes) {
         editor.putInt("N_FIXES", _nFixes);
         editor.commit();
@@ -636,11 +631,6 @@ public class PropertyHolder {
         return sharedPreferences.getInt("N_USER_FIXES", -1);
     }
 
-    /**
-     * Sets the user's nFixes in the shared preferences to the given value.
-     *
-     * @param _pk The value to which to set the nUploads key.
-     */
     public static void setNUserFixes(int _nUserFixes) {
         editor.putInt("N_USER_FIXES", _nUserFixes);
         editor.commit();

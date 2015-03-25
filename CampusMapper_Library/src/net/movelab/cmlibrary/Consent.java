@@ -61,9 +61,9 @@ public class Consent extends Activity {
 
         TextView consent = (TextView) findViewById(R.id.consenttext);
         consent.setText(Html.fromHtml(getString(R.string.consent_text)));
-        consent.setTextColor(Color.WHITE);
-        consent.setTextSize(getResources()
-                .getDimension(R.dimen.textsize_normal));
+//        consent.setTextColor(Color.WHITE);
+//        consent.setTextSize(getResources()
+//                .getDimension(R.dimen.textsize_normal));
 
         final Button consentButton = (Button) findViewById(R.id.consent_button);
         consentButton.setOnClickListener(new View.OnClickListener() {

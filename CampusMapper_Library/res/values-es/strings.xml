@@ -24,7 +24,13 @@
 
 <resources>
 
-        <string name="visit_website">Web</string>    
+    <string name="email">Correo electrónico</string>
+    <string name="email_hint">correu electrònic</string>
+    <string name="password">Contraseña</string>
+    <string name="password_hint">contraseña</string>
+
+
+    <string name="visit_website">Web</string>
     
         <string name="no_sharing_msg">En estos momentos no se están guardando más datos y las funciones de intercambio de datos se han deshabilitado. Por favor, consulte el sitio web del proyecto para más información. Muchas gracias por su interés!</string>    
     
@@ -239,14 +245,14 @@
     <string name="banner_image_content_description">Icono de Campus Mobility</string>
     <string name="consent_heading">Formulario de consentimiento</string>
     <string name="consent_instructions">Por favor lee el siguiente formulario de consentimiento. Puedes aceptar electrónicamente, clicando el botón aceptar de la pantalla. Si tienes preguntas, mándalas a activity.space.project@gmail.com.</string>
-    <string name="consent_signature_button">Acepto</string>
+    <string name="consent_signature_button">ACEPTA</string>
     <string name="nfixes_text">Guardados:</string>
     <string name="nuploads_text">Enviados:</string>
     <string name="thankyou">Gracias por tu participación!</string>
-    <string name="consent_decline_button">No acepto</string>
+    <string name="consent_decline_button">CANCELA</string>
     <string name="intro_text">
 <![CDATA[
-<p><b>Bienvenido\/da a Campus Mobility!</b></p>
+<p><b>Bienvenido/da a Campus Mobility!</b></p>
 
 <p>Gracias por descargarte Campus Mobility. Esta app forma parte de un proyecto académico que analiza los hábitos de movilidad cotidiana de la comunidad universitaria.</p>
 
@@ -342,11 +348,11 @@ John Palmer es el investigador principal de este proyecto y es un estudiante de 
 <![CDATA[
 <p><b>FORMULARIO DE CONSENTIMIENTO – “Campus Mobility”</b></p>
 <p>Investigadores:</p>
-<p>1. Grupo de Estudios en Movilidad, Transporte y Territorio (GEMOTT), Departamento de Geografía, Universidad Autónoma de Barcelona. Carrer de la Fortuna, Facultad de Filosofía y Letras (Edificio B), Departamento de Geografía - Campus de la UAB - 08193, Bellaterra (Cerdanyola del Vallès), Barcelona, España. Tel. +34 935814805. gemott@uab.cat</p>
+<p>1. <b>Grupo de Estudios en Movilidad, Transporte y Territorio (GEMOTT)</b>, Departamento de Geografía, Universidad Autónoma de Barcelona. Carrer de la Fortuna, Facultad de Filosofía y Letras (Edificio B), Departamento de Geografía - Campus de la UAB - 08193, Bellaterra (Cerdanyola del Vallès), Barcelona, España. Tel. +34 935814805. gemott@uab.cat</p>
 
-<p>2. ICREA Movement Ecology Laboratory, Centro de Estudios Avanzados de Blanes– Consejo Superior de Investigaciones Científicas (CEAB-CSIC). Acceso Cala Sant Francesc, 14, 17300, Blanes, Girona, España. www.movelab.net</p>
+<p>2. <b>ICREA Movement Ecology Laboratory</b>, Centro de Estudios Avanzados de Blanes– Consejo Superior de Investigaciones Científicas (CEAB-CSIC). Acceso Cala Sant Francesc, 14, 17300, Blanes, Girona, España. www.movelab.net</p>
 
-<p>3. Centro de Política de Suelo y Valoraciones, Universidad Politécnica de Cataluña. Av. Diagonal, 649, 4ta planta (Arq. Legal), 08028, Barcelona, Barcelona, España. www.upc.edu/cpsv/</p>
+<p>3. <b>Centro de Política de Suelo y Valoraciones</b>, Universidad Politécnica de Cataluña. Av. Diagonal, 649, 4ta planta (Arq. Legal), 08028, Barcelona, Barcelona, España. www.upc.edu/cpsv/</p>
 
 <p>Mediante este formulario, la persona involucrada en este proyecto:</p>
 <p>1. Es consciente de que tiene que ser mayor de 18 años de edad para participar en el proyecto.</p>
