@@ -165,6 +165,11 @@ public class Registration extends Activity {
                         R.string.internal_message_id)
                         + Util.MESSAGE_START_MESSAGE_AB_TIMER));
 
+                // todo make this only for expert version
+                sendBroadcast(new Intent(context.getResources().getString(
+                        R.string.internal_message_id)
+                        + Util.MESSAGE_START_MESSAGE_C_TIMER));
+
                 // create an intent object and tell it where to go
                 Intent intent2ASM = new Intent(Registration.this,
                         MapMyData.class);

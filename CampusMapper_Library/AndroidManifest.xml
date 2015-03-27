@@ -35,6 +35,7 @@
     <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
     <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS" />
     <uses-permission android:name="android.permission.BATTERY_STATS" />
+    <uses-permission android:name="android.permission.VIBRATE" />
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
@@ -92,6 +93,10 @@
         </activity>
         <activity android:name="net.movelab.cmlibrary.About" >
         </activity>
+        <activity android:name="net.movelab.cmlibrary.Message" >
+        </activity>
+        <activity android:name="net.movelab.cmlibrary.TransportationModeSurvey" >
+        </activity>
         <activity android:name="net.movelab.cmlibrary.ReviewConsent" >
         </activity>
         <activity android:name="net.movelab.cmlibrary.Lifeline" >
@@ -108,6 +113,9 @@
                 <action android:name="net.movelab.cmlibrary.message_make_a_notification" />
                 <action android:name="net.movelab.cmlibrary.message_make_b_notification" />
                 <action android:name="net.movelab.cmlibrary.message_make_c_notification" />
+                <action android:name="net.movelab.cmlibrary.message_cancel_a_notification" />
+                <action android:name="net.movelab.cmlibrary.message_cancel_b_notification" />
+                <action android:name="net.movelab.cmlibrary.message_cancel_c_notification" />
                 <action android:name="android.net.wifi.supplicant.CONNECTION_CHANGE" />
                 <action android:name="android.intent.action.POWER_CONNECTED" />
             </intent-filter>

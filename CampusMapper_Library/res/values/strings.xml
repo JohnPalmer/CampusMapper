@@ -35,15 +35,20 @@ under constuction
      ]]>
     </string>
 
+    <string name="expert_title">Expert Mode</string>
+    <string name="enter_expert">Enter expert mode?</string>
+    <string name="exit_expert">Exit expert mode?</string>
+
+
     <string name="popup_a">"Hola! Les dades que estàs generant estan sent correctament registrades! T\'animem a seguir amb la prova durant la resta de la setmana. Moltes gràcies per la teva col·laboració; la participació dels voluntaris és clau per a conèixer la mobilitat de la comunitat universitària!"</string>
 
-    <string name="popup_a_title">Gràcies de Campus Mobility</string>
+    <string name="popup_a_title">Campus Mobility</string>
 
     <string name="popup_a_ticker">Gràcies de Campus Mobility</string>
 
     <string name="popup_b1">"Hola! La teva participació al projecte Campus Mobility està sent un èxit. La teva informació ha estat correctament registrada durant 3 dies. T\'animem a seguir amb la prova durant la resta de la setmana. Moltes gràcies per la teva col·laboració; la participació dels voluntaris és clau per a conèixer la mobilitat de la comunitat universitària!"</string>
 
-    <string name="popup_b1_title">Gràcies de Campus Mobility</string>
+    <string name="popup_b1_title">Campus Mobility</string>
 
     <string name="popup_b1_ticker">Gràcies de Campus Mobility</string>
 
@@ -51,7 +56,7 @@ under constuction
 
     <string name="popup_b2_title">Campus Mobility</string>
 
-    <string name="popup_b2_ticker">Hola de Campus Mobility</string>
+    <string name="popup_b2_ticker">No estem rebent les teves dades</string>
 
 
     <string name="popup_c1">"Hola! Ens podries dir amb quin mode de transport has efectuat el teu darrer desplaçament?"</string>
@@ -59,12 +64,17 @@ under constuction
     <string name="popup_c2">"Moltes gràcies per la teva col·laboració!"</string>
 
     <string-array name="popup_transport_mode_array">
+        <item>       </item>
         <item>Caminant</item>
         <item>Amb bicicleta</item>
         <item>Amb transport privat</item>
         <item>Amb tren, ferrocarril o metro</item>
         <item>Amb autobús</item>
     </string-array>
+
+    <string name="popup_c_title">Campus Mobility</string>
+
+    <string name="popup_c_ticker">Mode de transport</string>
 
 
     <string name="email">Correu electrònic</string>

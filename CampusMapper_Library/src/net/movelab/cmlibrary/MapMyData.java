@@ -41,6 +41,7 @@ import net.movelab.cmlibrary.RangeSeekBarDonut.OnRangeSeekBarDonutChangeListener
 
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.app.Dialog;
 import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
 import android.content.ContentValues;
@@ -71,6 +72,7 @@ import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.view.Window;
+import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
 import android.widget.RelativeLayout;
@@ -93,6 +95,10 @@ import org.json.JSONObject;
  * @author John R.B. Palmer
  */
 public class MapMyData extends FragmentActivity {
+
+    private int count = 0;
+    private long startMillis=0;
+
     String TAG = "MapMyData";
     private ToggleButton mServiceButton;
 
@@ -103,6 +109,8 @@ public class MapMyData extends FragmentActivity {
     boolean updatingDatabase;
     boolean savingCsv;
 
+    boolean popup_a_already_done = false;
+    boolean popup_b_already_done = false;
 
     GeoPoint point;
     boolean satToggle;
@@ -213,6 +221,7 @@ public class MapMyData extends FragmentActivity {
 
         privacyZones = new ArrayList<GeoPoint>();
 
+
     }
 
 
@@ -284,6 +293,7 @@ public class MapMyData extends FragmentActivity {
         });
 
 
+
         super.onResume();
 
     }
@@ -330,6 +340,29 @@ public class MapMyData extends FragmentActivity {
     }
 
 
+
+    @Override
+    public boolean onTouchEvent(MotionEvent event) {
+        int eventaction = event.getAction();
+        if (eventaction == MotionEvent.ACTION_UP) {
+            long time= System.currentTimeMillis();
+            if (startMillis==0 || (time-startMillis> 3000) ) {
+                startMillis=time;
+                count=1;
+            }
+            else{
+                count++;
+            }
+            if (count==4) {
+                buildExpertMessage();
+            }
+            return true;
+        }
+        return false;
+    }
+
+
+
     private void buildFlushGPSAlert() {
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
         builder.setMessage(getResources().getString(R.string.renew_gps_alert))
@@ -371,6 +404,41 @@ public class MapMyData extends FragmentActivity {
         final AlertDialog alert = builder.create();
         alert.show();
     }
+
+
+    private void buildExpertMessage() {
+        final boolean expert = PropertyHolder.getExpertMode();
+        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
+        builder.setMessage(expert?getResources().getString(R.string.exit_expert):getResources().getString(R.string.enter_expert)).setTitle(getResources().getString(R.string.expert_title))
+                .setCancelable(true)
+                .setPositiveButton(getResources().getString(R.string.yes),
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(final DialogInterface dialog,
+                                                final int id) {
+                                PropertyHolder.setExpertMode(!expert);
+                                // if expert was false at first, now we are in expert mode, so make sure alarm on if service on
+                                if (!expert) {
+
+                                    if (PropertyHolder.isServiceOn()) {
+                                        sendBroadcast(new Intent(getResources().getString(R.string.internal_message_id) + Util.MESSAGE_SCHEDULE));
+                                   }
+                                } else {
+                                    sendBroadcast(new Intent(getResources().getString(R.string.internal_message_id) + Util.MESSAGE_CANCEL_C_NOTIFICATION));
+                                }
+                                dialog.dismiss();
+                            }
+                        })
+        .setNegativeButton(getResources().getString(R.string.no),
+                new DialogInterface.OnClickListener() {
+                    public void onClick(final DialogInterface dialog,
+                                        final int id) {
+                        dialog.dismiss();
+                    }
+                });
+        final AlertDialog alert = builder.create();
+        alert.show();
+    }
+
 
 
 }

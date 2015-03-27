@@ -104,11 +104,18 @@ public class Util {
     public final static int MESSAGE_B_NOTIFICATION = 3;
     public final static int MESSAGE_C_NOTIFICATION = 4;
 
+    // todo change interval
+    public final static long MESSAGE_C_INTERVAL = 1000*15;
+
+
     public final static String MESSAGE_START_MESSAGE_AB_TIMER = ".message_start_message_ab_timer";
     public final static String MESSAGE_START_MESSAGE_C_TIMER = ".message_start_message_c_timer";
     public final static String MESSAGE_MAKE_MESSAGE_A_NOTIFICATION = ".message_make_a_notification";
     public final static String MESSAGE_MAKE_MESSAGE_B_NOTIFICATION = ".message_make_b_notification";
     public final static String MESSAGE_MAKE_MESSAGE_C_NOTIFICATION = ".message_make_c_notification";
+    public final static String MESSAGE_CANCEL_A_NOTIFICATION = ".message_cancel_a_notification";
+    public final static String MESSAGE_CANCEL_B_NOTIFICATION = ".message_cancel_b_notification";
+    public final static String MESSAGE_CANCEL_C_NOTIFICATION = ".message_cancel_c_notification";
 
     public final static long SECONDS = 1000;
     public final static long MINUTES = SECONDS * 60;

@@ -93,5 +93,9 @@ public class DataCodeBook {
     public static String NMEA_KEY_LOCATION_MESSAGE = "location_message";
     public static String NMEA_KEY_HDOP = "hdop";
 
+    public static String TRANSPORT_PREFIX = "TRA";
+    public static String TRANSPORT_KEY_TIME  = "time";
+    public static String TRANSPORT_KEY_MODE_RESPONSE = "transport_mode_response";
+
 
 }

@@ -109,6 +109,17 @@ public class PropertyHolder {
         return Util.pro_versions_on && sharedPreferences.getBoolean("PRO", false);
     }
 
+
+    public static void setExpertMode(boolean expert) {
+        editor.putBoolean("EXPERT", expert);
+        editor.commit();
+    }
+
+    public static boolean getExpertMode() {
+        return sharedPreferences.getBoolean("EXPERT", false);
+    }
+
+
     final static String START_PT = "START_PARTICIPATION_TIME";
     final static String TOTAL_PT = "TOTAL_PARTICIPATION_TIME";
     final static String PT_RUNNING = "PT_RUNNING";

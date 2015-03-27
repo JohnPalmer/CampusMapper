@@ -79,18 +79,33 @@ public class SpaceMapperBroadcastReceiver extends BroadcastReceiver {
         PendingIntent pendingFixGetStop = PendingIntent.getBroadcast(context,
                 0, intent2StopFixGet, 0);
 
+        AlarmManager messageCAlarm = (AlarmManager) context
+                .getSystemService(Context.ALARM_SERVICE);
+        PendingIntent pending_message_C = PendingIntent.getBroadcast(context,
+                0, new Intent(context.getResources().getString(
+                R.string.internal_message_id)
+                + Util.MESSAGE_MAKE_MESSAGE_C_NOTIFICATION), 0);
+
+
         if (action != null) {
 
             if (action.contains(context.getResources().getString(
                     R.string.internal_message_id)
                     + Util.MESSAGE_UNSCHEDULE)) {
                 startFixGetAlarm.cancel(pendingIntent2FixGet);
+                messageCAlarm.cancel(pending_message_C);
                 PropertyHolder.setServiceOn(false);
                 PropertyHolder.ptStop();
                 cancelNotification(context);
+                cancelTransportNotification(context);
             } else if (action.contains(context.getResources().getString(
                     R.string.internal_message_id)
                     + Util.MESSAGE_SCHEDULE)) {
+
+                if(PropertyHolder.getExpertMode()){
+                messageCAlarm.setInexactRepeating(AlarmManager.ELAPSED_REALTIME, SystemClock.elapsedRealtime(),  Util.MESSAGE_C_INTERVAL, pending_message_C);
+                }
+
                 long alarmInterval = PropertyHolder.getAlarmInterval();
                 int alarmType = AlarmManager.ELAPSED_REALTIME_WAKEUP;
                 long triggerTime = SystemClock.elapsedRealtime();
@@ -133,10 +148,6 @@ public class SpaceMapperBroadcastReceiver extends BroadcastReceiver {
 
             } else if (action.contains(context.getResources().getString(
                     R.string.internal_message_id)
-                    + Util.MESSAGE_START_MESSAGE_C_TIMER)) {
-
-            } else if (action.contains(context.getResources().getString(
-                    R.string.internal_message_id)
                     + Util.MESSAGE_MAKE_MESSAGE_A_NOTIFICATION)) {
 
                 createMessage(context, true, context.getResources().getString(R.string.popup_a_title), context.getResources().getString(R.string.popup_a_ticker), context.getResources().getString(R.string.popup_a), Util.MESSAGE_A_NOTIFICATION);
@@ -150,6 +161,28 @@ public class SpaceMapperBroadcastReceiver extends BroadcastReceiver {
                 } else {
                     createMessage(context, false, context.getResources().getString(R.string.popup_b2_title), context.getResources().getString(R.string.popup_b2_ticker), context.getResources().getString(R.string.popup_b2), Util.MESSAGE_B_NOTIFICATION);
                 }
+            } else if (action.contains(context.getResources().getString(
+                    R.string.internal_message_id)
+                    + Util.MESSAGE_MAKE_MESSAGE_C_NOTIFICATION)) {
+
+                    createTransportModeNotification(context);
+
+            } else if (action.contains(context.getResources().getString(
+                    R.string.internal_message_id)
+                    + Util.MESSAGE_CANCEL_A_NOTIFICATION)) {
+
+                cancelMessage(context, Util.MESSAGE_A_NOTIFICATION);
+
+            } else if (action.contains(context.getResources().getString(
+                    R.string.internal_message_id)
+                    + Util.MESSAGE_CANCEL_B_NOTIFICATION)) {
+
+            cancelMessage(context, Util.MESSAGE_B_NOTIFICATION);
+            } else if (action.contains(context.getResources().getString(
+                    R.string.internal_message_id)
+                    + Util.MESSAGE_CANCEL_C_NOTIFICATION)) {
+
+                cancelTransportNotification(context);
 
             } else if (action.contains("BOOT_COMPLETED")) {
 
@@ -229,15 +262,54 @@ public class SpaceMapperBroadcastReceiver extends BroadcastReceiver {
         Notification notification = new Notification(thisnotification_icon,
                 message_ticker,
                 System.currentTimeMillis());
-        notification.flags |= Notification.FLAG_AUTO_CANCEL;
         notification.flags |= Notification.FLAG_ONLY_ALERT_ONCE;
-        Intent intent = new Intent(context, MapMyData.class);
+        Intent intent = new Intent(context, Message.class);
+        intent.putExtra("message_body", message_body);
+        intent.putExtra("notification_code", notification_code);
 
         PendingIntent pendingIntent = PendingIntent.getActivity(context, 0,
                 intent, PendingIntent.FLAG_CANCEL_CURRENT);
-        notification.setLatestEventInfo(context, message_title, message_body,
+        notification.setLatestEventInfo(context, message_title, message_ticker,
                 pendingIntent);
         notificationManager.notify(notification_code, notification);
+
+    }
+
+    public void cancelMessage(Context context, int notification_code) {
+        NotificationManager notificationManager = (NotificationManager) context
+                .getSystemService(Context.NOTIFICATION_SERVICE);
+        notificationManager.cancel(notification_code);
+
+    }
+
+
+    @SuppressWarnings("deprecation")
+    public void createTransportModeNotification(Context context) {
+        NotificationManager notificationManager = (NotificationManager) context
+                .getSystemService(Context.NOTIFICATION_SERVICE);
+        int thisnotification_icon = R.drawable.ic_stat_survey;
+        Notification notification = new Notification(thisnotification_icon,
+                context.getResources().getString(R.string.popup_c_ticker),
+                System.currentTimeMillis());
+        notification.flags |= Notification.FLAG_SHOW_LIGHTS;
+        notification.flags |= Notification.FLAG_NO_CLEAR;
+        notification.defaults |= Notification.DEFAULT_VIBRATE;
+        notification.defaults |= Notification.DEFAULT_LIGHTS;
+
+        Intent intent = new Intent(context, TransportationModeSurvey.class);
+
+        PendingIntent pendingIntent = PendingIntent.getActivity(context, 0,
+                intent, PendingIntent.FLAG_CANCEL_CURRENT);
+        notification.setLatestEventInfo(context, context.getResources().getString(R.string.popup_c_title), context.getResources().getString(R.string.popup_c_ticker),
+                pendingIntent);
+        notificationManager.notify(Util.MESSAGE_C_NOTIFICATION, notification);
+
+    }
+
+    public void cancelTransportNotification(Context context) {
+        NotificationManager notificationManager = (NotificationManager) context
+                .getSystemService(Context.NOTIFICATION_SERVICE);
+        notificationManager.cancel(Util.MESSAGE_C_NOTIFICATION);
 
     }
 

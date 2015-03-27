@@ -1,5 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?>
-<!--
+<?xml version="1.0" encoding="utf-8"?><!--
   ~ Mobility Mapper is a mobile phone app for studying activity spaces on campuses. It is based in part on code from the Human Mobility Project.
   ~
   ~ Copyright (c) 2015 John R.B. Palmer.
@@ -26,32 +25,42 @@
     android:id="@+id/LinearLayout1"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent"
-    android:orientation="vertical" >
+    android:orientation="vertical">
 
 
     <ScrollView
         android:layout_width="fill_parent"
         android:layout_height="0dip"
-        android:layout_weight="1" >
+        android:layout_weight="1">
 
         <LinearLayout
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:orientation="vertical" >
+            android:orientation="vertical">
 
             <TextView
                 android:id="@+id/messageText_1"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:padding="@dimen/html_text_pads" />
+                android:padding="@dimen/html_text_pads"
+                android:text="@string/popup_c1" />
+
+            <Spinner
+                android:id="@+id/spinner"
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:drawSelectorOnTop="true"
+                android:entries="@array/popup_transport_mode_array" />
+
 
             <TextView
                 android:id="@+id/messageText_2"
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:textAppearance="?android:attr/textAppearanceLarge"
-                android:padding="@dimen/html_text_pads" />
+                android:padding="@dimen/html_text_pads"
+                android:text="@string/popup_c2" />
 
 
         </LinearLayout>
@@ -68,7 +77,7 @@
         android:gravity="center_horizontal"
         android:orientation="horizontal"
         android:padding="8dip"
-        android:weightSum="2" >
+        android:weightSum="2">
 
         <Button
             android:id="@+id/messageButtonOK"
