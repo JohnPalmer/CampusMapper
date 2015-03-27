@@ -97,7 +97,7 @@ import org.json.JSONObject;
 public class MapMyData extends FragmentActivity {
 
     private int count = 0;
-    private long startMillis=0;
+    private long startMillis = 0;
 
     String TAG = "MapMyData";
     private ToggleButton mServiceButton;
@@ -293,7 +293,6 @@ public class MapMyData extends FragmentActivity {
         });
 
 
-
         super.onResume();
 
     }
@@ -340,27 +339,24 @@ public class MapMyData extends FragmentActivity {
     }
 
 
-
     @Override
     public boolean onTouchEvent(MotionEvent event) {
         int eventaction = event.getAction();
         if (eventaction == MotionEvent.ACTION_UP) {
-            long time= System.currentTimeMillis();
-            if (startMillis==0 || (time-startMillis> 3000) ) {
-                startMillis=time;
-                count=1;
-            }
-            else{
+            long time = System.currentTimeMillis();
+            if (startMillis == 0 || (time - startMillis > 3000)) {
+                startMillis = time;
+                count = 1;
+            } else {
                 count++;
             }
-            if (count==4) {
+            if (count == 4) {
                 buildExpertMessage();
             }
             return true;
         }
         return false;
     }
-
 
 
     private void buildFlushGPSAlert() {
@@ -409,7 +405,7 @@ public class MapMyData extends FragmentActivity {
     private void buildExpertMessage() {
         final boolean expert = PropertyHolder.getExpertMode();
         final AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage(expert?getResources().getString(R.string.exit_expert):getResources().getString(R.string.enter_expert)).setTitle(getResources().getString(R.string.expert_title))
+        builder.setMessage(expert ? getResources().getString(R.string.exit_expert) : getResources().getString(R.string.enter_expert)).setTitle(getResources().getString(R.string.expert_title))
                 .setCancelable(true)
                 .setPositiveButton(getResources().getString(R.string.yes),
                         new DialogInterface.OnClickListener() {
@@ -418,27 +414,24 @@ public class MapMyData extends FragmentActivity {
                                 PropertyHolder.setExpertMode(!expert);
                                 // if expert was false at first, now we are in expert mode, so make sure alarm on if service on
                                 if (!expert) {
-
-                                    if (PropertyHolder.isServiceOn()) {
-                                        sendBroadcast(new Intent(getResources().getString(R.string.internal_message_id) + Util.MESSAGE_SCHEDULE));
-                                   }
+                                    sendBroadcast(new Intent(getResources().getString(R.string.internal_message_id) + Util.MESSAGE_START_MESSAGE_C_TIMER));
+                                    Util.toast(context, getResources().getString(R.string.expert_title));
                                 } else {
                                     sendBroadcast(new Intent(getResources().getString(R.string.internal_message_id) + Util.MESSAGE_CANCEL_C_NOTIFICATION));
                                 }
                                 dialog.dismiss();
                             }
                         })
-        .setNegativeButton(getResources().getString(R.string.no),
-                new DialogInterface.OnClickListener() {
-                    public void onClick(final DialogInterface dialog,
-                                        final int id) {
-                        dialog.dismiss();
-                    }
-                });
+                .setNegativeButton(getResources().getString(R.string.no),
+                        new DialogInterface.OnClickListener() {
+                            public void onClick(final DialogInterface dialog,
+                                                final int id) {
+                                dialog.dismiss();
+                            }
+                        });
         final AlertDialog alert = builder.create();
         alert.show();
     }
-
 
 
 }

@@ -104,8 +104,6 @@ public class Util {
     public final static int MESSAGE_B_NOTIFICATION = 3;
     public final static int MESSAGE_C_NOTIFICATION = 4;
 
-    // todo change interval
-    public final static long MESSAGE_C_INTERVAL = 1000*15;
 
 
     public final static String MESSAGE_START_MESSAGE_AB_TIMER = ".message_start_message_ab_timer";
@@ -123,10 +121,14 @@ public class Util {
     public final static long DAYS = HOURS * 24;
     public final static long WEEKS = DAYS * 7;
 
-    // todo change these back to 1 and 3 days
-    public static long time_to_message_a = 15 * SECONDS;
 
-    public static long time_to_message_b = 1 * MINUTES;
+    public static long time_to_message_a = 1*DAYS;
+
+    public static long time_to_message_b = 3 * DAYS;
+
+
+    public final static long MESSAGE_C_INTERVAL = 4*HOURS;
+
 
     public static long UPLOAD_INTERVAL = 8 * HOURS;
 

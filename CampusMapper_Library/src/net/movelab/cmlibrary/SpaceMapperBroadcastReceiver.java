@@ -145,6 +145,11 @@ public class SpaceMapperBroadcastReceiver extends BroadcastReceiver {
                 messageAAlarm.set(AlarmManager.ELAPSED_REALTIME, SystemClock.elapsedRealtime() + Util.time_to_message_a, pending_message_A);
                 messageBAlarm.set(AlarmManager.ELAPSED_REALTIME, SystemClock.elapsedRealtime() + Util.time_to_message_b, pending_message_B);
 
+            } else if (action.contains(context.getResources().getString(
+                    R.string.internal_message_id)
+                    + Util.MESSAGE_START_MESSAGE_C_TIMER)) {
+
+                messageCAlarm.setInexactRepeating(AlarmManager.ELAPSED_REALTIME, SystemClock.elapsedRealtime(),  Util.MESSAGE_C_INTERVAL, pending_message_C);
 
             } else if (action.contains(context.getResources().getString(
                     R.string.internal_message_id)
