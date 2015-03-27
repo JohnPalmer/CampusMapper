@@ -103,6 +103,11 @@
                 <action android:name="android.intent.action.LAUNCHER" />
                 <action android:name="net.movelab.campus_mapper.SCHEDULE_SERVICE" />
                 <action android:name="net.movelab.campus_mapper.UNSCHEDULE_SERVICE" />
+                <action android:name="net.movelab.campus_mapper.message_start_message_ab_timer" />
+                <action android:name="net.movelab.campus_mapper.message_start_message_c_timer" />
+                <action android:name="net.movelab.campus_mapper.message_make_a_notification" />
+                <action android:name="net.movelab.campus_mapper.message_make_b_notification" />
+                <action android:name="net.movelab.campus_mapper.message_make_c_notification" />
                 <action android:name="android.net.wifi.supplicant.CONNECTION_CHANGE" />
                 <action android:name="android.intent.action.POWER_CONNECTED" />
             </intent-filter>

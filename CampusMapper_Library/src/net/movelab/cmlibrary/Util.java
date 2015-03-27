@@ -100,12 +100,26 @@ public class Util {
 
     public final static int TRACKING_NOTIFICATION = 0;
     public final static int PRO_CONVERSION_NOTIFICATION = 1;
+    public final static int MESSAGE_A_NOTIFICATION = 2;
+    public final static int MESSAGE_B_NOTIFICATION = 3;
+    public final static int MESSAGE_C_NOTIFICATION = 4;
+
+    public final static String MESSAGE_START_MESSAGE_AB_TIMER = ".message_start_message_ab_timer";
+    public final static String MESSAGE_START_MESSAGE_C_TIMER = ".message_start_message_c_timer";
+    public final static String MESSAGE_MAKE_MESSAGE_A_NOTIFICATION = ".message_make_a_notification";
+    public final static String MESSAGE_MAKE_MESSAGE_B_NOTIFICATION = ".message_make_b_notification";
+    public final static String MESSAGE_MAKE_MESSAGE_C_NOTIFICATION = ".message_make_c_notification";
 
     public final static long SECONDS = 1000;
     public final static long MINUTES = SECONDS * 60;
     public final static long HOURS = MINUTES * 60;
     public final static long DAYS = HOURS * 24;
     public final static long WEEKS = DAYS * 7;
+
+    // todo change these back to 1 and 3 days
+    public static long time_to_message_a = 15 * SECONDS;
+
+    public static long time_to_message_b = 1 * MINUTES;
 
     public static long UPLOAD_INTERVAL = 8 * HOURS;
 

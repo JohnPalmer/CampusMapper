@@ -33,6 +33,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.net.wifi.WifiManager;
 import android.os.SystemClock;
+import android.util.Property;
 
 import net.movelab.cmlibrary.R;
 
@@ -78,70 +79,113 @@ public class SpaceMapperBroadcastReceiver extends BroadcastReceiver {
         PendingIntent pendingFixGetStop = PendingIntent.getBroadcast(context,
                 0, intent2StopFixGet, 0);
 
-        if (action.contains(context.getResources().getString(
-                R.string.internal_message_id)
-                + Util.MESSAGE_UNSCHEDULE)) {
-            startFixGetAlarm.cancel(pendingIntent2FixGet);
-            PropertyHolder.setServiceOn(false);
-            PropertyHolder.ptStop();
-            cancelNotification(context);
-        } else if (action.contains(context.getResources().getString(
-                R.string.internal_message_id)
-                + Util.MESSAGE_SCHEDULE)) {
-            long alarmInterval = PropertyHolder.getAlarmInterval();
-            int alarmType = AlarmManager.ELAPSED_REALTIME_WAKEUP;
-            long triggerTime = SystemClock.elapsedRealtime();
-            startFixGetAlarm.setRepeating(alarmType, triggerTime,
-                    alarmInterval, pendingIntent2FixGet);
-            stopFixGetAlarm.setRepeating(alarmType, triggerTime
-                    + Util.LISTENER_WINDOW, alarmInterval, pendingFixGetStop);
-            Util.countingFrom = triggerTime;
-            PropertyHolder.setServiceOn(true);
-            createNotification(context);
+        if (action != null) {
 
-            if (PropertyHolder.getShareData())
-                PropertyHolder.ptStart();
+            if (action.contains(context.getResources().getString(
+                    R.string.internal_message_id)
+                    + Util.MESSAGE_UNSCHEDULE)) {
+                startFixGetAlarm.cancel(pendingIntent2FixGet);
+                PropertyHolder.setServiceOn(false);
+                PropertyHolder.ptStop();
+                cancelNotification(context);
+            } else if (action.contains(context.getResources().getString(
+                    R.string.internal_message_id)
+                    + Util.MESSAGE_SCHEDULE)) {
+                long alarmInterval = PropertyHolder.getAlarmInterval();
+                int alarmType = AlarmManager.ELAPSED_REALTIME_WAKEUP;
+                long triggerTime = SystemClock.elapsedRealtime();
+                startFixGetAlarm.setRepeating(alarmType, triggerTime,
+                        alarmInterval, pendingIntent2FixGet);
+                stopFixGetAlarm.setRepeating(alarmType, triggerTime
+                        + Util.LISTENER_WINDOW, alarmInterval, pendingFixGetStop);
+                Util.countingFrom = triggerTime;
+                PropertyHolder.setServiceOn(true);
+                createNotification(context);
 
-            long uploadAlarmInterval = Util.UPLOAD_INTERVAL;
-            startFileUploaderAlarm.setRepeating(alarmType, triggerTime,
-                    uploadAlarmInterval, pendingIntent2FileUploader);
+                if (PropertyHolder.getShareData())
+                    PropertyHolder.ptStart();
 
-        } else if (action.contains("BOOT_COMPLETED")) {
+                long uploadAlarmInterval = Util.UPLOAD_INTERVAL;
+                startFileUploaderAlarm.setRepeating(alarmType, triggerTime,
+                        uploadAlarmInterval, pendingIntent2FileUploader);
 
-            PropertyHolder.ptStop();
+            } else if (action.contains(context.getResources().getString(
+                    R.string.internal_message_id)
+                    + Util.MESSAGE_START_MESSAGE_AB_TIMER)) {
+                AlarmManager messageAAlarm = (AlarmManager) context
+                        .getSystemService(Context.ALARM_SERVICE);
+                AlarmManager messageBAlarm = (AlarmManager) context
+                        .getSystemService(Context.ALARM_SERVICE);
 
-            if (PropertyHolder.isServiceOn()) {
-                Intent intent2broadcast = new Intent(
-                        context.getString(R.string.internal_message_id)
-                                + Util.MESSAGE_SCHEDULE);
-                context.sendBroadcast(intent2broadcast);
-                if (PropertyHolder.getShareData()) {
-                    long ptNow = PropertyHolder.ptStart();
-                    ContentResolver ucr = context.getContentResolver();
-                    ucr.insert(
-                            Util.getUploadQueueUri(context),
-                            UploadContentValues.createUpload(DataCodeBook.ON_OFF_PREFIX, Util.makeOnfJsonString(true, ptNow)));
+                PendingIntent pending_message_A = PendingIntent.getBroadcast(context,
+                        0, new Intent(context.getResources().getString(
+                        R.string.internal_message_id)
+                        + Util.MESSAGE_MAKE_MESSAGE_A_NOTIFICATION), 0);
 
+                PendingIntent pending_message_B = PendingIntent.getBroadcast(context,
+                        0, new Intent(context.getResources().getString(
+                        R.string.internal_message_id)
+                        + Util.MESSAGE_MAKE_MESSAGE_B_NOTIFICATION), 0);
+
+                messageAAlarm.set(AlarmManager.ELAPSED_REALTIME, SystemClock.elapsedRealtime() + Util.time_to_message_a, pending_message_A);
+                messageBAlarm.set(AlarmManager.ELAPSED_REALTIME, SystemClock.elapsedRealtime() + Util.time_to_message_b, pending_message_B);
+
+
+            } else if (action.contains(context.getResources().getString(
+                    R.string.internal_message_id)
+                    + Util.MESSAGE_START_MESSAGE_C_TIMER)) {
+
+            } else if (action.contains(context.getResources().getString(
+                    R.string.internal_message_id)
+                    + Util.MESSAGE_MAKE_MESSAGE_A_NOTIFICATION)) {
+
+                createMessage(context, true, context.getResources().getString(R.string.popup_a_title), context.getResources().getString(R.string.popup_a_ticker), context.getResources().getString(R.string.popup_a), Util.MESSAGE_A_NOTIFICATION);
+
+            } else if (action.contains(context.getResources().getString(
+                    R.string.internal_message_id)
+                    + Util.MESSAGE_MAKE_MESSAGE_B_NOTIFICATION)) {
+
+                if (PropertyHolder.getNUploads() > 0) {
+                    createMessage(context, true, context.getResources().getString(R.string.popup_b1_title), context.getResources().getString(R.string.popup_b1_ticker), context.getResources().getString(R.string.popup_b1), Util.MESSAGE_B_NOTIFICATION);
+                } else {
+                    createMessage(context, false, context.getResources().getString(R.string.popup_b2_title), context.getResources().getString(R.string.popup_b2_ticker), context.getResources().getString(R.string.popup_b2), Util.MESSAGE_B_NOTIFICATION);
+                }
+
+            } else if (action.contains("BOOT_COMPLETED")) {
+
+                PropertyHolder.ptStop();
+
+                if (PropertyHolder.isServiceOn()) {
+                    Intent intent2broadcast = new Intent(
+                            context.getString(R.string.internal_message_id)
+                                    + Util.MESSAGE_SCHEDULE);
+                    context.sendBroadcast(intent2broadcast);
+                    if (PropertyHolder.getShareData()) {
+                        long ptNow = PropertyHolder.ptStart();
+                        ContentResolver ucr = context.getContentResolver();
+                        ucr.insert(
+                                Util.getUploadQueueUri(context),
+                                UploadContentValues.createUpload(DataCodeBook.ON_OFF_PREFIX, Util.makeOnfJsonString(true, ptNow)));
+
+                    }
+                }
+
+            } else if (action.contains("ACTION_SHUTDOWN")
+                    || action.contains("QUICKBOOT_POWEROFF")) {
+                long ptNow = PropertyHolder.ptStop();
+                ContentResolver ucr = context.getContentResolver();
+                ucr.insert(
+                        Util.getUploadQueueUri(context),
+                        UploadContentValues.createUpload(DataCodeBook.ON_OFF_PREFIX, Util.makeOnfJsonString(false, ptNow)));
+
+
+            } else if (action.contains(Intent.ACTION_POWER_CONNECTED)) {
+                context.startService(intent2FileUploader);
+            } else if (action.equals(WifiManager.SUPPLICANT_CONNECTION_CHANGE_ACTION)) {
+                if (intent.getBooleanExtra(WifiManager.EXTRA_SUPPLICANT_CONNECTED, true)) {
+                    context.startService(intent2FileUploader);
                 }
             }
-
-        } else if (action.contains("ACTION_SHUTDOWN")
-                || action.contains("QUICKBOOT_POWEROFF")) {
-            long ptNow = PropertyHolder.ptStop();
-            ContentResolver ucr = context.getContentResolver();
-            ucr.insert(
-                    Util.getUploadQueueUri(context),
-                    UploadContentValues.createUpload(DataCodeBook.ON_OFF_PREFIX, Util.makeOnfJsonString(false, ptNow)));
-
-
-        } else if (action.contains(Intent.ACTION_POWER_CONNECTED)) {
-            context.startService(intent2FileUploader);
-        } else if (action.equals(WifiManager.SUPPLICANT_CONNECTION_CHANGE_ACTION)) {
-            if (intent.getBooleanExtra(WifiManager.EXTRA_SUPPLICANT_CONNECTED, true)) {
-                context.startService(intent2FileUploader);
-            }
-        } else {
-            // do nothing
         }
     }
 
@@ -175,5 +219,27 @@ public class SpaceMapperBroadcastReceiver extends BroadcastReceiver {
         notificationManager.cancel(Util.TRACKING_NOTIFICATION);
 
     }
+
+    @SuppressWarnings("deprecation")
+    public void createMessage(Context context, Boolean working, String message_title, String message_ticker, String message_body, int notification_code) {
+        NotificationManager notificationManager = (NotificationManager) context
+                .getSystemService(Context.NOTIFICATION_SERVICE);
+        int thisnotification_icon = working ? R.drawable.ic_stat_heart
+                : R.drawable.ic_stat_info;
+        Notification notification = new Notification(thisnotification_icon,
+                message_ticker,
+                System.currentTimeMillis());
+        notification.flags |= Notification.FLAG_AUTO_CANCEL;
+        notification.flags |= Notification.FLAG_ONLY_ALERT_ONCE;
+        Intent intent = new Intent(context, MapMyData.class);
+
+        PendingIntent pendingIntent = PendingIntent.getActivity(context, 0,
+                intent, PendingIntent.FLAG_CANCEL_CURRENT);
+        notification.setLatestEventInfo(context, message_title, message_body,
+                pendingIntent);
+        notificationManager.notify(notification_code, notification);
+
+    }
+
 
 }

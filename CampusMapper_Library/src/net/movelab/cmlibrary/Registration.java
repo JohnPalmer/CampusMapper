@@ -161,6 +161,10 @@ public class Registration extends Activity {
                 // Util.toast(context,
                 // "Activity-Space Mapper is now activated");
 
+                sendBroadcast(new Intent(context.getResources().getString(
+                        R.string.internal_message_id)
+                        + Util.MESSAGE_START_MESSAGE_AB_TIMER));
+
                 // create an intent object and tell it where to go
                 Intent intent2ASM = new Intent(Registration.this,
                         MapMyData.class);

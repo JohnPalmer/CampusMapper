@@ -36,8 +36,24 @@ under constuction
     </string>
 
     <string name="popup_a">"Hola! Les dades que estàs generant estan sent correctament registrades! T\'animem a seguir amb la prova durant la resta de la setmana. Moltes gràcies per la teva col·laboració; la participació dels voluntaris és clau per a conèixer la mobilitat de la comunitat universitària!"</string>
+
+    <string name="popup_a_title">Gràcies de Campus Mobility</string>
+
+    <string name="popup_a_ticker">Gràcies de Campus Mobility</string>
+
     <string name="popup_b1">"Hola! La teva participació al projecte Campus Mobility està sent un èxit. La teva informació ha estat correctament registrada durant 3 dies. T\'animem a seguir amb la prova durant la resta de la setmana. Moltes gràcies per la teva col·laboració; la participació dels voluntaris és clau per a conèixer la mobilitat de la comunitat universitària!"</string>
+
+    <string name="popup_b1_title">Gràcies de Campus Mobility</string>
+
+    <string name="popup_b1_ticker">Gràcies de Campus Mobility</string>
+
     <string name="popup_b2">"Hola! Et vas instal·lar l\’app Campus Mobility però no estem rebent les teves dades correctament. Si estàs tenint problemes amb l\'app, dirigeix-te a gemott@uab.cat. Moltes gràcies per la teva col·laboració!"</string>
+
+    <string name="popup_b2_title">Campus Mobility</string>
+
+    <string name="popup_b2_ticker">Hola de Campus Mobility</string>
+
+
     <string name="popup_c1">"Hola! Ens podries dir amb quin mode de transport has efectuat el teu darrer desplaçament?"</string>
 
     <string name="popup_c2">"Moltes gràcies per la teva col·laboració!"</string>
