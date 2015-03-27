@@ -122,12 +122,12 @@ public class Util {
     public final static long WEEKS = DAYS * 7;
 
 
-    public static long time_to_message_a = 1*DAYS;
+    public static long time_to_message_a = 15*SECONDS;
 
-    public static long time_to_message_b = 3 * DAYS;
+    public static long time_to_message_b = 1 * MINUTES;
 
 
-    public final static long MESSAGE_C_INTERVAL = 4*HOURS;
+    public final static long MESSAGE_C_INTERVAL = 1*MINUTES;
 
 
     public static long UPLOAD_INTERVAL = 8 * HOURS;
