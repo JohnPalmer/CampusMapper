@@ -4,6 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/CampusMapper_Library/CampusMapper_Library.iml" filepath="$PROJECT_DIR$/CampusMapper_Library/CampusMapper_Library.iml" />
       <module fileurl="file://$PROJECT_DIR$/CampusMapper_Research/CampusMapper_Research.iml" filepath="$PROJECT_DIR$/CampusMapper_Research/CampusMapper_Research.iml" />
+      <module fileurl="file://$PROJECT_DIR$/CampusMapper_Research/libs/google-play-services_lib/google-play-services_lib.iml" filepath="$PROJECT_DIR$/CampusMapper_Research/libs/google-play-services_lib/google-play-services_lib.iml" />
     </modules>
   </component>
 </project>
