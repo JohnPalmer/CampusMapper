@@ -23,70 +23,38 @@
 
 package net.movelab.cmlibrary;
 
-import java.io.BufferedWriter;
-import java.io.File;
-import java.io.FileOutputStream;
-import java.io.FileWriter;
-import java.io.IOException;
-import java.text.SimpleDateFormat;
-import java.util.ArrayList;
-import java.util.Calendar;
-import java.util.Date;
-import java.util.List;
-
-import net.movelab.cmlibrary.R;
-import net.movelab.cmlibrary.Fix.Fixes;
-import net.movelab.cmlibrary.RangeSeekBar.OnRangeSeekBarChangeListener;
-import net.movelab.cmlibrary.RangeSeekBarDonut.OnRangeSeekBarDonutChangeListener;
-
-import android.app.Activity;
 import android.app.AlertDialog;
-import android.app.Dialog;
-import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
-import android.content.ContentValues;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
-import android.content.IntentFilter;
-import android.content.res.Configuration;
 import android.database.Cursor;
-import android.graphics.Bitmap;
-import android.graphics.BitmapFactory;
-import android.graphics.Canvas;
-import android.graphics.Paint;
-import android.graphics.Point;
-import android.location.Location;
+import android.graphics.Color;
 import android.location.LocationManager;
-import android.net.Uri;
 import android.os.AsyncTask;
-import android.os.Build;
 import android.os.Bundle;
-import android.os.Environment;
-import android.os.SystemClock;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
-import android.view.View.OnClickListener;
-import android.view.Window;
-import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.ProgressBar;
-import android.widget.RelativeLayout;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
+import com.google.android.gms.maps.GoogleMap;
+import com.google.android.gms.maps.MapFragment;
+import com.google.android.gms.maps.OnMapReadyCallback;
+import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.MarkerOptions;
+import com.google.android.gms.maps.model.Polyline;
+import com.google.android.gms.maps.model.PolylineOptions;
 import com.google.android.maps.GeoPoint;
-import com.google.android.maps.MapActivity;
-import com.google.android.maps.MapController;
-import com.google.android.maps.MapView;
-import com.google.android.maps.Overlay;
 
-import org.json.JSONException;
-import org.json.JSONObject;
+import java.util.ArrayList;
+import java.util.Calendar;
+import java.util.List;
 
 /**
  * Allows user to view their own data in a map (from the database on their phone
@@ -94,7 +62,10 @@ import org.json.JSONObject;
  *
  * @author John R.B. Palmer
  */
-public class MapMyData extends FragmentActivity {
+public class MapMyData extends FragmentActivity implements OnMapReadyCallback {
+
+    PolylineOptions routeLineOptionsBlack;
+    Polyline polyline;
 
     private int count = 0;
     private long startMillis = 0;
@@ -163,7 +134,7 @@ public class MapMyData extends FragmentActivity {
 
     ProgressBar progressbar;
 
-    ArrayList<MapPoint> mPoints;
+    List<LatLng> mPoints;
     MapPoint[] mPointsArray;
 
     TextView progressbarText;
@@ -185,13 +156,12 @@ public class MapMyData extends FragmentActivity {
 
     Context context = this;
 
+    private GoogleMap mMap;
+
     @Override
     public void onCreate(Bundle icicle) {
         super.onCreate(icicle);
 
-
-        // TODO add all of the alerts from countdown activity regarding sensors
-        // off, sm off etc.
 
         PropertyHolder.init(context);
         PowerSensor.init(context);
@@ -211,16 +181,37 @@ public class MapMyData extends FragmentActivity {
 
         setContentView(R.layout.map_layout);
 
+        routeLineOptionsBlack = new PolylineOptions()
+                .width(25)
+                .color(Color.BLACK)
+                .geodesic(true);
+        mPoints = new ArrayList<LatLng>();
+
         receiverNotificationArea = (LinearLayout) findViewById(R.id.mapReceiverNotificationArea);
-
+        progressNotificationArea = (LinearLayout) findViewById(R.id.mapProgressNotificationArea);
         mReceiversOffWarning = (TextView) findViewById(R.id.mapReceiversOffWarning);
-
+        progressbar = (ProgressBar) findViewById(R.id.mapProgressbar);
 
         getIntro = PropertyHolder.getIntro();
         isPro = PropertyHolder.getProVersion();
 
         privacyZones = new ArrayList<GeoPoint>();
 
+        SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
+                .findFragmentById(R.id.map);
+        mapFragment.getMapAsync(this);
+
+
+    }
+
+
+    @Override
+    public void onMapReady(GoogleMap map) {
+
+        polyline = mMap.addPolyline(routeLineOptionsBlack);
+        if (mPoints.size() > 0) {
+            polyline.setPoints(mPoints);
+        }
 
     }
 
@@ -386,20 +377,6 @@ public class MapMyData extends FragmentActivity {
         alert.show();
     }
 
-    private void buildAlertMessageIntro() {
-        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage(getResources().getText(R.string.main_text))
-                .setCancelable(true)
-                .setNeutralButton(getResources().getString(R.string.ok),
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(final DialogInterface dialog,
-                                                final int id) {
-                                dialog.dismiss();
-                            }
-                        });
-        final AlertDialog alert = builder.create();
-        alert.show();
-    }
 
 
     private void buildExpertMessage() {
@@ -431,6 +408,84 @@ public class MapMyData extends FragmentActivity {
                         });
         final AlertDialog alert = builder.create();
         alert.show();
+    }
+
+    public class DataGrabberTask extends AsyncTask<Context, Integer, Boolean> {
+        int myProgress;
+        int nFixes;
+        ArrayList<MapPoint> results = new ArrayList<MapPoint>();
+        GeoPoint center;
+
+        @Override
+        protected void onPreExecute() {
+            myProgress = 0;
+            progressNotificationArea.setVisibility(View.VISIBLE);
+        }
+
+        protected Boolean doInBackground(Context... context) {
+            results.clear();
+            final String selectionString;
+            selectionString = Fix.Fixes.KEY_ROWID + " > " + lastRecId;
+            ContentResolver cr = getContentResolver();
+            Cursor c = cr.query(Util.getFixesUri(context[0]),
+                    Fix.Fixes.KEYS_LATLONACCTIMES, selectionString, null, null);
+            if (!c.moveToFirst()) {
+                c.close();
+                return false;
+            }
+            int latCol = c.getColumnIndexOrThrow("latitude");
+            int lonCol = c.getColumnIndexOrThrow("longitude");
+            int accCol = c.getColumnIndexOrThrow("accuracy");
+            int idCol = c.getColumnIndexOrThrow("_id");
+            int timeCol = c.getColumnIndexOrThrow(Fix.Fixes.KEY_TIMELONG);
+            int sdtimeCol = c
+                    .getColumnIndexOrThrow(Fix.Fixes.KEY_STATION_DEPARTURE_TIMELONG);
+            nFixes = c.getCount();
+// float lastAcc = 0;
+            int currentRecord = 0;
+            while (!c.isAfterLast()) {
+                myProgress = (int) (((currentRecord + 1) / (float) nFixes) * 100);
+                publishProgress(myProgress);
+// Escape early if cancel() is called
+                if (isCancelled())
+                    break;
+                lastRecId = c.getInt(idCol);
+// First grabbing double values of lat lon and time
+                Double lat = c.getDouble(latCol);
+                Double lon = c.getDouble(lonCol);
+                float acc = c.getFloat(accCol);
+                long entryTime = c.getLong(timeCol);
+                long exitTime = c.getLong(sdtimeCol);
+                Double geoLat = lat * 1E6;
+                Double geoLon = lon * 1E6;
+                results.add(new MapPoint(geoLat.intValue(), geoLon.intValue(),
+                        acc, entryTime, exitTime, MapPoint.ICON_NORMAL));
+                c.moveToNext();
+                currentRecord++;
+            }
+            c.close();
+            return true;
+        }
+
+        protected void onProgressUpdate(Integer... progress) {
+            progressbar.setProgress(progress[0]);
+        }
+
+        protected void onPostExecute(Boolean result) {
+            if (result) {
+                if (results != null && results.size() > 0) {
+                    for (MapPoint p : results) {
+                        mPoints.add(new LatLng(p.lat, p.lon));
+                    }
+                    final int newlastFixIndex = mPoints.size() - 1;
+                    if (polyline != null) {
+                        polyline.setPoints(mPoints);
+                    }
+                }
+            } else
+                progressNotificationArea.setVisibility(View.INVISIBLE);
+            loadingData = false;
+        }
     }
 
 
