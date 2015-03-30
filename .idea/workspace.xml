@@ -79,55 +79,87 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CampusMapper_Library/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="26" selection-start="2205" selection-end="2205" vertical-scroll-proportion="0.0" vertical-offset="468" max-vertical-offset="2826">
+            <state line="26" column="26" selection-start="2205" selection-end="2205" vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="3096">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="MapMyData.java" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CampusMapper_Research/AndroidManifest.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="26" selection-start="2204" selection-end="2204" vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="3276">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="MapMyData.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/MapMyData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="443" column="21" selection-start="16264" selection-end="16264" vertical-scroll-proportion="0.7250438" vertical-offset="7938" max-vertical-offset="9324">
+            <state line="187" column="0" selection-start="6604" selection-end="6604" vertical-scroll-proportion="0.0" vertical-offset="2107" max-vertical-offset="9540">
               <folding>
-                <element signature="e#0#18044#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-                <element signature="e#7709#9625#0" expanded="true" />
-                <element signature="e#8271#8310#0" expanded="true" />
-                <element signature="e#9614#9615#0" expanded="true" />
-                <element signature="e#10147#10221#0" expanded="true" />
-                <element signature="e#10373#10442#0" expanded="true" />
-                <element signature="e#10545#10886#0" expanded="true" />
-                <element signature="e#10859#10860#0" expanded="true" />
-                <element signature="e#11872#11922#0" expanded="true" />
-                <element signature="e#11996#12033#0" expanded="true" />
-                <element signature="e#12059#12405#0" expanded="true" />
-                <element signature="e#12378#12379#0" expanded="true" />
-                <element signature="e#12443#12484#0" expanded="true" />
-                <element signature="e#12510#12796#0" expanded="true" />
-                <element signature="e#12769#12770#0" expanded="true" />
-                <element signature="e#13097#13143#0" expanded="true" />
-                <element signature="e#13146#13193#0" expanded="true" />
-                <element signature="e#13204#13251#0" expanded="true" />
-                <element signature="e#13325#13363#0" expanded="true" />
-                <element signature="e#13389#14415#0" expanded="true" />
-                <element signature="e#13878#13932#0" expanded="true" />
-                <element signature="e#14029#14076#0" expanded="true" />
-                <element signature="e#14181#14235#0" expanded="true" />
-                <element signature="e#14388#14389#0" expanded="true" />
-                <element signature="e#14452#14489#0" expanded="true" />
-                <element signature="e#14515#14802#0" expanded="true" />
-                <element signature="e#14775#14776#0" expanded="true" />
-                <element signature="e#15061#15071#0" expanded="true" />
+                <element signature="e#8716#8755#0" expanded="true" />
+                <element signature="e#10144#10215#0" expanded="true" />
+                <element signature="e#10871#10945#0" expanded="true" />
+                <element signature="e#11097#11166#0" expanded="true" />
+                <element signature="e#12709#12755#0" expanded="true" />
+                <element signature="e#12758#12805#0" expanded="true" />
+                <element signature="e#12816#12863#0" expanded="true" />
+                <element signature="e#12937#12975#0" expanded="true" />
+                <element signature="e#13490#13544#0" expanded="true" />
+                <element signature="e#13641#13688#0" expanded="true" />
+                <element signature="e#13793#13847#0" expanded="true" />
+                <element signature="e#14064#14101#0" expanded="true" />
               </folding>
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="admob_ads_attrs.xml" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/CampusMapper_Library/libs/google-play-services_lib/res/values/admob_ads_attrs.xml">
+      <file leaf-file-name="SpaceMapperBroadcastReceiver.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/SpaceMapperBroadcastReceiver.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="0" selection-start="329" selection-end="329" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
+            <state line="304" column="0" selection-start="15989" selection-end="16066" vertical-scroll-proportion="0.0" vertical-offset="4365" max-vertical-offset="5130">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="main_menu.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/menu/main_menu.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="27" column="44" selection-start="2230" selection-end="2230" vertical-scroll-proportion="0.0" vertical-offset="562" max-vertical-offset="1098">
+              <folding>
+                <element signature="e#2208#2230#0" expanded="true" />
+                <element signature="e#2376#2398#0" expanded="true" />
+                <element signature="e#2540#2556#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/values/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="80" column="0" selection-start="4903" selection-end="4947" vertical-scroll-proportion="-11.37037" vertical-offset="1133" max-vertical-offset="18018">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="strings.xml" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/values-es/strings.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="66" column="27" selection-start="4257" selection-end="4257" vertical-scroll-proportion="0.0" vertical-offset="1456" max-vertical-offset="19710">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Util.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/Util.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="105" column="0" selection-start="4856" selection-end="4856" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="15948">
               <folding />
             </state>
           </provider>
@@ -135,17 +167,29 @@
       </file>
       <file leaf-file-name="map_layout.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/map_layout.xml">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="84" column="0" selection-start="4470" selection-end="4470" vertical-scroll-proportion="-5.5384617" vertical-offset="1368" max-vertical-offset="2052">
+              <folding>
+                <element signature="e#2482#2505#0" expanded="true" />
+                <element signature="e#2597#2620#0" expanded="true" />
+                <element signature="e#3676#3692#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
           <provider editor-type-id="android-designer">
             <state />
           </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="map_frag.xml" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/map_frag.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="78" column="41" selection-start="4315" selection-end="4315" vertical-scroll-proportion="4.6538463" vertical-offset="1525" max-vertical-offset="2088">
-              <folding>
-                <element signature="e#2818#2841#0" expanded="true" />
-                <element signature="e#2940#2963#0" expanded="true" />
-                <element signature="e#3779#3795#0" expanded="true" />
-              </folding>
+            <state line="33" column="23" selection-start="2486" selection-end="2486" vertical-scroll-proportion="0.5706422" vertical-offset="553" max-vertical-offset="1098">
+              <folding />
             </state>
+          </provider>
+          <provider editor-type-id="android-designer">
+            <state />
           </provider>
         </entry>
       </file>
@@ -172,10 +216,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/CampusMapper_Library/res/layout/contact.xml" />
-        <option value="$PROJECT_DIR$/CampusMapper_Library/res/layout/data_menu.xml" />
-        <option value="$PROJECT_DIR$/CampusMapper_Library/res/layout/database_update.xml" />
-        <option value="$PROJECT_DIR$/CampusMapper_Library/res/layout/dblistitem.xml" />
         <option value="$PROJECT_DIR$/CampusMapper_Library/res/layout/debriefing_survey.xml" />
         <option value="$PROJECT_DIR$/CampusMapper_Library/res/layout/faqs.xml" />
         <option value="$PROJECT_DIR$/CampusMapper_Library/res/layout/gpl_view.xml" />
@@ -197,12 +237,10 @@
         <option value="$PROJECT_DIR$/CampusMapper_Library/res/layout/about.xml" />
         <option value="$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/DebriefingSurvey.java" />
         <option value="$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/FileUploader.java" />
-        <option value="$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/NmeaGet.java" />
         <option value="$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/Settings.java" />
         <option value="$PROJECT_DIR$/CampusMapper_Library/res/values-ca/strings.xml" />
         <option value="$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/Intro.java" />
         <option value="$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/Consent.java" />
-        <option value="$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/FixGet.java" />
         <option value="$PROJECT_DIR$/CampusMapper_Library/res/layout/consent.xml" />
         <option value="$PROJECT_DIR$/CampusMapper_Library/res/layout/registration_new.xml" />
         <option value="$PROJECT_DIR$/CampusMapper_Library/res/layout/message.xml" />
@@ -212,17 +250,23 @@
         <option value="$PROJECT_DIR$/CampusMapper_Library/res/layout/transport_mode_survey.xml" />
         <option value="$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/DataCodeBook.java" />
         <option value="$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/TransportationModeSurvey.java" />
-        <option value="$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/PropertyHolder.java" />
-        <option value="$PROJECT_DIR$/CampusMapper_Library/res/values-es/strings.xml" />
-        <option value="$PROJECT_DIR$/CampusMapper_Library/res/values/strings.xml" />
-        <option value="$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/Util.java" />
         <option value="$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/SpaceMapperBroadcastReceiver.java" />
-        <option value="$PROJECT_DIR$/CampusMapper_Library/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/CampusMapper_Library/res/values/api_keys.xml" />
         <option value="$PROJECT_DIR$/CampusMapper_Research/res/layout/map_layout.xml" />
-        <option value="$PROJECT_DIR$/CampusMapper_Research/AndroidManifest.xml" />
-        <option value="$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/MapMyData.java" />
+        <option value="$PROJECT_DIR$/CampusMapper_Library/res/map_frag.xml" />
+        <option value="$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/MapPoint.java" />
+        <option value="$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/NmeaGet.java" />
         <option value="$PROJECT_DIR$/CampusMapper_Library/res/layout/map_layout.xml" />
+        <option value="$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/PropertyHolder.java" />
+        <option value="$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/FixGet.java" />
+        <option value="$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/Util.java" />
+        <option value="$PROJECT_DIR$/CampusMapper_Library/res/values/strings.xml" />
+        <option value="$PROJECT_DIR$/CampusMapper_Library/res/values-es/strings.xml" />
+        <option value="$PROJECT_DIR$/CampusMapper_Library/res/menu/main_menu.xml" />
+        <option value="$PROJECT_DIR$/CampusMapper_Library/res/layout/map_frag.xml" />
+        <option value="$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/MapMyData.java" />
+        <option value="$PROJECT_DIR$/CampusMapper_Research/AndroidManifest.xml" />
+        <option value="$PROJECT_DIR$/CampusMapper_Library/AndroidManifest.xml" />
       </list>
     </option>
   </component>
@@ -257,8 +301,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -283,34 +325,6 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="CampusMapper_Research" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CampusMapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CampusMapper_Research" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="libs" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
-            </PATH_ELEMENT>
-          </PATH>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="CampusMapper" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-            <PATH_ELEMENT>
               <option name="myItemId" value="CampusMapper_Library" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
@@ -325,7 +339,11 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="res" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="cmlibrary" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -343,12 +361,64 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="layout" />
+              <option name="myItemId" value="values-es" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CampusMapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CampusMapper_Library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="values" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CampusMapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CampusMapper_Library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CampusMapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CampusMapper_Library" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="res" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="menu" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -365,7 +435,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/CampusMapper_Library/libs/google-play-services_lib/libs/google-play-services.jar!/" />
     <property name="recentsLimit" value="5" />
     <property name="ExportedModule" value="CampusMapper_Research" />
-    <property name="ExportedApkPath" value="$USER_HOME$/Dropbox/campus_mapper/CampusMobility_v1.01map.apk" />
+    <property name="ExportedApkPath" value="$USER_HOME$/Dropbox/campus_mapper/CampusMobility_v1.02.apk" />
     <property name="AndroidRunProguardForReleaseBuild" value="false" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -385,6 +455,9 @@
       <recent name="$PROJECT_DIR$/CampusMapper_Research/res/values" />
       <recent name="$PROJECT_DIR$/CampusMapper_Library/res/layout" />
       <recent name="$PROJECT_DIR$/CampusMapper_Library/res/values" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/CampusMapper_Library/res/layout" />
     </key>
   </component>
   <component name="RunManager" selected="Android Application.CampusMapper_Research">
@@ -623,124 +696,100 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/faqs.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1782" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/gpl_view.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/help.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2520" />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/lgpl_view.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720" />
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/lifeline_overlay.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1620" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/multiline_spinner_dropdown_item.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/multiline_spinner_dropdown_item.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="630" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/progress_bar.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/progress_bar.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="936" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/registration.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/registration.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="9936" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/review_consent.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/review_consent.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1764" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/settings.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/settings.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="13122" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/splash.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/splash.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/underage_view.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/underage_view.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1872" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/withdraw.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/withdraw.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="2034" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/withdraw_lock.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/withdraw_lock.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1674" />
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/list_my_data.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/list_my_data.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="30.653847" vertical-offset="797" max-vertical-offset="1440" />
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/Upload.java">
@@ -756,11 +805,6 @@
     <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/OldFileUploader.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="40" column="22" selection-start="2376" selection-end="2391" vertical-scroll-proportion="0.5748663" vertical-offset="19" max-vertical-offset="1674" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/NmeaGet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="214" column="0" selection-start="7776" selection-end="7776" vertical-scroll-proportion="0.85561496" vertical-offset="3802" max-vertical-offset="4284" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/UploadContentValues.java">
@@ -807,9 +851,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/consent.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="51" selection-start="2870" selection-end="2870" vertical-scroll-proportion="-2.5769231" vertical-offset="725" max-vertical-offset="1782">
           <folding>
@@ -820,15 +861,18 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/about.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/about.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="10" column="131" selection-start="864" selection-end="864" vertical-scroll-proportion="-1.2862386" vertical-offset="989" max-vertical-offset="2106">
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/Settings.java">
@@ -846,9 +890,6 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/registration_new.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="92" column="25" selection-start="4608" selection-end="4608" vertical-scroll-proportion="2.7692308" vertical-offset="1728" max-vertical-offset="2628">
           <folding>
@@ -856,22 +897,23 @@
           </folding>
         </state>
       </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CampusMapper_Research/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="738">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/intro.xml">
       <provider editor-type-id="android-designer">
         <state />
       </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CampusMapper_Research/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="738" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/intro.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="46" column="39" selection-start="2883" selection-end="2883" vertical-scroll-proportion="-2.0769231" vertical-offset="774" max-vertical-offset="1710">
           <folding />
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/Message.java">
@@ -885,15 +927,15 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/message.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="44" column="52" selection-start="2770" selection-end="2770" vertical-scroll-proportion="5.3076925" vertical-offset="930" max-vertical-offset="1710">
           <folding>
             <element signature="e#3594#3606#0" expanded="false" />
           </folding>
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/Registration.java">
@@ -907,13 +949,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/FixGet.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="684" column="72" selection-start="24210" selection-end="24251" vertical-scroll-proportion="0.0" vertical-offset="11035" max-vertical-offset="12474">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/DataCodeBook.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="94" column="0" selection-start="5353" selection-end="5353" vertical-scroll-proportion="0.0" vertical-offset="1084" max-vertical-offset="1548">
@@ -922,53 +957,18 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/transport_mode_survey.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state line="41" column="47" selection-start="2663" selection-end="2663" vertical-scroll-proportion="0.0" vertical-offset="738" max-vertical-offset="1728">
           <folding />
         </state>
       </provider>
+      <provider editor-type-id="android-designer">
+        <state />
+      </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/TransportationModeSurvey.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="68" column="43" selection-start="3635" selection-end="3635" vertical-scroll-proportion="0.0" vertical-offset="454" max-vertical-offset="1080">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/values-es/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="0" selection-start="2087" selection-end="2258" vertical-scroll-proportion="0.0" vertical-offset="480" max-vertical-offset="19674">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/values/strings.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="40" column="0" selection-start="2873" selection-end="2873" vertical-scroll-proportion="0.0" vertical-offset="574" max-vertical-offset="20358">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="129" column="51" selection-start="6054" selection-end="6054" vertical-scroll-proportion="0.0" vertical-offset="563" max-vertical-offset="16038">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/SpaceMapperBroadcastReceiver.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="152" column="0" selection-start="8243" selection-end="8243" vertical-scroll-proportion="0.0" vertical-offset="1770" max-vertical-offset="5904">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/AndroidManifest.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="26" selection-start="2205" selection-end="2205" vertical-scroll-proportion="0.0" vertical-offset="719" max-vertical-offset="3096">
           <folding />
         </state>
       </provider>
@@ -980,76 +980,146 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CampusMapper_Research/AndroidManifest.xml">
+    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/PowerSensor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="53" column="0" selection-start="3381" selection-end="3381" vertical-scroll-proportion="0.3315508" vertical-offset="1100" max-vertical-offset="3276">
+        <state line="47" column="44" selection-start="2728" selection-end="2728" vertical-scroll-proportion="0.0" vertical-offset="383" max-vertical-offset="954">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/MapPoint.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="29" column="14" selection-start="2105" selection-end="2105" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="846">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/NmeaGet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="81" column="0" selection-start="3581" selection-end="3581" vertical-scroll-proportion="0.0" vertical-offset="706" max-vertical-offset="3222">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/PropertyHolder.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="119" column="5" selection-start="5061" selection-end="5061" vertical-scroll-proportion="0.72192514" vertical-offset="1386" max-vertical-offset="12024">
+        <state line="108" column="0" selection-start="4705" selection-end="4705" vertical-scroll-proportion="0.0" vertical-offset="2201" max-vertical-offset="12258">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CampusMapper_Library/libs/google-play-services_lib/res/values/admob_ads_attrs.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="0" selection-start="329" selection-end="329" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="504">
+        <state line="9" column="0" selection-start="329" selection-end="329" vertical-scroll-proportion="0.28371277" vertical-offset="0" max-vertical-offset="571">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/FixGet.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="436" column="56" selection-start="16063" selection-end="16063" vertical-scroll-proportion="0.0" vertical-offset="6305" max-vertical-offset="12402">
+          <folding>
+            <element signature="e#6183#6258#0" expanded="true" />
+            <element signature="e#15606#15677#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/values/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="0" selection-start="4903" selection-end="4947" vertical-scroll-proportion="-11.37037" vertical-offset="1133" max-vertical-offset="18018">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/values-es/strings.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="66" column="27" selection-start="4257" selection-end="4257" vertical-scroll-proportion="0.0" vertical-offset="1456" max-vertical-offset="19710">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/menu/main_menu.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="27" column="44" selection-start="2230" selection-end="2230" vertical-scroll-proportion="0.0" vertical-offset="562" max-vertical-offset="1098">
+          <folding>
+            <element signature="e#2208#2230#0" expanded="true" />
+            <element signature="e#2376#2398#0" expanded="true" />
+            <element signature="e#2540#2556#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="105" column="0" selection-start="4856" selection-end="4856" vertical-scroll-proportion="0.0" vertical-offset="630" max-vertical-offset="15948">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/SpaceMapperBroadcastReceiver.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="304" column="0" selection-start="15989" selection-end="16066" vertical-scroll-proportion="0.0" vertical-offset="4365" max-vertical-offset="5130">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/map_layout.xml">
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state line="78" column="41" selection-start="4315" selection-end="4315" vertical-scroll-proportion="4.6538463" vertical-offset="1525" max-vertical-offset="2088">
+        <state line="84" column="0" selection-start="4470" selection-end="4470" vertical-scroll-proportion="-5.5384617" vertical-offset="1368" max-vertical-offset="2052">
           <folding>
-            <element signature="e#2818#2841#0" expanded="true" />
-            <element signature="e#2940#2963#0" expanded="true" />
-            <element signature="e#3779#3795#0" expanded="true" />
+            <element signature="e#2482#2505#0" expanded="true" />
+            <element signature="e#2597#2620#0" expanded="true" />
+            <element signature="e#3676#3692#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/MapMyData.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="443" column="21" selection-start="16264" selection-end="16264" vertical-scroll-proportion="0.7250438" vertical-offset="7938" max-vertical-offset="9324">
+        <state line="187" column="0" selection-start="6604" selection-end="6604" vertical-scroll-proportion="0.0" vertical-offset="2107" max-vertical-offset="9540">
           <folding>
-            <element signature="e#0#18044#0" expanded="true" />
-            <element signature="imports" expanded="true" />
-            <element signature="e#7709#9625#0" expanded="true" />
-            <element signature="e#8271#8310#0" expanded="true" />
-            <element signature="e#9614#9615#0" expanded="true" />
-            <element signature="e#10147#10221#0" expanded="true" />
-            <element signature="e#10373#10442#0" expanded="true" />
-            <element signature="e#10545#10886#0" expanded="true" />
-            <element signature="e#10859#10860#0" expanded="true" />
-            <element signature="e#11872#11922#0" expanded="true" />
-            <element signature="e#11996#12033#0" expanded="true" />
-            <element signature="e#12059#12405#0" expanded="true" />
-            <element signature="e#12378#12379#0" expanded="true" />
-            <element signature="e#12443#12484#0" expanded="true" />
-            <element signature="e#12510#12796#0" expanded="true" />
-            <element signature="e#12769#12770#0" expanded="true" />
-            <element signature="e#13097#13143#0" expanded="true" />
-            <element signature="e#13146#13193#0" expanded="true" />
-            <element signature="e#13204#13251#0" expanded="true" />
-            <element signature="e#13325#13363#0" expanded="true" />
-            <element signature="e#13389#14415#0" expanded="true" />
-            <element signature="e#13878#13932#0" expanded="true" />
-            <element signature="e#14029#14076#0" expanded="true" />
-            <element signature="e#14181#14235#0" expanded="true" />
-            <element signature="e#14388#14389#0" expanded="true" />
-            <element signature="e#14452#14489#0" expanded="true" />
-            <element signature="e#14515#14802#0" expanded="true" />
-            <element signature="e#14775#14776#0" expanded="true" />
-            <element signature="e#15061#15071#0" expanded="true" />
+            <element signature="e#8716#8755#0" expanded="true" />
+            <element signature="e#10144#10215#0" expanded="true" />
+            <element signature="e#10871#10945#0" expanded="true" />
+            <element signature="e#11097#11166#0" expanded="true" />
+            <element signature="e#12709#12755#0" expanded="true" />
+            <element signature="e#12758#12805#0" expanded="true" />
+            <element signature="e#12816#12863#0" expanded="true" />
+            <element signature="e#12937#12975#0" expanded="true" />
+            <element signature="e#13490#13544#0" expanded="true" />
+            <element signature="e#13641#13688#0" expanded="true" />
+            <element signature="e#13793#13847#0" expanded="true" />
+            <element signature="e#14064#14101#0" expanded="true" />
           </folding>
         </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CampusMapper_Research/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="26" selection-start="2204" selection-end="2204" vertical-scroll-proportion="0.0" vertical-offset="432" max-vertical-offset="3276">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/AndroidManifest.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="26" column="26" selection-start="2205" selection-end="2205" vertical-scroll-proportion="0.0" vertical-offset="720" max-vertical-offset="3096">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/map_frag.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="33" column="23" selection-start="2486" selection-end="2486" vertical-scroll-proportion="0.5706422" vertical-offset="553" max-vertical-offset="1098">
+          <folding />
+        </state>
+      </provider>
+      <provider editor-type-id="android-designer">
+        <state />
       </provider>
     </entry>
   </component>

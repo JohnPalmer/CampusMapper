@@ -38,6 +38,7 @@ under constuction
     <string name="expert_title">Expert Mode</string>
     <string name="enter_expert">Enter expert mode?</string>
     <string name="exit_expert">Exit expert mode?</string>
+    <string name="normal_title">Normal Mode</string>
 
 
     <string name="popup_a">"Hola! Les dades que estàs generant estan sent correctament registrades! T\'animem a seguir amb la prova durant la resta de la setmana. Moltes gràcies per la teva col·laboració; la participació dels voluntaris és clau per a conèixer la mobilitat de la comunitat universitària!"</string>
@@ -75,6 +76,8 @@ under constuction
     <string name="popup_c_title">Campus Mobility</string>
 
     <string name="popup_c_ticker">Mode de transport</string>
+
+    <string name="survey">Enquesta</string>
 
 
     <string name="email">Correu electrònic</string>

@@ -64,6 +64,8 @@
 
     <string name="popup_c_ticker">Modo de transporte</string>
 
+    <string name="survey">Encuesta</string>
+
 
     <string name="email">Correo electrónico</string>
     <string name="email_hint">correu electrònic</string>

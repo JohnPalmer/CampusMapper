@@ -25,8 +25,8 @@ package net.movelab.cmlibrary;
 
 public class MapPoint {
 
-	int lat;
-	int lon;
+	double lat;
+	double lon;
 	float acc;
 	long entryTime;
 	long exitTime;
@@ -39,7 +39,7 @@ public class MapPoint {
 
 	public static final int ICON_SELECTED_LOCATION = 2;
 
-	public MapPoint(int _lat, int _lon, float _acc, long _entryTime,
+	public MapPoint(double _lat, double _lon, float _acc, long _entryTime,
 			long _exitTime, int _iconFlag) {
 
 		lat = _lat;

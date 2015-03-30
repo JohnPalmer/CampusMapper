@@ -91,6 +91,19 @@ public class PropertyHolder {
         return sharedPreferences.getBoolean(TRYING_TO_WITHDRAW, false);
     }
 
+
+    public static final String CURRENT_ZOOM = "current_zoom";
+
+    public static void setCurrentMapZoom(int zoom) {
+        editor.putInt(CURRENT_ZOOM, zoom);
+        editor.commit();
+    }
+
+    public static int getCurrentMapZoom() {
+        return sharedPreferences.getInt(CURRENT_ZOOM, 18);
+    }
+
+
     public static void setUploadOldFiles(boolean uploadOld) {
         editor.putBoolean("UPLOAD_OLD_FILES", uploadOld);
         editor.commit();

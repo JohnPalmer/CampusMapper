@@ -195,10 +195,11 @@ public class FixGet extends Service {
     public void onDestroy() {
         removeLocationUpdates();
 
+
         try {
             unregisterReceiver(stopReceiver);
         } catch (Exception e) {
-            // Log.e(TAG, "exception" + e);
+// Log.e(TAG, "exception" + e);
         }
         unWakeLock();
 
@@ -382,11 +383,6 @@ public class FixGet extends Service {
                 if (locationListener1 == null && locationListener2 == null) {
 
                     removeLocationUpdates();
-                    // try {
-                    // unregisterReceiver(stopReceiver);
-                    // } catch (Exception e) {
-                    // Log.e(TAG, "exception" + e);
-                    // }
 
                     fixInProgress = false;
 
@@ -436,6 +432,9 @@ public class FixGet extends Service {
         Bundle bundle = new Bundle();
         bundle.putString("nFixes", String.valueOf(PropertyHolder.getNFixes()));
         bundle.putBoolean(NEW_RECORD, newRecord);
+        bundle.putDouble("lat", location.getLatitude());
+        bundle.putDouble("lon", location.getLongitude());
+        bundle.putDouble("acc", location.getAccuracy());
         intent.putExtras(bundle);
 
         sendBroadcast(intent);
@@ -663,11 +662,6 @@ public class FixGet extends Service {
                 // Log.e("FixGet", "short run stop");
 
                 removeLocationUpdates();
-                // try {
-                // unregisterReceiver(stopReceiver);
-                // } catch (Exception e) {
-                // Log.e(TAG, "exception" + e);
-                // }
 
                 fixInProgress = false;
                 stopSelf();

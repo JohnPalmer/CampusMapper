@@ -80,7 +80,6 @@ public class NmeaGet extends Service {
 
     public void onStart(Intent intent, int startId) {
 
-        stopReceiver = null;
         if (NmeaInProgress == false) {
             NmeaInProgress = true;
             bestNmeaLocation = null;
@@ -109,12 +108,12 @@ public class NmeaGet extends Service {
 
         removeNmeaUpdates();
 
-        if (stopReceiver != null) {
-            unregisterReceiver(stopReceiver);
-        }
-        // mGpsNmeaListener = null;
-        // locationManager = null;
         NmeaInProgress = false;
+        try {
+            unregisterReceiver(stopReceiver);
+        } catch (Exception e) {
+// Log.e(TAG, "exception" + e);
+        }
 
     }
 
@@ -180,6 +179,7 @@ public class NmeaGet extends Service {
     private void removeNmeaUpdates() {
         if (mGpsNmeaListener != null)
             locationManager.removeNmeaListener(mGpsNmeaListener);
+
     }
 
     public class StopReceiver extends BroadcastReceiver {

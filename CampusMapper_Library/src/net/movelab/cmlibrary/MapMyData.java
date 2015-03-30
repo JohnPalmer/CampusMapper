@@ -24,10 +24,12 @@
 package net.movelab.cmlibrary;
 
 import android.app.AlertDialog;
+import android.content.BroadcastReceiver;
 import android.content.ContentResolver;
 import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
+import android.content.IntentFilter;
 import android.database.Cursor;
 import android.graphics.Color;
 import android.location.LocationManager;
@@ -35,6 +37,8 @@ import android.os.AsyncTask;
 import android.os.Bundle;
 import android.support.v4.app.FragmentActivity;
 import android.util.Log;
+import android.view.Menu;
+import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.widget.LinearLayout;
@@ -42,11 +46,15 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.ToggleButton;
 
+import com.google.android.gms.maps.CameraUpdateFactory;
 import com.google.android.gms.maps.GoogleMap;
 import com.google.android.gms.maps.MapFragment;
 import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
+import com.google.android.gms.maps.model.Circle;
+import com.google.android.gms.maps.model.CircleOptions;
 import com.google.android.gms.maps.model.LatLng;
+import com.google.android.gms.maps.model.Marker;
 import com.google.android.gms.maps.model.MarkerOptions;
 import com.google.android.gms.maps.model.Polyline;
 import com.google.android.gms.maps.model.PolylineOptions;
@@ -65,62 +73,38 @@ import java.util.List;
 public class MapMyData extends FragmentActivity implements OnMapReadyCallback {
 
     PolylineOptions routeLineOptionsBlack;
-    Polyline polyline;
+    Polyline polylineBlack;
+
+    PolylineOptions routeLineOptionsColor;
+    Polyline polylineColor;
+
+
+    int circleRad = 4;
+
+    int circleZ = 2;
+    int lineZ = 1;
+    float circleStrokeWidth = 1f;
+
+    int routeColor = Color.parseColor("#2b8cbe");
 
     private int count = 0;
     private long startMillis = 0;
 
+    Marker currentPosition;
+
     String TAG = "MapMyData";
     private ToggleButton mServiceButton;
 
-    boolean getIntro = false;
-    boolean isPro = false;
 
-    boolean loadingData;
-    boolean updatingDatabase;
-    boolean savingCsv;
-
-    boolean popup_a_already_done = false;
-    boolean popup_b_already_done = false;
-
-    GeoPoint point;
-    boolean satToggle;
-    String stringLat;
-    String stringLng;
-    String stringAlt;
-    String stringAcc;
-    String stringProvider;
-    String stringTime;
+    boolean loadingData = false;
 
     boolean shareData;
-
-    Double lastLat = null;
-    Double lastLon = null;
-    Double lastGeoLat = null;
-    Double lastGeoLon = null;
-
-    int startDay;
-    int startMonth;
-    int startYear;
-
-    int endDay;
-    int endMonth;
-    int endYear;
 
     private int lastRecId = 0;
 
     public static boolean reloadData = false;
 
-    boolean drawConfidenceCircles;
-    boolean drawIcons;
-
-    // TODO setting this totrue for testing until I build the on/off button
-    boolean selectNewPrivacyZone = true;
-    ArrayList<GeoPoint> privacyZones;
-
     boolean isServiceOn;
-
-    GeoPoint currentCenter;
 
     int BORDER_COLOR_MAP = 0xee4D2EFF;
     int FILL_COLOR_MAP = 0x554D2EFF;
@@ -131,13 +115,9 @@ public class MapMyData extends FragmentActivity implements OnMapReadyCallback {
     int PZ_BORDER_COLOR = 0xee00ff00;
     int PZ_FILL_COLOR = 0x5500ff00;
 
-
     ProgressBar progressbar;
 
     List<LatLng> mPoints;
-    MapPoint[] mPointsArray;
-
-    TextView progressbarText;
 
     public static String DATES_BUTTON_MESSAGE = "datesButtonMessage";
 
@@ -147,16 +127,11 @@ public class MapMyData extends FragmentActivity implements OnMapReadyCallback {
 
     private TextView mReceiversOffWarning;
 
-    boolean _mustDraw = true;
-
-    long thumbMin = -1;
-    long thumbMax = -1;
-
-    private int minDist = 0;
-
     Context context = this;
 
-    private GoogleMap mMap;
+    GoogleMap thisMap;
+
+    FixReceiver fixReceiver;
 
     @Override
     public void onCreate(Bundle icicle) {
@@ -164,7 +139,6 @@ public class MapMyData extends FragmentActivity implements OnMapReadyCallback {
 
 
         PropertyHolder.init(context);
-        PowerSensor.init(context);
 
         if (Util.trafficCop(this))
             finish();
@@ -176,15 +150,20 @@ public class MapMyData extends FragmentActivity implements OnMapReadyCallback {
             PropertyHolder.setInitialStartDateSet(true);
         }
 
-        minDist = Util.getMinDist();
-        // Log.e("FixGet", "minDist=" + minDist);
-
         setContentView(R.layout.map_layout);
 
         routeLineOptionsBlack = new PolylineOptions()
-                .width(25)
+                .width(6)
                 .color(Color.BLACK)
+                .geodesic(true)
+                .zIndex(lineZ);
+        routeLineOptionsColor = new PolylineOptions()
+                .width(4)
+                .color(routeColor)
+                .zIndex(lineZ)
                 .geodesic(true);
+
+
         mPoints = new ArrayList<LatLng>();
 
         receiverNotificationArea = (LinearLayout) findViewById(R.id.mapReceiverNotificationArea);
@@ -192,10 +171,6 @@ public class MapMyData extends FragmentActivity implements OnMapReadyCallback {
         mReceiversOffWarning = (TextView) findViewById(R.id.mapReceiversOffWarning);
         progressbar = (ProgressBar) findViewById(R.id.mapProgressbar);
 
-        getIntro = PropertyHolder.getIntro();
-        isPro = PropertyHolder.getProVersion();
-
-        privacyZones = new ArrayList<GeoPoint>();
 
         SupportMapFragment mapFragment = (SupportMapFragment) getSupportFragmentManager()
                 .findFragmentById(R.id.map);
@@ -208,10 +183,34 @@ public class MapMyData extends FragmentActivity implements OnMapReadyCallback {
     @Override
     public void onMapReady(GoogleMap map) {
 
-        polyline = mMap.addPolyline(routeLineOptionsBlack);
+        polylineBlack = map.addPolyline(routeLineOptionsBlack);
+        polylineColor = map.addPolyline(routeLineOptionsColor);
+
         if (mPoints.size() > 0) {
-            polyline.setPoints(mPoints);
+            polylineBlack.setPoints(mPoints);
+            polylineColor.setPoints(mPoints);
+            for (LatLng p : mPoints) {
+                map.addCircle(new CircleOptions()
+                        .center(p)
+                        .radius(circleRad)
+                        .strokeColor(Color.BLACK)
+                        .strokeWidth(circleStrokeWidth)
+                        .fillColor(routeColor))
+                        .setZIndex(circleZ);
+            }
+
+            if (currentPosition != null) {
+                currentPosition.setPosition(mPoints.get(mPoints.size() - 1));
+            } else {
+                currentPosition = thisMap.addMarker(new MarkerOptions()
+                        .position(mPoints.get(mPoints.size() - 1)));
+            }
+
+
+            map.moveCamera(CameraUpdateFactory.newLatLngZoom(mPoints.get(mPoints.size() - 1), PropertyHolder.getCurrentMapZoom()));
+
         }
+        this.thisMap = map;
 
     }
 
@@ -222,15 +221,12 @@ public class MapMyData extends FragmentActivity implements OnMapReadyCallback {
 
         Context context = getApplicationContext();
 
-        Log.e("TAPMAP", "selectPZ=" + selectNewPrivacyZone);
+        loadingData = true;
+        new DataGrabberTask().execute(context);
+
 
         if (Util.trafficCop(this))
             finish();
-
-        if (reloadData) {
-            mPoints.clear();
-            lastRecId = 0;
-        }
 
         isServiceOn = PropertyHolder.isServiceOn();
         shareData = PropertyHolder.getShareData();
@@ -284,6 +280,13 @@ public class MapMyData extends FragmentActivity implements OnMapReadyCallback {
         });
 
 
+        IntentFilter fixFilter;
+        fixFilter = new IntentFilter(getResources().getString(
+                R.string.internal_message_id)
+                + Util.MESSAGE_FIX_RECORDED);
+        fixReceiver = new FixReceiver();
+        registerReceiver(fixReceiver, fixFilter);
+
         super.onResume();
 
     }
@@ -326,6 +329,7 @@ public class MapMyData extends FragmentActivity implements OnMapReadyCallback {
 
     @Override
     protected void onPause() {
+        unregisterReceiver(fixReceiver);
         super.onPause();
     }
 
@@ -348,35 +352,6 @@ public class MapMyData extends FragmentActivity implements OnMapReadyCallback {
         }
         return false;
     }
-
-
-    private void buildFlushGPSAlert() {
-        final AlertDialog.Builder builder = new AlertDialog.Builder(this);
-        builder.setMessage(getResources().getString(R.string.renew_gps_alert))
-                .setCancelable(true)
-                .setPositiveButton(getResources().getString(R.string.ok),
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(final DialogInterface dialog,
-                                                final int id) {
-
-                                Util.flushGPSFlag = true;
-
-                                dialog.cancel();
-                            }
-                        })
-
-                .setNegativeButton(getResources().getString(R.string.cancel),
-                        new DialogInterface.OnClickListener() {
-                            public void onClick(final DialogInterface dialog,
-                                                final int id) {
-                                dialog.cancel();
-                            }
-                        });
-
-        final AlertDialog alert = builder.create();
-        alert.show();
-    }
-
 
 
     private void buildExpertMessage() {
@@ -414,12 +389,12 @@ public class MapMyData extends FragmentActivity implements OnMapReadyCallback {
         int myProgress;
         int nFixes;
         ArrayList<MapPoint> results = new ArrayList<MapPoint>();
-        GeoPoint center;
 
         @Override
         protected void onPreExecute() {
             myProgress = 0;
             progressNotificationArea.setVisibility(View.VISIBLE);
+
         }
 
         protected Boolean doInBackground(Context... context) {
@@ -456,9 +431,7 @@ public class MapMyData extends FragmentActivity implements OnMapReadyCallback {
                 float acc = c.getFloat(accCol);
                 long entryTime = c.getLong(timeCol);
                 long exitTime = c.getLong(sdtimeCol);
-                Double geoLat = lat * 1E6;
-                Double geoLon = lon * 1E6;
-                results.add(new MapPoint(geoLat.intValue(), geoLon.intValue(),
+                results.add(new MapPoint(lat, lon,
                         acc, entryTime, exitTime, MapPoint.ICON_NORMAL));
                 c.moveToNext();
                 currentRecord++;
@@ -477,16 +450,142 @@ public class MapMyData extends FragmentActivity implements OnMapReadyCallback {
                     for (MapPoint p : results) {
                         mPoints.add(new LatLng(p.lat, p.lon));
                     }
-                    final int newlastFixIndex = mPoints.size() - 1;
-                    if (polyline != null) {
-                        polyline.setPoints(mPoints);
+                    if (polylineBlack != null && polylineColor != null) {
+                        polylineBlack.setPoints(mPoints);
+                        polylineColor.setPoints(mPoints);
                     }
+                    if (thisMap != null) {
+                        for (LatLng p : mPoints) {
+                            thisMap.addCircle(new CircleOptions()
+                                    .center(p)
+                                    .radius(circleRad)
+                                    .strokeWidth(circleStrokeWidth)
+                                    .strokeColor(Color.BLACK)
+                                    .fillColor(routeColor))
+                                    .setZIndex(circleZ);
+                        }
+                        if (currentPosition != null) {
+                            currentPosition.setPosition(mPoints.get(mPoints.size() - 1));
+                        } else {
+                            currentPosition = thisMap.addMarker(new MarkerOptions()
+                                    .position(mPoints.get(mPoints.size() - 1)));
+                        }
+
+                        thisMap.moveCamera(CameraUpdateFactory.newLatLngZoom(mPoints.get(mPoints.size() - 1), PropertyHolder.getCurrentMapZoom()));
+
+                    }
+
                 }
-            } else
-                progressNotificationArea.setVisibility(View.INVISIBLE);
+            }
+            progressNotificationArea.setVisibility(View.INVISIBLE);
             loadingData = false;
         }
     }
 
+
+    public class FixReceiver extends BroadcastReceiver {
+        @Override
+        public void onReceive(Context context, Intent intent) {
+            if (intent.getBooleanExtra(FixGet.NEW_RECORD, false)) {
+                updateMap(intent);
+            }
+        }
+    }
+
+
+    public void updateMap(Intent intent) {
+        double lat = intent.getDoubleExtra("lat", 0);
+        double lon = intent.getDoubleExtra("lon", 0);
+        if (lat != 0 && lon != 0)
+            mPoints.add(new LatLng(lat, lon));
+        if (polylineBlack != null && polylineColor != null) {
+            polylineBlack.setPoints(mPoints);
+            polylineColor.setPoints(mPoints);
+        }
+        if (thisMap != null) {
+            for (LatLng p : mPoints) {
+                thisMap.addCircle(new CircleOptions()
+                        .center(p)
+                        .radius(circleRad)
+                        .strokeWidth(circleStrokeWidth)
+                        .strokeColor(Color.BLACK)
+                        .fillColor(routeColor))
+                        .setZIndex(circleZ);
+
+            }
+            if (currentPosition != null) {
+                currentPosition.setPosition(mPoints.get(mPoints.size() - 1));
+            } else {
+                currentPosition = thisMap.addMarker(new MarkerOptions()
+                        .position(mPoints.get(mPoints.size() - 1)));
+            }
+
+        }
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+
+        // Inflate the menu; this adds items to the action bar if it is present.
+        getMenuInflater().inflate(R.menu.main_menu, menu);
+        return true;
+    }
+
+    @Override
+    public boolean onPrepareOptionsMenu(Menu menu) {
+
+        MenuItem surveyItem = menu.findItem(R.id.launchSurvey);
+        MenuItem expertItem = menu.findItem(R.id.toggleExpertMode);
+        MenuItem normalItem = menu.findItem(R.id.toggleNormalMode);
+
+        if (!PropertyHolder.getExpertMode()) {
+            if (surveyItem != null) {
+                surveyItem.setVisible(false);
+            }
+            if (normalItem != null) {
+                normalItem.setVisible(false);
+            }
+            if (expertItem != null) {
+                expertItem.setVisible(true);
+            }
+
+        } else {
+            if (surveyItem != null) {
+                surveyItem.setVisible(true);
+            }
+            if (normalItem != null) {
+                normalItem.setVisible(true);
+            }
+            if (expertItem != null) {
+                expertItem.setVisible(false);
+            }
+
+        }
+
+        return true;
+    }
+
+    @Override
+    public boolean onOptionsItemSelected(MenuItem item) {
+        // Handle action bar item clicks here. The action bar will
+        // automatically handle clicks on the Home/Up button, so long
+        // as you specify a parent activity in AndroidManifest.xml.
+        int id = item.getItemId();
+        if (id == R.id.toggleExpertMode) {
+            buildExpertMessage();
+            return true;
+        }
+        else if (id == R.id.toggleNormalMode) {
+            buildExpertMessage();
+            return true;
+        }
+        else if (id == R.id.launchSurvey) {
+            Intent intent = new Intent(MapMyData.this, TransportationModeSurvey.class);
+            startActivity(intent);
+            return true;
+        }
+
+        return super.onOptionsItemSelected(item);
+    }
 
 }
