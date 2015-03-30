@@ -24,9 +24,11 @@
 
 <resources>
 
-    <string name="expert_title">Expert Mode</string>
-    <string name="enter_expert">Enter expert mode?</string>
-    <string name="exit_expert">Exit expert mode?</string>
+    <string name="expert_title">Modo experto</string>
+    <string name="normal_title">Modo normal</string>
+
+    <string name="enter_expert">¿Quieres entrar en el modo de experto?</string>
+    <string name="exit_expert">¿Quieres salir del modo de experto?</string>
 
     <string name="popup_a">"¡Hola! Los datos que estás generando están siendo correctamente registrados. Te animamos a seguir con la prueba durante el resto de la semana. Muchas gracias por tu colaboración; ¡la participación de los voluntarios es clave para conocer la movilidad de la comunidad universitaria!"</string>
 
@@ -53,6 +55,7 @@
 
     <string-array name="popup_transport_mode_array">
         <item>       </item>
+        <item>Ningún desplazamiento en los últimos 10 minutos</item>
         <item>Caminando</item>
         <item>En bicicleta</item>
         <item>En transporte privado</item>
@@ -143,8 +146,8 @@
     <string name="mapdata_loading_text">Cargando los datos de localización.</string>
     <string name="first_station_time_label">"Primera: "</string>
     <string name="latest_station_time_label">"Última: "</string>
-    <string name="tracking_notification_initial">Gravando tu actividad-espacial.</string>
-    <string name="tracking_notification">Gravando tu actividad-espacial</string>
+    <string name="tracking_notification_initial">Registrando tu movilidad</string>
+    <string name="tracking_notification">Registrando tu movilidad</string>
     <string name="tracking_notification_subject">Campus Mobility está gravando</string>
     <string name="menu_flush_gps">Actualiza GPS</string>
     <string name="renew_gps_alert">Quisieras eliminar y bajarte un nuevo A-GPS data? Si lo haces, el GPS funcionará major si tienes uns buena conexión de datos i el GPS parece que no funciona correctamente. No obstante, esto puede producir un retraso en las estimaciones de tus localizaciones.</string>

@@ -70,6 +70,8 @@ public class TransportationModeSurvey extends Activity {
                     //todo
                 }
 
+                sendBroadcast(new Intent(getResources().getString(R.string.internal_message_id) + Util.MESSAGE_CANCEL_C_NOTIFICATION));
+
                 Util.toast(context, getResources().getString(R.string.thankyou));
 
                 startActivity(new Intent(TransportationModeSurvey.this, MapMyData.class));

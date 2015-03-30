@@ -145,16 +145,16 @@ public class Util {
     // http://ageing.oxfordjournals.org/content/26/1/15.full.pdf+html
     public static int WALKING_SPEED = 127;
 
-    // Use the distance one would cover at walking speed capped at 80 (which is
-    // standard city block size)
+    // Use the distance one would cover at walking speed capped at 50
     public static int getMinDist() {
-        int fixIntervalSeconds = (int) ((int) PropertyHolder.getAlarmInterval() / (int) SECONDS);
+//        int fixIntervalSeconds = (int) ((int) PropertyHolder.getAlarmInterval() / (int) SECONDS);
 
-        int expectedWalkingDistanceMeters = (int) (WALKING_SPEED * fixIntervalSeconds) / 100;
-        return Math.min(MIN_DIST, expectedWalkingDistanceMeters);
+ //       int expectedWalkingDistanceMeters = (int) (WALKING_SPEED * fixIntervalSeconds) / 100;
+  //      return Math.min(MIN_DIST, expectedWalkingDistanceMeters);
+        return MIN_DIST;
     }
 
-    public static int MIN_DIST = 80;
+    public static int MIN_DIST = 50;
 
     public static boolean needDatabaseUpdate = false;
 

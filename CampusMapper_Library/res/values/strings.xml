@@ -35,10 +35,10 @@ under constuction
      ]]>
     </string>
 
-    <string name="expert_title">Expert Mode</string>
-    <string name="enter_expert">Enter expert mode?</string>
-    <string name="exit_expert">Exit expert mode?</string>
-    <string name="normal_title">Normal Mode</string>
+    <string name="expert_title">Mode d’expert</string>
+    <string name="normal_title">Mode normal</string>
+    <string name="enter_expert">Vols entrar al mode d’expert?</string>
+    <string name="exit_expert">Vols sortir del mode d’expert?</string>
 
 
     <string name="popup_a">"Hola! Les dades que estàs generant estan sent correctament registrades! T\'animem a seguir amb la prova durant la resta de la setmana. Moltes gràcies per la teva col·laboració; la participació dels voluntaris és clau per a conèixer la mobilitat de la comunitat universitària!"</string>
@@ -53,7 +53,7 @@ under constuction
 
     <string name="popup_b1_ticker">Gràcies de Campus Mobility</string>
 
-    <string name="popup_b2">"Hola! Et vas instal·lar l\’app Campus Mobility però no estem rebent les teves dades correctament. Si estàs tenint problemes amb l\'app, dirigeix-te a gemott@uab.cat. Moltes gràcies per la teva col·laboració!"</string>
+    <string name="popup_b2">"Hola! Et vas instal·lar l\'app Campus Mobility però no estem rebent les teves dades correctament. Si estàs tenint problemes amb l\'app, dirigeix-te a gemott@uab.cat. Moltes gràcies per la teva col·laboració!"</string>
 
     <string name="popup_b2_title">Campus Mobility</string>
 
@@ -66,6 +66,7 @@ under constuction
 
     <string-array name="popup_transport_mode_array">
         <item>       </item>
+        <item>Cap desplaçament en els darrers 10 minuts</item>
         <item>Caminant</item>
         <item>Amb bicicleta</item>
         <item>Amb transport privat</item>
@@ -154,8 +155,8 @@ under constuction
     <string name="mapdata_loading_text">Carregant les dades de localització.</string>
     <string name="first_station_time_label">"Primera: "</string>
     <string name="latest_station_time_label">"Última: "</string>
-    <string name="tracking_notification_initial">Gravant la teva activitat-espai.</string>
-    <string name="tracking_notification">Gravant la teva activitat-espai.</string>
+    <string name="tracking_notification_initial">Enregistrant la teva mobilitat</string>
+    <string name="tracking_notification">Enregistrant la teva mobilitat</string>
     <string name="tracking_notification_subject">Campus Mobility està gravant</string>
     <string name="menu_flush_gps">Actualitza GPS</string>
     <string name="renew_gps_alert">Voldries eliminar i baixar un nou A-GPS data ? Fer-ho millorarà el funcionament del GPS si tens una bona connexió de dades i el GPS sembla que no funciona correctament. No obstant, això pot resultar en un endarreriment en les estimacions de les teves localitzacions.</string>
@@ -419,7 +420,7 @@ John Palmer, estudiant de doctorat de la Woodrow Wilson School i l\'Office of Po
 
 <p>2. <b>ICREA Movement Ecology Laboratory (ICREA-MoveLab)</b>, Centre d\'Estudis Avançats de Blanes – <i>Consejo Superior de Investigaciones Científicas</i> (CEAB-CSIC). Accés Cala Sant Francesc, 14, 17300, Blanes, Girona, Espanya. www.movelab.net</p>
 
-<p>3. <b>Centre de Política de Sòl i Valoracions (CPSV)</b>, Universitat Politècnica de Catalunya. Av. Diagonal, 649, 4ta planta (Arq. Legal), 08028, Barcelona, Barcelona, Espanya. www.upc.edu\/cpsv\/</p>
+<p>3. <b>Centre de Política de Sòl i Valoracions (CPSV)</b>, Universitat Politècnica de Catalunya. Av. Diagonal, 649, 4ta planta (Arq. Legal), 08028, Barcelona, Barcelona, Espanya. www.upc.edu/cpsv/</p>
 
 <p>Mitjançant aquest formulari, la persona involucrada en aquest projecte:</p>
 
