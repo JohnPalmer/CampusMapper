@@ -79,16 +79,34 @@
       <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CampusMapper_Library/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="30" column="32" selection-start="2287" selection-end="2287" vertical-scroll-proportion="0.0" vertical-offset="738" max-vertical-offset="3096">
+            <state line="27" column="29" selection-start="2237" selection-end="2237" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="3096">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="AndroidManifest.xml" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CampusMapper_Research/AndroidManifest.xml">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="34" column="32" selection-start="2380" selection-end="2380" vertical-scroll-proportion="0.25218913" vertical-offset="738" max-vertical-offset="3276">
+            <state line="27" column="29" selection-start="2236" selection-end="2236" vertical-scroll-proportion="0.0" vertical-offset="631" max-vertical-offset="3276">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Util.java" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/Util.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="153" column="24" selection-start="7028" selection-end="7028" vertical-scroll-proportion="0.46791443" vertical-offset="1265" max-vertical-offset="15840">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="UtilLocal.java" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/UtilLocal.java">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="41" column="17" selection-start="2392" selection-end="2392" vertical-scroll-proportion="0.0" vertical-offset="149" max-vertical-offset="720">
               <folding />
             </state>
           </provider>
@@ -97,11 +115,8 @@
       <file leaf-file-name="TransportationModeSurvey.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/TransportationModeSurvey.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="73" column="0" selection-start="3818" selection-end="3818" vertical-scroll-proportion="0.0" vertical-offset="433" max-vertical-offset="1134">
-              <folding>
-                <element signature="e#3723#3777#0" expanded="true" />
-                <element signature="e#3855#3898#0" expanded="true" />
-              </folding>
+            <state line="73" column="0" selection-start="3818" selection-end="3818" vertical-scroll-proportion="0.0" vertical-offset="1314" max-vertical-offset="1728">
+              <folding />
             </state>
           </provider>
         </entry>
@@ -109,7 +124,7 @@
       <file leaf-file-name="MapMyData.java" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/MapMyData.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="372" column="0" selection-start="13732" selection-end="13888" vertical-scroll-proportion="0.0" vertical-offset="5291" max-vertical-offset="9468">
+            <state line="372" column="0" selection-start="13732" selection-end="13888" vertical-scroll-proportion="0.0" vertical-offset="6696" max-vertical-offset="10728">
               <folding />
             </state>
           </provider>
@@ -138,7 +153,6 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/CampusMapper_Library/res/layout/debriefing_survey.xml" />
         <option value="$PROJECT_DIR$/CampusMapper_Library/res/layout/faqs.xml" />
         <option value="$PROJECT_DIR$/CampusMapper_Library/res/layout/gpl_view.xml" />
         <option value="$PROJECT_DIR$/CampusMapper_Library/res/layout/help.xml" />
@@ -187,6 +201,7 @@
         <option value="$PROJECT_DIR$/CampusMapper_Library/res/values/strings.xml" />
         <option value="$PROJECT_DIR$/CampusMapper_Library/res/values-es/strings.xml" />
         <option value="$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/TransportationModeSurvey.java" />
+        <option value="$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/UtilLocal.java" />
         <option value="$PROJECT_DIR$/CampusMapper_Library/AndroidManifest.xml" />
         <option value="$PROJECT_DIR$/CampusMapper_Research/AndroidManifest.xml" />
       </list>
@@ -223,7 +238,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -239,6 +253,24 @@
             </PATH_ELEMENT>
             <PATH_ELEMENT>
               <option name="myItemId" value="CampusMapper_Research" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CampusMapper" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="CampusMapper_Research" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="mobility" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -272,6 +304,7 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="Scope" />
       <pane id="PackagesPane" />
     </panes>
   </component>
@@ -289,7 +322,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$/CampusMapper_Library/libs/google-play-services_lib/libs/google-play-services.jar!/" />
     <property name="recentsLimit" value="5" />
     <property name="ExportedModule" value="CampusMapper_Research" />
-    <property name="ExportedApkPath" value="$USER_HOME$/Dropbox/campus_mapper/CampusMobility_v1.03.apk" />
+    <property name="ExportedApkPath" value="$USER_HOME$/Dropbox/campus_mapper/CampusMobility_v1.04.apk" />
     <property name="AndroidRunProguardForReleaseBuild" value="false" />
     <property name="project.structure.last.edited" value="Modules" />
     <property name="project.structure.proportion" value="0.15" />
@@ -344,19 +377,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -382,6 +402,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -502,22 +535,20 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="52" width="1366" height="692" extended-state="6" />
-    <editor active="true" />
+    <editor active="false" />
     <layout>
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329429" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6137124" sideWeight="0.64787704" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6137124" sideWeight="0.352123" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Gradle Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Build Variants" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32943144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32943144" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Android" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
@@ -530,6 +561,8 @@
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
+      <window_info id="Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.329429" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.6137124" sideWeight="0.64787704" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
@@ -550,14 +583,6 @@
     <breakpoint-manager />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/lgpl_view.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="720" />
-      </provider>
-      <provider editor-type-id="android-designer">
-        <state />
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/layout/lifeline_overlay.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1620" />
@@ -886,16 +911,6 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/Util.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="153" column="24" selection-start="7028" selection-end="7028" vertical-scroll-proportion="0.0" vertical-offset="1296" max-vertical-offset="15948">
-          <folding>
-            <element signature="e#6737#6738#0" expanded="true" />
-            <element signature="e#7033#7034#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/CampusMapper_Library/res/menu/main_menu.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="30" column="0" selection-start="2309" selection-end="2309" vertical-scroll-proportion="0.0" vertical-offset="686" max-vertical-offset="1098">
@@ -938,23 +953,34 @@
     <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/TransportationModeSurvey.java">
       <provider selected="true" editor-type-id="text-editor">
         <state line="73" column="0" selection-start="3818" selection-end="3818" vertical-scroll-proportion="0.0" vertical-offset="433" max-vertical-offset="1134">
-          <folding>
-            <element signature="e#3723#3777#0" expanded="true" />
-            <element signature="e#3855#3898#0" expanded="true" />
-          </folding>
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/UtilLocal.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="41" column="17" selection-start="2392" selection-end="2392" vertical-scroll-proportion="0.0" vertical-offset="149" max-vertical-offset="720">
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CampusMapper_Library/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="30" column="32" selection-start="2287" selection-end="2287" vertical-scroll-proportion="0.0" vertical-offset="738" max-vertical-offset="3096">
+        <state line="27" column="29" selection-start="2237" selection-end="2237" vertical-scroll-proportion="0.0" vertical-offset="540" max-vertical-offset="3096">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/CampusMapper_Research/AndroidManifest.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="34" column="32" selection-start="2380" selection-end="2380" vertical-scroll-proportion="0.25218913" vertical-offset="738" max-vertical-offset="3276">
+        <state line="27" column="29" selection-start="2236" selection-end="2236" vertical-scroll-proportion="0.0" vertical-offset="631" max-vertical-offset="3276">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/CampusMapper_Library/src/net/movelab/cmlibrary/Util.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="153" column="24" selection-start="7028" selection-end="7028" vertical-scroll-proportion="0.46791443" vertical-offset="1265" max-vertical-offset="15840">
           <folding />
         </state>
       </provider>
