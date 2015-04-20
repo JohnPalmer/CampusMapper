@@ -63,29 +63,31 @@
                 android:text="@string/popup_c2" />
 
 
+            <View
+                android:layout_width="fill_parent"
+                android:layout_height="1dip"
+                android:background="@color/white" />
+
+            <LinearLayout
+                android:layout_width="fill_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="horizontal"
+                android:padding="8dip"
+                android:weightSum="2">
+
+                <Button
+                    android:id="@+id/messageButtonOK"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="@string/ok" />
+
+            </LinearLayout>
+
+
         </LinearLayout>
     </ScrollView>
 
-    <View
-        android:layout_width="fill_parent"
-        android:layout_height="1dip"
-        android:background="@color/white" />
-
-    <LinearLayout
-        android:layout_width="fill_parent"
-        android:layout_height="wrap_content"
-        android:gravity="center_horizontal"
-        android:orientation="horizontal"
-        android:padding="8dip"
-        android:weightSum="2">
-
-        <Button
-            android:id="@+id/messageButtonOK"
-            android:layout_width="0dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="1"
-            android:text="@string/ok" />
-
-    </LinearLayout>
 
 </LinearLayout>

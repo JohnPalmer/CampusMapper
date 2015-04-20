@@ -49,7 +49,7 @@
 
     <string name="popup_b2_ticker">No estamos recibiendo tus datos</string>
 
-    <string name="popup_c1">"¡Hola! ¿Nos podrías decir en qué modo de transporte has efectuado tu último desplazamiento?"</string>
+    <string name="popup_c1">"¡Hola! ¿Nos podrías decir cuál ha sido el medio de transporte principal que has usado en tu último desplazamiento?"</string>
 
     <string name="popup_c2">"¡Muchas gracias por tu colaboración!"</string>
 

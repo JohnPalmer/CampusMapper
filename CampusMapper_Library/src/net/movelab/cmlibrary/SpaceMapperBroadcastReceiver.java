@@ -302,12 +302,12 @@ public class SpaceMapperBroadcastReceiver extends BroadcastReceiver {
         notification.defaults |= Notification.DEFAULT_VIBRATE;
         notification.defaults |= Notification.DEFAULT_LIGHTS;
 
-        Intent intent = new Intent(context, TransportationModeSurvey.class);
+        Intent ts_intent = new Intent(context, TransportationModeSurvey.class);
 
-        PendingIntent pendingIntent = PendingIntent.getActivity(context, 0,
-                intent, PendingIntent.FLAG_CANCEL_CURRENT);
+        PendingIntent ts_pendingIntent = PendingIntent.getActivity(context, 0,
+                ts_intent, PendingIntent.FLAG_CANCEL_CURRENT);
         notification.setLatestEventInfo(context, context.getResources().getString(R.string.popup_c_title), context.getResources().getString(R.string.popup_c_ticker),
-                pendingIntent);
+                ts_pendingIntent);
         notificationManager.notify(Util.MESSAGE_C_NOTIFICATION, notification);
 
     }

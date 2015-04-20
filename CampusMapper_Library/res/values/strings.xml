@@ -60,7 +60,7 @@ under constuction
     <string name="popup_b2_ticker">No estem rebent les teves dades</string>
 
 
-    <string name="popup_c1">"Hola! Ens podries dir amb quin mode de transport has efectuat el teu darrer desplaçament?"</string>
+    <string name="popup_c1">"Hola! Ens podries dir quin ha estat el mitjà de transport principal que has utilitzat en el teu darrer desplaçament?"</string>
 
     <string name="popup_c2">"Moltes gràcies per la teva col·laboració!"</string>
 
