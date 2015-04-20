@@ -103,7 +103,8 @@ public class SpaceMapperBroadcastReceiver extends BroadcastReceiver {
                     + Util.MESSAGE_SCHEDULE)) {
 
                 if(PropertyHolder.getExpertMode()){
-                messageCAlarm.setInexactRepeating(AlarmManager.ELAPSED_REALTIME, SystemClock.elapsedRealtime(),  Util.MESSAGE_C_INTERVAL, pending_message_C);
+                 // start repeating alarm with first one in 10 minutes
+                messageCAlarm.setInexactRepeating(AlarmManager.ELAPSED_REALTIME, SystemClock.elapsedRealtime() + 10*60*1000,  Util.MESSAGE_C_INTERVAL, pending_message_C);
                 }
 
                 long alarmInterval = PropertyHolder.getAlarmInterval();

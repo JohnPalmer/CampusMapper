@@ -66,7 +66,7 @@ under constuction
 
     <string-array name="popup_transport_mode_array">
         <item>       </item>
-        <item>Cap desplaçament en els darrers 10 minuts</item>
+        <item>Cap desplaçament</item>
         <item>Caminant</item>
         <item>Amb bicicleta</item>
         <item>Amb transport privat</item>

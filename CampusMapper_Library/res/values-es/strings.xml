@@ -55,7 +55,7 @@
 
     <string-array name="popup_transport_mode_array">
         <item>       </item>
-        <item>Ningún desplazamiento en los últimos 10 minutos</item>
+        <item>Ningún desplazamiento</item>
         <item>Caminando</item>
         <item>En bicicleta</item>
         <item>En transporte privado</item>
